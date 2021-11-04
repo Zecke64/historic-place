@@ -1,0 +1,348 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Historic.Place-Historische Karten</title>
+
+<script type="text/javascript" src="/ol/OpenLayers.js"></script>
+<script type="text/javascript" src="/j/OpenStreetMap.js"></script>
+
+<script type="text/javascript" src="/j/layerchanger.js"></script>
+<script type="text/javascript" src="/j/loadstatus.js"></script>
+<script type="text/javascript" src="js/jsonloader.js"></script>
+
+<script type="text/javascript">
+//------------------------------------------------------------------------------
+//	Die anonyme Onload-Function baut das Kartenobjekt aus Komponenten zusammen.
+//------------------------------------------------------------------------------
+
+window.onload = function () {
+
+	//----------------------------------------------------------------------
+	//	Karte - der Name ('map') muss mit der id des <div> uebereinstimmen.
+	//----------------------------------------------------------------------
+
+	var map = new OpenLayers.Map ('map');
+
+	//----------------------------------------------------------------------
+	//	Default-Koordinatensystem fuer alle Controls
+	//----------------------------------------------------------------------
+
+	map.displayProjection = new OpenLayers.Projection('EPSG:4326');
+
+	//----------------------------------------------------------------------
+	//	Steuerelemente
+	//----------------------------------------------------------------------
+
+	map.addControl (new OpenLayers.Control.LoadStatus());
+	map.addControl (new OpenLayers.Control.MousePosition());
+
+	//----------------------------------------------------------------------
+	//	LayerChanger-Control
+	//----------------------------------------------------------------------
+
+	map.addControl (new OpenLayers.Control.LayerChanger({
+
+		withFullZoomButton: true,
+
+		layerGroups: [
+			{id: 'main', name: 'Grundkarte', hidden: true},
+			{id: 'data', name: 'Overlays', hidden: true},
+			{id: 'jsonloader', name: 'Shapes im Ausschnitt', hidden: false},
+		        {id: 'Austria', name: 'Austria', hidden: true},
+		        {id: 'Belgium', name: 'Belgium', hidden: true},
+			{id: 'Česky', name: 'Česky', hidden: true},
+			{id: 'Dansk', name: 'Dansk', hidden: true},
+			{id: 'Estonia', name: 'Estonia', hidden: true},
+			{id: 'Finland', name: 'Finland', hidden: true},
+			{id: 'France', name: 'France', hidden: true},
+			{id: 'Germany', name: 'Germany', hidden: true},
+			{id: 'Germany-Citys', name: 'Germany-Citys', hidden: true},
+			{id: 'Great Britain', name: 'Great Britain', hidden: true},
+			{id: 'Hungary', name: 'Hungary', hidden: true},
+			{id: 'Nederlands', name: 'Nederlands', hidden: true},
+			{id: 'Romania', name: 'Romania', hidden: true},
+			{id: 'Russia', name: 'Russia', hidden: true},
+			{id: 'Serbia', name: 'Serbia', hidden: true},
+			{id: 'Sweden', name: 'Sweden', hidden: true},
+			{id: 'Switzerland', name: 'Switzerland', hidden: true},
+			{id: 'USA', name: 'USA', hidden: true},
+			{id: 'local', name: 'Lokale Dateien', hidden: true}
+		]
+	}));
+
+	//----------------------------------------------------------------------
+	//	SelectFeature: popup on select
+	//----------------------------------------------------------------------
+
+	var selectControl = new OpenLayers.Control.SelectFeature([], {
+
+		//--------------------------------------------------------------
+		//	second click on feature deselects
+		//--------------------------------------------------------------
+
+		toggle: true,
+
+		//--------------------------------------------------------------
+		//	On select create popup
+		//--------------------------------------------------------------
+
+		onSelect: function (feature) {
+
+			if (!feature.layer.shape.description) return;
+
+			//------------------------------------------------------
+			//	create label from feature attributes
+			//------------------------------------------------------
+
+			var content = '<h2>' + this.html(feature.layer.shape.title) + '</h2>' +
+				'<img src="/i/ajax-loader.gif" />';
+
+			//------------------------------------------------------
+			//	feature position
+			//------------------------------------------------------
+
+			var lonLat = this.map.getLonLatFromViewPortPx(
+					this.handlers.feature.evt.xy);
+
+			//------------------------------------------------------
+			//	No close button in popup to keep example simple
+			//------------------------------------------------------
+
+			var selectControl = this;
+
+			popup = new OpenLayers.Popup.FramedCloud(
+				'featurePopup',			// id
+				lonLat,				// lonlat
+				null,				// contentSize
+				content,			// contentHTML
+				null,
+				true,
+				function(evt) {selectControl.unselect(feature);}
+			);
+
+			popup.panMapIfOutOfView = false;
+			popup.div.style.zIndex='10000';
+
+			//------------------------------------------------------
+			//	Link popup to feature
+			//------------------------------------------------------
+
+			feature.popup = popup;
+
+			//------------------------------------------------------
+			//	async load description
+			//------------------------------------------------------
+
+			var url = feature.layer.shape.loader.jsonPrefix +
+					feature.layer.shape.description;
+
+			OpenLayers.Request.GET({
+
+				url: url,
+
+				success: function(request) {
+
+					popup.setContentHTML(request.responseText);
+					popup.contentDiv.style.padding='1em 0';
+					popup.updateSize();
+					popup.contentDiv.style.padding='0';
+				},
+
+				failure: function(request) {
+
+					popup.setContentHTML('Fehler beim Laden von "' + url + '".');
+					popup.updateSize();
+				}
+			});
+
+			//------------------------------------------------------
+			//	display popup
+			//------------------------------------------------------
+
+			this.map.addPopup(popup, true);
+		},
+
+		//--------------------------------------------------------------
+		//	On unselect destroy popup
+		//--------------------------------------------------------------
+
+		onUnselect: function(feature) {
+
+			if (feature.popup) {
+				popup.feature = null;
+				this.map.removePopup(feature.popup);
+				feature.popup.destroy();
+				feature.popup = null;
+			}
+		},
+
+		//--------------------------------------------------------------
+		//	Encode text as HTML
+		//--------------------------------------------------------------
+
+		html: function (text) {
+			if (text==null) return '';
+			return (text+'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+		}
+	});
+
+	map.addControl(selectControl);
+	selectControl.activate();
+
+	//----------------------------------------------------------------------
+	//	Jsonloader-Control
+	//----------------------------------------------------------------------
+
+	map.addControl (new OpenLayers.Control.JsonLoader({
+
+		//--------------------------------------------------------------
+		//	Das Control nutzt eine Indexdatei mit Daten zu den Shapes.
+		//	Die Datei ist Tab-getrennt ohne Spalten-Ueberschriften und
+		//	enthaelt von links nach rechts:
+		//	1. Name der Json-Datei (relativ zur Seite+jsonPrefix)
+		//	2. Kleinster Lon-Wert
+		//	3. Kleinster Lat-Wert
+		//	4. Groesster Lon-Wert
+		//	5. Groesster Lat-Wert (2..5 entsprechen einer BBOX)
+		//	6. Name (optional)
+		//--------------------------------------------------------------
+		//	Zur Erzeugung der Index-Datei zu den Shapes liegt
+		//	ein kleines Skript bereit.
+		//--------------------------------------------------------------
+
+		//--------------------------------------------------------------
+		//	Pfad zur Json-Index-CSV (relativ zur Seite)
+		//--------------------------------------------------------------
+		//	Default ist "json.csv".
+		//--------------------------------------------------------------
+
+		jsonIndex:	'index.csv',
+
+		//--------------------------------------------------------------
+		//	Die GPX-Dateien koennen in einem Unterverzeichnis liegen.
+		//	Damit das unterverzeichnis nicht bei jedem Eintrag der
+		//	Indexdate aufgefuehrt werden muss, wird es hier angegeben.
+		//--------------------------------------------------------------
+		//	Default ist "./".
+		//--------------------------------------------------------------
+
+		jsonPrefix:	'obj/',
+
+		//--------------------------------------------------------------
+		//	Gleichzeitig wird nur eine begrenzte Zahl von Tracks geladen.
+		//--------------------------------------------------------------
+		//	Default ist 10.
+		//--------------------------------------------------------------
+
+		maxShapes:	10,
+
+		//--------------------------------------------------------------
+		//	Nach dem Laden der Indexdatei zoomt die Karte auf den Bereich,
+		//	den die Tracks abdecken.
+		//--------------------------------------------------------------
+		//	Default ist true.
+		//--------------------------------------------------------------
+
+		zoomToShapes:   true,
+
+		//--------------------------------------------------------------
+		//	Das Verschieben der Karte wird auf den Bereich beschraenkt,
+		//	den die Tracks abdecken.
+		//--------------------------------------------------------------
+		//	Default ist false.
+		//--------------------------------------------------------------
+
+		restrictMap:    true,
+
+		//--------------------------------------------------------------
+		//	Automatische Aktualisierungen bei Pan/Zoom
+		//--------------------------------------------------------------
+		//	false:	keine automatische Aktualisierung
+		//	null:	Statistik im Bedienknopf wird aktualisiert
+		//	true:	Statistik und Trackliste werden aktualisiert.
+		//--------------------------------------------------------------
+		//	Default ist null.
+		//--------------------------------------------------------------
+
+		autoUpdate:	true,
+
+		//--------------------------------------------------------------
+		//	Erzeugte Tracklayer werden beim SelectFeature registriert.
+		//--------------------------------------------------------------
+
+		selectFeature: selectControl
+	}));
+
+	//----------------------------------------------------------------------
+	//	Kartenlayer
+	//----------------------------------------------------------------------
+
+	map.addLayer (new OpenLayers.Layer.OSM.Mapnik('Mapnik'));
+	map.addLayer (new OpenLayers.Layer.OSM.CycleMap('CycleMap'));
+
+	//----------------------------------------------------------------------
+	//	Kartenposition wird vom TrackLoader korrigiert (zoomToTracks).
+	//----------------------------------------------------------------------
+};
+</script>
+
+<style type="text/css">
+.olControlLayerChanger {
+	right:	0px;
+	top:	25px;
+}
+
+.olControlLayerChanger table {
+	font-family: sans-serif;
+	font-size: smaller;
+}
+
+.olControlLayerChanger th, .olControlLayerChanger td {
+	border: 1px gray dotted;
+}
+
+.olControlLayerChanger .layersDiv {
+	background-color: #dddddd;
+	border: 2px ridge gray;
+}
+
+.olControlLayerChanger .maximizeDiv, .olControlLayerChanger .minimizeDiv {
+	top:	2px;
+	right:	0px;
+}
+
+.olControlLayerChanger th {
+	text-align: left;
+}
+
+.olControlLayerChanger input, .olControlLayerChanger button {
+	cursor: pointer;
+}
+
+.olControlLayerChanger th.hidden:before {
+	content: '\25B6\00a0';	/* Dreieck */
+}
+
+.olControlLayerChanger th.visible:before {
+	content: '\25BC\00a0';	/* Dreieck */
+}
+
+.olControlLoadStatus {
+	left:	50px;
+	top:	10px;
+}
+
+.olControlJsonLoader {
+	bottom:	0.1em;
+	left:	0.1em;
+}
+</style>
+</head>
+
+<body style="margin: 0">
+
+<div id="map" style="background: gray; width: 100%; height: 100%;"></div>
+
+</body>
+</html>

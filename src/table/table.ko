@@ -1,0 +1,361 @@
+Ab Zoom 10 sichtbar###배율 10에서 표시
+Ab Zoom 11 sichtbar###배율 11에서 표시
+Ab Zoom 12 sichtbar###배율 12에서 표시
+Ab Zoom 13 sichtbar###배율 13에서 표시
+Ab Zoom 14 sichtbar###배율 14에서 표시
+Ab Zoom 15 sichtbar###배율 15에서 표시
+Ab Zoom 16 sichtbar###배율 16에서 표시
+Ab Zoom 17 sichtbar###배율 17에서 표시
+Ab Zoom 18 sichtbar###배율 19에서 표시
+Ab Zoom 5 sichtbar###배율 5에서 표시
+Alle ${count} Einträge###모든 항목(${count}개)
+Alle Einträge###모든 항목
+Andere Objekte mit historischem Bezug###역사 관련 값을 가진 다른 개체
+Anzahl###횟수
+Archäologische Stätte - allgemein###유적지 - 일반
+Archäologische Stätte###유적지
+Archäologische Stätte (Befestigung)###유적지(요새)
+Archäologische Stätte (Ganggrab)###유적지(연도분, 통로를 뚫어 놓은 무덤)
+Archäologische Stätte (Grabkammer)###유적지(지하 공간)
+Archäologische Stätte (Großsteingrab)###유적지(고인돌)
+Archäologische Stätte (Hügelgrab)###유적지(봉분)
+Archäologische Stätte (Megalith)###유적지(거석, 큰 돌로 제작됨)
+Archäologische Stätte (Menhir)###유적지(선돌, 큰 돌을 세워 놓음)
+Archäologische Stätte (Steinkreis)###유적지(열석, 큰 돌을 줄지어 세워 놓음)
+Archäologische Stätte (Steinreihe)###유적지(환상 열석, 큰 돌을 원형으로 세워 놓음)
+auf aktuellen Standort zoomen###현재 위치로 확대
+aufgegeben###버려짐
+Ausrichtung des Objektes im Popup###팝업에 표시되는 개체의 방향
+Aussichtsturm###전망탑
+Bahnhof###철도역
+Bahnhofsgelände###철도역 구역
+Bahnlinie###철도
+Baumbildstock###성지(나무)
+Bearbeiten mit###편집
+Bearbeiten mit iD###iD로 편집
+Bearbeiten mit JOSM###JOSM으로 편집
+Bearbeiten mit Potlatch###Potlatch로 편집
+Befestigungsanlage###방어 시설
+bei Zoom=${next} werden weitere Daten eingeblendet###더 많은 데이터를 보려면 배율 ${next}(으)로 확대하세요
+Bergwerk###광산
+Bergwerk/Schachtanlage/Schacht###광산
+Bergwerksstollen###수직 갱도
+Bergwerksstollen (aufgegeben)###수직 갱도(폐쇄됨)
+Beschreibung###설명
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###다음 사람이 코드 뭉치와 데이터를 준비했습니다:
+Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###핀지(pinge, 갱도 등이 무너져서 생긴 구덩이)
+Bombenkrater###폭탄 구덩이
+Historische Brücke###역사적인 다리
+Historische Brücke (Ruine)###역사적인 다리(폐허)
+Brunnen###분수
+Bunker###벙커
+Bunker (Ruine)###벙커(폐허)
+Burg oder Schloss###성
+Burg###궁전/성/요새(추가 설명 없음)
+Burg (Ruine)###궁전/성/요새(폐허, 추가 설명 없음)
+Credits###제작자
+Danksagung###제작자
+Dargestellte Einträge###표시되는 항목
+denkmalgeschützt###투영됨
+Denkmal###기념비
+Denkmalschutz###보존
+Details###상세
+Die ersten ${count} von ${all} Einträgen###항목 ${all}개 중 ${count}개
+Dreschplatz###탈곡장
+Du willst ein Bild? Beteilige Dich!###사진을 추가하고 싶으신가요? 어서 참여하세요!
+Erinnerungsstätte###기념물
+Farm###농장
+Festung###성(방어용)
+Festung/Kreml###성(방어용)
+Festung/Kreml (Ruine)###성(방어용, 폐허)
+Findling###미아석(빙하에 의해 운반된 돌)
+Fläche###영역
+Flächen###영역
+Fragmente###파편
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###이 지도의 첫 버전을 만든 사람:
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###이 지도의 위키를 만든 사람:
+Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###역사적 개체를 추가하기 위한 JOSM 프리셋이 있습니다
+Für Übersetzungen :###번역
+Galgen###교수대
+Ganggrab (Langbett)###연도분
+Gebäude###건물
+Gedenkplakette###기념 명판
+Gedenktafel###명판
+Gefängnis###감옥
+geschlossen###폐쇄됨
+geschützt durch###보호 중
+Geschütztes Gebäude###보호받는 건물
+Geschütztes Gebiet###보호받는 영역
+Gipfelkreuz###산 정상의 십자가
+Glockenturm###종탑
+Glockenturm (Ruine)###종탑(폐허)
+Grab###무덤
+Grenzmarkierung###경계 표지
+Grenzstein###경계석
+Großsteingrab - Dolmen###고인돌
+Haltepunkt###철도 정거장
+Handschwengelpumpe###양수기(수동)
+Handwasserpumpe###양수기(수동)
+Herrenhaus###영지
+Historische Eisenbahnstrecke###역사적인 철로
+Historische Farm###역사적인 농장
+Historische Industriebauten###역사적인 산업용 건물
+Historische Objekte###역사적 개체
+Historische Quelle###역사적인 분수
+Naturdenkmal###천연기념물
+Historischer Brunnen / Zierbrunnen###역사적인 분수
+Historischer Dreschplatz/Tenne###역사적인 탈곡장
+Historischer Eisenbahn-Haltepunkt###역사적인 철도역
+Historischer Galgen###역사적인 교수대
+Historischer Name###역사적 명칭
+Historischer Stein###역사적인 돌
+Historischer Turm###역사적인 탑
+Historischer Turm (Ruine)###역사적인 탑(폐허)
+Historischer Vermessungspunkt###역사적인 기준점
+Historisches Gebäude###역사적인 건물
+Historisches Grab###역사적인 무덤
+Historisches Luftfahrzeug###역사적인 항공기
+Historisches Objekt###역사적인 물건
+Historisches Schiff###역사적인 배
+Historisches Stadttor###역사적인 성문
+Historische Stadt-Mauer/Historische Mauer###역사적인 배
+Hügelgrab (Tumulus)###봉분
+Hütte###오두막
+Icon###성상
+Industriegebäude###산업용 건물
+Informationstafel###정보 안내 표지판
+Infos für Mapper###지도 제작자의 정보
+Infos für OSM-Mapper###OSM 지도 제작자의 정보
+Info-Tafel mit historischem Bezug###역사적인 정보 안내 표지판
+Inschrift###비문
+Japanische Burg###일본식 성채
+JOSM_Vorlage###JOSM 프리셋
+Kanone###대포
+Kapelle###예배당
+Kein Treffer###결과 없음
+Keine Vorschau verfügbar!###미리보기 없음
+Kirche###교회
+Kloster###수도원
+Kloster (Ruine)###수도원(폐허)
+Kompass###나침반
+Kompass ein/aus###나침반 켜기/끄기
+Kontakt###연락처
+Konzentrationslager###강제 수용소
+Koordinaten###좌표
+Kreml###러시아식 성채
+Kriegsgefangenenlager###포로 수용소
+Laden###불러오는 중
+Legende###범례
+Legende und Infos###범례와 정보
+Leuchtturm###등대
+Linie###선
+Linien###선
+Linien und Flächen###선과 면
+Link zum Bild###이미지 링크
+Luftfahrzeug###항공기
+Marterl###길가의 시당
+Mehr Objekte anzeigen###개체 더 보기
+Meilenstein###거리 표시석(마일스톤)
+Monument###기념물
+Moschee###모스크
+Namen###이름
+Normale Zahl von Objekten anzeigen###기본 개체 표시
+NS-Konzentrationslager###나치 포로 수용소
+Obelisk###오벨리스크
+Objekte mit Zusatzinfos###웹 사이트 링크가 있는 개체
+Objekte mit Zusatz-Link###웹 사이트 링크가 있는 개체
+Objekt###개체
+oder###또는
+OpenStreetMap und Mitwirkende###OpenStreetMap과 기여자들
+Paläontologische Stätte###화석 산출지
+Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)###궁전/성/요새(추가 설명 없음)
+Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)###궁전/성/요새(폐허, 추가 설명 없음)
+Palast###궁전
+Palast (Ruine)###궁전(폐허)
+Pā (Māori) Befestigungsanlagen###파 요새(마오리족)
+Pinge###핀지(pinge, 갱도 등이 무너져서 생긴 구덩이)
+Pranger###죄수에게 씌우는 칼
+Punkt###지점
+Quelle###출처
+Rathaus###마을 회관
+Religiöse Stätte (mit Link)###숭배 시설(웹 사이트 링크만 있음)
+Religiöse Stätte###숭배 시설
+Religiöse Stätte (religionsspezifisch)###종교 시설
+Rittergut/Herrenhaus###영지
+Rittergut/Herrenhaus (Ruine)###영지(폐허)
+Ruine###폐허
+Runenstein###룬 문자가 새겨진 돌
+Schacht###수직 갱도
+Schiff###배
+Schiffswrack###난파선
+Schlachtfeld###전장
+Schloss###웅장한 성채
+Schloss (Ruine)###웅장한 성채(폐허)
+Schrein###성지
+See###호수
+Shiro (Japanische Burg)###일본식 성채
+Shiro (Ruine)###일본식 성채(폐허)
+Sprachauswahl###언어 선택
+Stadtmauer###성벽
+Stadttor###성문
+Stand der Daten###데이터 출처
+Steinbruch###채석장
+Steingrab - Menhir###묘석(선돌)
+Steinkreis###환상 열석
+Steinreihe###열석
+Stillgelegtes Bergwerk/stillgelegter Schacht###갱도/수직 갱도(폐쇄됨)
+Stollen (allgemein)###입구
+Stolleneingang###입구
+Stolpersteine###슈톨퍼슈타인(나치즘의 희생자를 기리는 비석)
+Stolperstein###슈톨퍼슈타인(나치즘의 희생자를 기리는 비석)
+Sühnekreuz###위로 십자가(살인이나 사고가 일어난 곳에 설치하는 십자가)
+Sühnestein###위로 십자가(살인이나 사고가 일어난 곳에 설치하는 십자가)
+Synagoge###유대교 회당
+Technikdenkmal###공업 기념물
+Technisches Denkmal###산업 유산
+Tempel###신전
+Turm###탑
+Übersicht###개요
+UNESCO Welterbe###유네스코 세계 유산
+Vermessungspunkt###기준점
+von###:
+Wallanlage###성곽
+Wanderwege###하이킹 경로
+Waschplatz###씻는 장소
+Wassermühle (Ruine)###물방앗간(폐허)
+Wassermühle###물방앗간
+Wasserpumpe###물 펌프
+Wasserturm###급수탑
+Webseite###웹 사이트
+Wegkapelle###길가의 예배당
+Weg-Kapelle###길가의 예배당
+Wegkreuz###길가의 십자가
+Bildstock###길가의 사당
+Weitere Karten###다른 지도
+Weniger Objekte anzeigen###개체 덜 보기
+Wiki zur Karte###이 지도의 위키
+Windmühle (Ruine)###풍차(폐허)
+Windmühle###풍차
+Wrack###난파선
+Wüstung###버려진 장소
+Zur Anzeige der Karte ist JavaScript erforderlich.###이 지도를 보려면 자바스크립트가 필요합니다.
+ausgedehnte Objekte###확장된 개체
+Die Routen-Layer###경로 레이어
+Einzelobjekte###관심 지점(POI)
+Eisenbahnen###철로
+experimentell###실험 기능
+Freizeit###여가
+Grundkarte###배경 지도
+Hilfsebenen###서포트 레이어
+Inline-Skating###인라인 스케이트
+lizenziert unter###라이선스 부여자:
+Mountainbike###산악 자전거
+Radwege###자전거 경로
+Schummerung###음영기복도
+Straßen###도로
+Verwaltungsgrenzen###행정 구역
+Wetter###날씨
+Zeichenwerkzeuge###그리기 도구
+Zeichnen###그리기
+Steuerelemente###도구
+Zeigt diese Gruppe###이 그룹 표시
+Versteckt diese Gruppe###이 그룹 숨기기
+Zeigt diese Ebene###이 레이어 표시
+Versteckt diese Ebene###이 레이어 숨기기
+Wählt diese Ebene als Basisebene###기반 레이어로 지정
+Zeigt dieses Steuerelement###이 도구 표시
+Versteckt dieses Steuerelement###이 도구 숨기기
+Verringert die Deckkraft der Ebene###이 레이어의 불투명도 낮추기
+Erhöht die Deckkraft der Ebene###이 레이어의 불투명도 높이기
+Verringert die Deckkraft des Steuerelements###이 도구의 불투명도 낮추기
+Erhöht die Deckkraft des Steuerelements###이 도구의 불투명도 높이기
+Navigationsfenster###내비게이션
+Reit- und Wanderkarte###하이킹+오솔길 자전거 도로 지도
+Statue###동상
+Aquädukt###송수로
+Ehemaliger Windmühlenstandort###옛 풍차 위치
+Ehemaliger Wassermühlenstandort###옛 물방앗간 위치
+Ehemaliger Schacht###옛 수직 갱도
+Ehemaliger Stollen###옛 수평 갱도
+Wappen###문장(紋章)
+Bergehalde###굴착 잔해 무더기
+Schlackenhalde###슬래그 무더기
+Müllhalde###매립지
+Bohrung###시추공
+Museumsbahnlinie###전통적인 철도 노선
+stillgelegt###사용하지 않음
+nahezu komplett entfernt###파괴됨
+Stehen lassen###열려 있음
+Historisches Gefängnis###역사적인 감옥
+Suche###검색
+Kartenebenen###지도 레이어
+Fenster schließen###창 닫기
+Köhlerei###숯가마
+Töpferei###도자기
+Ziegelei###벽돌 공장
+Kalkbrandofen###석회 가마
+Pechhütte###타르 가마
+Glashütte###유리 가마
+Brennofen###가마
+Kohlenmeiler###숯가마
+Schornstein###굴뚝
+Portal###입구
+Tunnelportal###터널 입구
+Fachwerkhaus###목조 가옥
+Felsenkeller###지하 저장고
+Maultierpfad###짐 나르는 말이 다니는 길
+Umgebindehaus###고지 루사티아식 가옥
+Wohnturm###주거용 탑
+Wehrturm###요새화한 탑
+Wachturm###감시탑
+Skisprungschanze###스키 점프대
+Optischer Telegraf###수기 신호
+Historisches Militärgelände###역사적인 군사 영역
+Historische Straße###역사적인 도로
+Arbeitslager###노동 수용소
+Ehemaliges Bergwerk###옛 광산
+Erbaut###건축일:
+Historische Karten###옛 지도
+Verweise auf Fremdkarten###참조한 다른 지도
+Objekte Bearbeiten###개체 편집
+Downloads###다운로드
+Karten-Zoom###지도 배율
+Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###먼저 배율 ${zoom}와(과) 배율 ${minZoom} 사이로 배율을 조정해 주세요
+Zoomt auf Ausdehnung###확대 범위
+Entfernt das Layer###이 레이어 삭제
+Lokale Dateien###로컬 파일
+GPX einlesen###GPX 불러오기
+Einstellungen in Cookie speichern###설정을 쿠키에 저장
+Cookie gespeichert###쿠키 저장 완료
+Permalink###링크
+Übersichtskarte über verfügbare historische Karten###옛 지도의 개요 지도
+Historische Karten im Ausschnitt###보이는 범위 내의 옛 지도
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###저자, 라이선스, 이미지 정보를 보거나 확대하려면 미리보기를 클릭하세요
+Historisches Schienenfahrzeug###옛 철도 차량
+Historisches Ausstellungsstück###역사적인 전시품
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###GPX 파일을 로컬에서 불러오기
+Reiten###승마
+Die Datei ${name} ist ${size} Bytes groß###${name} 파일의 크기는 ${size}바이트입니다
+Das Laden kann etwas dauern. Fortsetzen?###불러오는 데 시간이 걸릴 수 있습니다. 계속하시겠습니까?
+Ende###끝
+Hilfe###도움말
+Messwerkzeug###측정 도구
+Kriegsgräberstätte###전몰자 묘
+Umgebung mit###주변 환경
+Pflanzjahr###심어진 년도
+Mehr Infos von###정보 더 보기:
+vor Christus###기원전
+vor###이전
+nach###이후
+Anfang###초기
+um###정도
+Mitte###사이
+gegen Ende###후기
+Kunstwerk###예술품
+Transformatorenturm###변전소 탑
+OSM deutscher Stil###OSM German style
+Reit- und Wanderkarte###Riding and hiking map
+Topgrafische Karte von Maxbe###Topgraphic map of Maxbe
+Regionen###Natural regions, mountain ranges,
+Historische Grenzen (experimentell)###Historical boundaries (experimental)
+Jahrhundert###세기

@@ -1,0 +1,793 @@
+body {
+	margin: 0;
+}
+
+.olImageLoadError {
+    display: none !important;
+}
+#banner {
+	position: absolute;
+	left: 20px;
+	top: 10px;
+
+	z-index: 2000;
+}
+.olControlMeasureDistance {
+        background-color: white;
+	top: 20em;
+	left: 1.5em;
+}
+
+.olControlMeasureTool {
+
+	left: 1px;
+	bottom: 30px;
+	background-color: white;
+	color: black;
+	opacity: 0.7;
+}
+
+.olControlMeasureTool .measureToolAnalyzer {
+
+	font-size: 200%;
+	border: 2px gray ridge;
+	background-color: white;
+}
+
+.olControlMeasureTool .measureToolResult {
+	border: 2px gray ridge;
+	font-size: 100%;
+	background-color: white;
+	cursor: help;
+}
+iframe {
+	position: absolute;
+	top:0;
+	left:0;
+}
+.olControlLocalTracks {
+	left: 20em;
+	top: 0.2em;
+}
+.olControlLocalTracks.enabled button:hover{
+	background-color: yellow;
+}
+div.editPanel {
+    top: 150px;
+    left: 50px;
+    position: absolute;
+}
+    .editPanel div {
+      background-image: url("../i/edit_sprite.png");
+      background-repeat: no-repeat;
+      width:  24px;
+      height: 22px;
+      border: thin solid black;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+.olControlNavigationItemActive {background-position: 0px -207px; }
+.olControlNavigationItemInactive {background-position: 0px -184px; }
+.lineButtonItemActive {background-position: 0px -69px; }
+.lineButtonItemInactive {background-position: 0px -46px; }
+.pointButtonItemActive {background-position: 0px -23px; }
+.pointButtonItemInactive {background-position: 0px 0px; }
+.polygonButtonItemActive {background-position: 0px -395px; }
+.polygonButtonItemInactive {background-position: 0px -372px; }
+.olControlModifyFeatureItemActive {background-position: 0px -161px; }
+.olControlModifyFeatureItemInactive {background-position: 0px -138px; }
+.olControlDeleteFeatureItemActive { background-position: 0px -253px; }
+.olControlDeleteFeatureItemInactive { background-position: 0px -230px; }
+.olControlSplitItemActive {background-position: 0px -347px; }
+.olControlSplitItemInactive {background-position: 0px -322px; }
+.editButtonItemActive {background-position: 0px -115px; }
+.editButtonItemInactive {background-position: 0px -92px; }
+.saveButtonItemActive {background-position: 0px -299px; }
+.saveButtonItemInactive {background-position: 0px -276px;}
+
+
+
+div.noscript {
+	background-color: yellow;
+	border: 10px solid red;
+	color: black;
+	font-size: larger;
+	left: 0;
+	padding: 1ex;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 10001;
+}
+
+p.meta {
+	border: 1px gray solid;
+}
+
+
+
+div#legend {
+	position: absolute;
+	right: 0;
+	padding: 1px;
+	text-align: right;
+	background-color: transparent;
+	z-index: 1001;
+	/* max-width: 250px; */
+}
+
+div#flagicon {
+	margin: 1.5px;
+	vertical-align: top;
+	float: left;
+}
+
+div#flagicon a img {
+	border: 0;
+	/* height: 10px; optional zum spielen */
+}
+
+div.flagicon {
+	margin: 1.5px;
+	vertical-align: top;
+	float: left;
+}
+
+div.flagicon a img {
+	border: 0;
+	/* height: 10px; optional zum spielen */
+}
+
+ /*Der Tooltip für die latest news*/
+
+span#hint:hover { background-color: #3D6199; }
+
+div.newstip {
+        background-color:rgba(251,251,251,0.9);
+	border-color:rgba(80,80,80,0.9);
+	/*border-weight: 1px;*/
+	border-style: solid;
+        position: absolute;
+        left: -140px;
+        top: 25px;
+        z-index: 1000000;
+        width: 350px;
+        border-radius: 5px;
+        font-family: "Arial", sans-serif;
+        font-size:100%;
+	text-align: left;
+}
+
+div.newstip p {
+        margin: 10px;
+        color: #4C4C4C;
+}
+
+#cookie-saved  {
+        background-color:rgba(251,251,251,0.9);
+        border-color:rgba(80,80,80,0.9);
+       /* border-weight: 1px;*/
+        border-style: solid;
+        border-width: thin;
+        position: absolute;
+        left: 52px;
+        top: 25px;
+        z-index: 1000000;
+        width: 100px;
+        border-radius: 5px;
+        font-family: "Arial", sans-serif;
+        font-size:80%;
+        text-align: center;
+        visibility: hidden;
+}
+
+.olMap a {
+	text-decoration: none;
+}
+
+.olControlEditingToolbar {
+
+	top: 2px;
+	right: 300px!important;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+div.olControlLayerSwitcher .layersDiv {
+	background-color: #888888;
+	padding-left: 0px;
+	font-size: 12px;
+}
+
+.olControlLoadStatus {
+	left: 50px;
+	top: 10px;
+}
+
+.olControlMaplink {
+	background-color: #d3dbdb;
+	bottom: 2.5em;
+	font-size: 12px;
+	right: 3px;
+	width: auto;
+}
+
+#xnoimagegpx {
+	bottom: 8.9em;
+}
+
+/*
+#gpx {
+	bottom: 7.7em;
+	right: 35px;
+}
+
+#gpi {
+	bottom: 7.7em;
+}
+*/
+
+#xjosm {
+	bottom: 7.4em;
+}
+
+#xid {
+	bottom: 5.9em;
+}
+
+#xpl2 {
+	bottom: 4.4em;
+}
+
+.olControlMousePosition {
+	background-color: white;
+	top: 0.2em;
+	font-family: Monospace;
+	height: 16px;
+	right: 40em !important;
+	text-align: right;
+	width: auto;
+}
+
+.olControlMousePositionGK {
+	background-color: white;
+	top: 1.5em;
+	font-family: Monospace;
+	height: 16px;
+	right: 515px;
+	text-align: right;
+	width: auto;
+}
+
+.olControlPermalink {
+	background-color: #d3dbdb;
+	bottom: 2.9em !important;
+	font-size: 12px !important;
+	width: auto;
+}
+#permalink {
+	position: absolute;
+	right: 250;
+    top: 2px;
+	padding: 1px;
+	text-align: right;
+	background-color: transparent;
+	z-index: 1001;
+        /*margin: 1.5px;*/
+        /*horizontal-align: right;*/
+        /*float: left;*/
+        /*right: 300px!important;*/
+       /* background-color: #d3dbdb;*/
+        /*bottom: 2.9em !important;*/
+        font-size: 12px !important;
+        width: auto;
+}
+
+.olControlScaleLine {
+	top: 0.2em !important;
+	left: 60em !important;
+	height: 25px;
+	background-color: #d3dbdb;
+}
+
+.olControlSearchBox  {
+	left: 120px;
+	top: 1px;
+}
+
+.olControlSearchBox div.label {
+	background: none;
+	
+}
+
+.olControlSearchBox div.busy {
+	background: url(../i/ajax-loader.gif);
+	height: 55px;
+	width: 54px;
+}
+
+.olControlSearchBox div.failure {
+	background-color: red;
+	color: black;
+	font-weight: bold;
+}
+
+.olControlSearchBox div.success {
+	background-color: white;
+}
+
+.olControlSearchBox div.success.empty {
+	color: gray;
+	font-style: italic;
+}
+
+.olControlSearchBox div.success div.entry:hover {
+	background-color: blue;
+	color: white;
+	cursor: pointer;
+}
+
+.olControlUpDownSwitch {
+	left: 10px;
+	top: 400px;
+}
+
+.olControlZoomValue {
+	color: black;
+	font-size: 18px;
+	left: 10px;
+	text-align: center;
+	top: 295px;
+	width: 32px;
+	height: 32px;
+}
+
+.olControlZoomstatus {
+	bottom: 1.8em;
+	left: 0px;
+	color: red;
+	background-color: white;
+	opacity: 0.7;
+}
+
+div.olPopupMarker div.tooltip {
+	display: none;
+	left: -10px;
+	top: 25px;
+	z-index: 10000;
+	font-size: 8pt;
+}
+@font-face {
+	font-family: "Amerton Outline";
+	src: url("AmertonOutline.ttf");
+}
+@font-face {
+	font-family: "Cardiff";
+	src: url("CARDIF__.TTF");
+}
+div#regiogrenzLayer div.tooltip {
+
+        background-color: transparent;
+        border: 1px solid transparent;
+        color: black;
+	display: block;
+	font-size: 90%;
+        left: -3em;
+        opacity: 0.7;
+        padding-right: 6px;
+        top: -1em;
+}
+
+div#regiogrenzLayer:hover div.tooltip {
+
+        background-color: white;
+        border-color: gray;
+}
+
+div#regiogrenzLayer div.tooltip:hover {
+
+	font-size: 100%;
+        opacity: 1;
+        z-index: 10001;
+}
+div#plzLayer div.tooltip {
+
+        background-color: transparent;
+        border: 1px solid transparent;
+        color: black;
+	display: block;
+	font-size: 70%;
+        left: -3em;
+        opacity: 0.7;
+        padding-right: 6px;
+        top: -1em;
+}
+
+div#plzLayer:hover div.tooltip {
+
+        background-color: white;
+        border-color: gray;
+}
+
+div#plzLayer div.tooltip:hover {
+
+	font-size: 100%;
+        opacity: 1;
+        z-index: 10001;
+}
+
+
+
+
+body.on div.olPopupMarker div.tooltip,
+div.olPopupMarker:hover div.tooltip {
+	display: block;
+}
+
+#tooltipSwitch {
+	/*display: absolute;*/
+	right: 150px;
+	bottom: 0.2em;
+	cursor: move;
+}
+
+
+
+#compassSwitch {
+	/*display: absolute;*/
+	right: 400px;
+	bottom: 0.2em;
+	cursor: move;
+}
+
+#compass {
+	position: absolute;
+	display: none;
+	left: 70%;
+	top: 50%;
+	margin-left: -150px;
+	margin-top: -117px;
+	z-index: 2000;
+}
+
+.olFramedCloudPopupContent th {
+	text-align: left;
+}
+
+.olFramedCloudPopupContent th,
+.olFramedCloudPopupContent td {
+	color: black;
+	background-color: #ccccff;
+	font-size: 10pt;
+	height:10px;
+	width: 10px;
+}
+
+#map {
+	background-color: rgba(255,255,255,.9);
+	height:100%;
+	width: 100%;
+}
+
+#descriptionToggle {
+	position: absolute;
+	font-size: 0.8em;
+	z-index: 10000;
+	right: 260px;
+	height: 14px;
+	border-left: 1px solid #000040;
+	border-bottom: 1px solid #000040;
+	border-right: 1px solid #000040;
+	padding: 2px 10px;
+	margin-right: 30px;
+	background-color: #d3dbdb;
+	cursor: default;
+	opacity: 1;
+}
+
+#descriptionToggle:hover {
+	background-color: #FFF;
+}
+
+#description {
+	position: absolute;
+	z-index: 10000;
+	right: 30px;
+	top: 25px;
+	/*
+	height: 250px;
+	*/
+	height: 90%;
+	width: 35%;
+	border: 1px solid #000040;
+	padding: 10px 10px;
+	margin-right: 30px;
+	overflow: auto;
+	background-color: #FFF;
+	font-size: 12px;
+	/*-moz-filter: alpha(opacity=50);*/ 
+	opacity: 0.9;
+	border-radius:15px;
+	/*-moz-border-radius:15px;*/
+	/*-khtml-border-radius:15px;*/
+	/*-webkit-border-radius:15px;*/
+}
+
+#description2 {
+	position: absolute;
+	z-index: 10000;
+	right: 30px;
+	top: 25px;
+	/*
+	height: 250px;
+	*/
+	height: 90%;
+	width: 35%;
+	border: 1px solid #000040;
+	padding: 10px 10px;
+	margin-right: 30px;
+	overflow: auto;
+	background-color: #FFF;
+	font-size: 12px;
+	/*-moz-filter: alpha(opacity=50);*/ 
+	opacity: 0.9;
+	border-radius:15px;
+	/*-moz-border-radius:15px;*/
+	/*-khtml-border-radius:15px;*/
+	/*-webkit-border-radius:15px;*/
+}
+
+#description3 {
+	position: absolute;
+	z-index: 10000;
+	right: 30px;
+	top: 25px;
+	height: 250px;
+	width: 35%;
+	border: 1px solid #000040;
+	padding: 10px 10px;
+	margin-right: 30px;
+	overflow: auto;
+	background-color: #F0F0F0;
+	font-size: 12px;
+	/*-moz-filter: alpha(opacity=50);*/ 
+	opacity: 0.9;
+	border-radius:15px;
+	/*-moz-border-radius:15px;*/
+	/*-khtml-border-radius:15px;*/
+	/*-webkit-border-radius:15px;*/
+}
+
+.hide {
+	display: none;
+}
+
+.references table {
+	background-color: #FFFFFF;
+	border: 1px solid #C3C3C3;
+	border-collapse: collapse;
+	font-size: 14px;
+	width: 100%;
+}
+
+#Geolocation {
+	position: absolute;
+	left: 10px;
+	top: 350px;
+	z-index: 1000;
+}
+
+.olControlUpDownSwitch {
+	left: 10px;
+	top: 400px;
+}
+
+.olControlUpDownSwitch div {
+	width: 32px;
+}
+
+.olControlUpDownSwitch .upper {
+	background: url(../i/upper.png);
+	height: 32px;
+}
+
+.olControlUpDownSwitch .inner {
+	background: url(../i/inner.png);
+	color:#350707;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.olControlUpDownSwitch .lower {
+	background: url(../i/lower.png);
+	height: 32px;
+}
+
+.olControlOverviewMapContainer {
+	position: absolute;
+	bottom: 120px !important;
+	right: 0;
+}
+
+.olControlOverviewMapElement {
+	padding: 10px 18px 10px 10px;
+	background-color: #00008B;
+	/*-moz-border-radius: 1em 0 0 0;*/
+}
+
+.olControlOverviewMapMinimizeButton,
+.olControlOverviewMapMaximizeButton {
+	height: 18px;
+	width: 18px;
+	right: 0;
+	cursor: pointer;
+}
+
+.olControlOverviewMapExtentRectangle {
+	overflow: hidden;
+	background-image: url("/i/blank.gif");
+	cursor: move;
+	border: 2px dotted red;
+}
+
+/*.olControlOverviewMapRectReplacement {
+	overflow: hidden;
+	cursor: move;
+	background-image: url("j/ol/img/overview_replacement.gif");
+	background-repeat: no-repeat;
+	background-position: center;
+}*/
+
+.olFramedCloudPopupContent table {
+	border-collapse: collapse;
+}
+
+.olFramedCloudPopupContent th {
+	text-align: left;
+}
+
+.olFramedCloudPopupContent .tabs a {
+	background-color: #2772b2;
+	border: 1px solid gray;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.olFramedCloudPopupContent .cooked th,
+.olFramedCloudPopupContent .cooked td {
+	color: black;
+	background-color: white;
+	border: 1px dotted gray;
+}
+
+.olFramedCloudPopupContent td.field1 {
+	font-size: smaller;
+	font-weight: bold;
+	margin: 1ex;
+	text-align: center;
+}
+
+.olFramedCloudPopupContent td.field1 img {
+	float: left;
+	height: 30px;
+	width: 30px;
+}
+
+.olFramedCloudPopupContent td.thumb  {
+	background-color: #f5f9fb;
+	width:200px;
+}
+
+.olFramedCloudPopupContent div.object {
+	font-size: small;
+	background-color:#f5f9fb;
+	text-align: left;
+}
+
+.olFramedCloudPopupContent div.lonlat {
+	background-color: #f5f9fb;
+	font-size: small;
+	margin: 0.5ex;
+	padding: 0.2ex;
+	text-align: center;
+}
+
+.olFramedCloudPopupContent div.edit {
+	color: black;
+	background-color:#f5f9fb;
+}
+
+.olFramedCloudPopupContent div.info {
+	color: black;
+}
+
+.olFramedCloudPopupContent div.description {
+	color: black;
+	background-color:#f5f9fb;
+}
+
+.olFramedCloudPopupContent div.inscription {
+	color: black;
+	background-color:#e1edf4;
+}
+
+.olFramedCloudPopupContent .tabs button.active {
+	background-color:#ff9100;
+}
+
+.olFramedCloudPopupContent div.website {
+	color:#000000;
+	background-color:#FAFAD2;
+	font-size: 12px;
+}
+
+.olFramedCloudPopupContent div.wikipedia {
+	color: #000000;
+	background-color:#e1edf4;
+	font-size: 12px;
+}
+.olFramedCloudPopupContent div.Reasonator {
+	color: #000000;
+	background-color:#e1edf4;
+	font-size: 14px;
+}
+.olFramedCloudPopupContent div.wikidata {
+	color: #000000;
+    background-color:#FFEFD5;
+	font-size: 12px;
+}
+.olFramedCloudPopupContent div.heritage {
+	color: #000000;
+    background-color:#F5F5DC ;
+	font-size: 12px;
+}
+
+
+
+.olFramedCloudPopupContent div.imgcaption {
+	color: #2772b2;
+	background-color:#f5f9fb;
+	font-family: "Arial", sans-serif;
+	font-size: 9px;
+}
+
+.olFramedCloudPopupContent div.raw th,
+.olFramedCloudPopupContent div.raw td {
+	font-size: small;
+	border: 1px solid white;
+	background-color: #eeeeee;
+	font-weight: normal;
+	width:400px;
+}
+
+div.olPopupMarker:hover {
+	background-color: #cccc00;
+}
+
+.olPopupMarker.members {
+	display: none;
+}
+
+.olPopupMarker.site,
+.olPopupMarker.route {
+	display: block;
+	background-color: yellow;
+}
+
+div.olPopupMarker {
+	border-radius: 30%;
+}
+
+.olControlAttribution {
+	bottom: 0.1em !important;
+	left: 0.1em;
+	right: auto !important;
+	/* background-color: white;*/
+	background-color: rgba(255,255,255,0.6);
+}

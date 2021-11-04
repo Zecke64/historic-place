@@ -1,0 +1,122 @@
+#!/bin/bash
+#
+#	Übersetzt genau ein file
+#	
+#	update_distinct_file <table> <file>
+#
+
+#set -x
+
+raus () {
+	echo "$*"
+	exit 1
+}
+
+
+home="$( cd "$(dirname "$0")" ; cd .. ; pwd -P )"
+
+. "$home/install.conf" && . "$home/bin/check_install_conf" || raus "install.conf not found"
+
+work="$home/src"
+
+karte=$hp_map
+
+[ $# -ne 2 ] && raus "illegal no of params $# instead of 2"
+
+table="$1"
+[ -s $table ] || raus "translation table $table empty"
+
+lang="${table##*.}"
+[ -z $lang ] && raus "no language table"
+
+masterf="$2"
+[ -s $masterf ] || raus "master file $masterf empty"
+
+
+hist="$hp_webroot/$karte"
+trans="$hist/l"
+
+#####################################################
+#
+# match <pattern> <string>	findet ganze Woerter
+#
+#####################################################
+
+match() { 
+	pat=$1
+	set -- $2
+	while [ $# -gt 0 ]; do 
+		[ "$pat" = "$1" ] && return 0
+		shift
+	done
+	return 1
+}
+
+#####################################################
+
+
+cd "$hp_root/src"
+
+
+
+master=$(basename $masterf)
+
+if [ "$master" = "histmap.js" ]; then
+	"$hp_root"/bin/merge_inc "$hp_root"/src/histmap.js "$hp_root"/tmp/histmap.js
+	masterf="$hp_root/tmp/histmap.js"
+fi
+
+wikilang="en"
+match "$lang" "$wikilanguages"
+[ $? -eq 0 ] && wikilang=$lang
+
+zielfile="$trans/$lang/$master"
+
+echo "Master: $masterf"
+echo "Ziel:   $zielfile"
+
+"$home"/bin/translate.sh $masterf $table $zielfile
+[ $? -ne 0 ] && raus "error in translate.sh"
+
+# Sprache setzen
+sed -i 's/SPRACHE/'$lang'/' $zielfile
+
+# einige individuelle Patches
+
+case $master in
+"index.html" )
+
+	# die Links ins Wiki müssen noch angepasst werden 
+	if [ "$wikilang" = "en" ]; then
+		sed -i 's#wiki/DE:Historical Objects#wiki/Historical Objects#g' "$zielfile"
+	else
+		sed -i 's#wiki/DE:Historical Objects#wiki/'"$wikilang"':Historical Objects#g' "$zielfile"
+	fi
+
+	# Hilfe nur auf DE oder EN
+	sed -i 's#/DE:Help#/Help#g' $zielfile
+	sed -i 's#/Karteneigenschaften#/Map Properties#g' $zielfile
+	;;
+
+"histmap.js" )
+
+	# Link ins Wiki (no-image) muss noch angepasst werden 
+	if [ ! "$wikilang" = "en" ]; then
+		sed -i 's#wiki/Historical#wiki/'"$wikilang"':Historical#g' $zielfile
+	fi
+
+	# "kein Bild" und "keine Vorschau" image sprachabhängig
+	sed -i 's/beteilige\.png/beteilige-'$lang'.png/' $zielfile
+	sed -i 's/php?image/php?lang='$lang'\&image/' $zielfile
+	;;
+
+*)
+	;;
+esac
+
+# Wurde auch alles übersetzt?
+fgrep '%%' "$zielfile"
+[ $? -eq 0 ] && echo "Warnung: nicht alle Begriffe wurden übersetzt!!!"
+
+exit 0
+

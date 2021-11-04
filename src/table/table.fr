@@ -1,0 +1,361 @@
+Ab Zoom 10 sichtbar###Visible à partir du zoom 10
+Ab Zoom 11 sichtbar###Visible à partir du zoom 11
+Ab Zoom 12 sichtbar###Visible à partir du zoom 12
+Ab Zoom 13 sichtbar###Visible à partir du zoom 13
+Ab Zoom 14 sichtbar###Visible à partir du zoom 14
+Ab Zoom 15 sichtbar###Visible à partir du zoom 15
+Ab Zoom 16 sichtbar###Visible à partir du zoom 16
+Ab Zoom 17 sichtbar###Visible à partir du zoom 17
+Ab Zoom 18 sichtbar###Visible à partir du zoom 18
+Ab Zoom 5 sichtbar###Visible à partir du zoom 5
+Alle ${count} Einträge###Toutes les ${count} entrées
+Alle Einträge###Toutes les entrées
+Andere Objekte mit historischem Bezug###Autre objet avec référence historique
+Anzahl###Nombre
+Archäologische Stätte - allgemein###Site archéologique - en général
+Archäologische Stätte (Befestigung)###Site archéologique (forteresse)
+Archäologische Stätte (Ganggrab)###Site archéologique (tombe à couloir)
+Archäologische Stätte (Grabkammer)###Site archéologique (tombe à chambre)
+Archäologische Stätte (Großsteingrab)###Site archéologique (dolmen)
+Archäologische Stätte (Hügelgrab)###Site archéologique (tumulus)
+Archäologische Stätte (Megalith)###Site archéologique (mégalithe)
+Archäologische Stätte (Menhir)###Site archéologique (menhir)
+Archäologische Stätte###Site archéologique
+Archäologische Stätte (Steinkreis)###Site archéologique (cromlech)
+Archäologische Stätte (Steinreihe)###Site archéologique (alignement mégalithique)
+auf aktuellen Standort zoomen###Zoomer sur votre position actuelle
+aufgegeben###abandonné
+Ausrichtung des Objektes im Popup###Orientation de l'objet dans le popup
+Aussichtsturm###Tour d'observation
+Bahnhof###Gare
+Bahnhofsgelände###Zone ferroviaire
+Bahnlinie###Ligne ferroviaire
+Baumbildstock###Potale / Niche votive / Petit oratoire
+Bearbeiten mit###Éditer avec
+Bearbeiten mit iD###Éditer avec iD
+Bearbeiten mit JOSM###Éditer avec JOSM
+Bearbeiten mit Potlatch###Éditer avec Potlatch
+Befestigungsanlage###Fortification
+bei Zoom=${next} werden weitere Daten eingeblendet###à partir de Zoom=${next} plus de détails seront visibles
+Bergwerk###Mine
+Bergwerk/Schachtanlage/Schacht###Mine / Puits de mine
+Bergwerksstollen (aufgegeben)###Galerie (de mine) fermée
+Bergwerksstollen###Galerie (de mine)
+Beschreibung###Description
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Extraits de code (snippet) et données fournis par:
+Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###Affaissement / Effondrement minier
+Bombenkrater###Cratère d'obus
+Historische Brücke###Pont historique
+Historische Brücke (Ruine)###Pont historique (en ruine)
+Brunnen###Puits / Fontaine / Bassin
+Bunker###Casemate
+Bunker (Ruine)###Casemate (en ruine)
+Burg###Château fort
+Burg oder Schloss###Château ou château fort
+Burg (Ruine)###Château fort (en ruine)
+Credits###Crédits
+Danksagung###Remerciements
+Dargestellte Einträge###Entrées affichées
+denkmalgeschützt###monument historique classé
+Denkmal###Mémorial
+Denkmalschutz###Protection des monuments
+Details###Détails
+Die ersten ${count} von ${all} Einträgen###Les ${count} premières entrées de ${all}
+Du willst ein Bild? Beteilige Dich!###Vous avez besoin d'une photo ? Impliquez-vous !
+Dreschplatz###Aire de battage
+Erinnerungsstätte###Grand monument commémoratif
+Farm###Ferme
+Festung###Fortification
+Festung/Kreml###Fortification / Kremlin
+Festung/Kreml (Ruine)###Fortification / Kremlin (en ruine)
+Findling###Bloc erratique
+Flächen###Surfaces
+Fläche###Surface
+Fragmente###Fragments
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###La première version de cette carte a été réalisée par :
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###Le wiki historique est réalisé par :
+Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###Pour les utilisateurs de JOSM, il existe un modèle d'attributs prédéfinis
+Für Übersetzungen :###Traductions :
+Galgen###Potence (pendaison)
+Ganggrab (Langbett)###Tombe à couloir
+Gebäude###Bâtiment
+Gedenkplakette###Plaque commémorative (plaque bleue)
+Gedenktafel###Plaque commémorative
+Gefängnis###Prison
+geschlossen###fermé
+geschützt durch###Protection
+Geschütztes Gebäude###Monument classé
+Geschütztes Gebiet###Territoire classé
+Gipfelkreuz###Croix sommitale
+Glockenturm###Beffroi
+Glockenturm (Ruine)###Beffroi (en ruine)
+Grab###Tombe
+Grenzmarkierung###Borne frontière
+Grenzstein###Borne frontière
+Großsteingrab - Dolmen###Dolmen
+Haltepunkt###Arrêt
+Handschwengelpumpe###Pompe à bras
+Handwasserpumpe###Pompe à bras
+Herrenhaus###Manoir
+Historische Eisenbahnstrecke###Chemin de fer historique (voies)
+Historische Farm###Ferme historique
+Historische Industriebauten###Bâtiment industriel historique
+Historische Objekte###Objets historiques
+Historische Quelle###Source historique
+Naturdenkmal###Monument naturel
+Historischer Brunnen / Zierbrunnen###Puits / Fontaine / Bassin historique
+Historischer Dreschplatz/Tenne###Aire de battage historique
+Historischer Eisenbahn-Haltepunkt###Chemin de fer historique (gare)
+Historischer Galgen###Potence / Gibet historique
+Historischer Name###Nom historique
+Historischer Stein###Pierre historique
+Historischer Turm (Ruine)###Tour historique (en ruine)
+Historischer Turm###Tour historique
+Historischer Vermessungspunkt###Point géodésique historique
+Historisches Gebäude###Bâtiment historique
+Historisches Grab###Tombe historique
+Historisches Luftfahrzeug###Aéronef historique
+Historisches Objekt###Objet historique
+Historisches Schiff###Bateau historique
+Historisches Stadttor###Porte de ville historique
+Historische Stadt-Mauer/Historische Mauer###Mur d'enceinte historique
+Hügelgrab (Tumulus)###Tumulus
+Hütte###Abri
+Icon###Icône
+Industriegebäude###Bâtiment industriel
+Informationstafel###Panneau d'information
+Infos für Mapper###Informations pour cartographes
+Infos für OSM-Mapper###Informations pour cartographes OSM
+Info-Tafel mit historischem Bezug###Panneau d'information avec références historiques
+Inschrift###Inscription
+Japanische Burg###Château japonais (Shiro)
+JOSM_Vorlage###Modèle d'attributs pour JOSM
+Kanone###Canon
+Kapelle###Chapelle
+Kein Treffer###Pas de résultat
+Keine Vorschau verfügbar!###Pas de prévisualisation disponible !
+Kirche###Église
+Kloster###Monastère
+Kloster (Ruine)###Monastère (en ruine)
+Kompass###Rapporteur
+Kompass ein/aus###Boussole (visible / masquée)
+Kontakt###Contact
+Konzentrationslager###Camp de concentration
+Koordinaten###Coordonnées
+Kreml###Kremlin
+Kriegsgefangenenlager###Camp de prisonniers de guerre
+Laden###Télécharger
+Legende###Légende
+Legende und Infos###Légende et informations
+Leuchtturm###Phare
+Linie###Ligne
+Linien###Lignes
+Linien und Flächen###Lignes et surfaces
+Link zum Bild###Lien vers l'image
+Luftfahrzeug###Avion
+Marterl###Petite chapelle
+Mehr Objekte anzeigen###Montrer plus d'objets
+Meilenstein###Borne milliaire
+Monument###Grand monument commémoratif
+Moschee###Mosquée
+Namen###Libellés
+Normale Zahl von Objekten anzeigen###Montrer les objets : réinitialiser
+NS-Konzentrationslager###Camp de concentration
+Obelisk###Obélisque
+Objekte mit Zusatzinfos###Objets avec des informations supplémentaires
+Objekte mit Zusatz-Link###Objets avec un lien web
+Objekt###Objet
+oder###ou
+OpenStreetMap und Mitwirkende###OpenStreetMap et contributeurs
+Paläontologische Stätte###Site paléontologique
+Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)###Palais / château / château fort / forteresse (indistinctement)
+Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)###Palais / château / château fort / forteresse (en ruine - indistinctement)
+Palast###Palais
+Palast (Ruine)###Palais (en ruine)
+Pā (Māori) Befestigungsanlagen###Pā (Forteresse maori)
+Pinge###Affaissement / Effondrement minier
+Pranger###Pilori
+Punkt###Nœud
+Quelle###Source historique
+Rathaus###Hôtel de ville
+Religiöse Stätte###Lieu de culte
+Religiöse Stätte (mit Link)###Lieu de culte (avec lien)
+Religiöse Stätte (religionsspezifisch)###Lieu de culte (par religion)
+Rittergut/Herrenhaus###Manoir
+Rittergut/Herrenhaus (Ruine)###Manoir (en ruine)
+Ruine###Ruine
+Runenstein###Pierre runique
+Schacht###Puits
+Schiff###Bateau historique
+Schiffswrack###Épave
+Schlachtfeld###Champ de bataille
+Schloss###Château
+Schloss (Ruine)###Château (en ruine)
+Schrein###Sanctuaire
+See###Lac
+Shiro (Japanische Burg)###Shiro (Château japonais)
+Shiro (Ruine)###Shiro (en ruine)
+Sprachauswahl###Sélection de langue
+Stadtmauer###Muraille
+Stadttor###Porte de ville historique
+Stand der Daten###État des données
+Steinbruch###Carrière
+Steingrab - Menhir###Menhir
+Steinkreis###Cromlech
+Steinreihe###Alignement mégalithique
+Stillgelegtes Bergwerk/stillgelegter Schacht###Mine fermée / Puits de mine fermé
+Stollen (allgemein)###Entrée de galerie
+Stolleneingang###Entrée de galerie
+Stolpersteine###Pierres d'achoppement
+Stolperstein###Pierre d'achoppement
+Sühnekreuz###Croix d'expiation
+Sühnestein###Croix d'expiation
+Synagoge###Synagogue
+Technikdenkmal###Monument technique
+Technisches Denkmal###Monument technique
+Tempel###Temple
+Turm###Tour
+Übersicht###Aperçu
+UNESCO Welterbe###Patrimoine culturel mondial
+Vermessungspunkt###Point géodésique historique
+von###de
+Wallanlage###Rempart
+Wanderwege###Sentiers de randonnée
+Waschplatz###Lavoir
+Wassermühle###Moulin à eau
+Wassermühle (Ruine)###Moulin à eau (en ruine)
+Wasserpumpe###Pompe
+Wasserturm###Château d'eau
+Webseite###Site web
+Wegkapelle###Petite chapelle
+Weg-Kapelle###Petite chapelle
+Wegkreuz###Calvaire
+Bildstock###Potale / Niche votive / Petit oratoire
+Weitere Karten###Autres cartes
+Weniger Objekte anzeigen###Montrer moins d'objets
+Wiki zur Karte###Wiki de la carte historique
+Windmühle###Moulin à vent
+Windmühle (Ruine)###Moulin à vent (en ruine)
+Wrack###Épave
+Wüstung###Village abandonné
+Zur Anzeige der Karte ist JavaScript erforderlich.###Cette carte a besoin de JavaScript
+ausgedehnte Objekte###Objets étendus
+Die Routen-Layer###Calque d'itinéraires
+Einzelobjekte###Objets singuliers
+Eisenbahnen###Chemins de fer
+experimentell###expérimental
+Freizeit###Loisirs
+Grundkarte###Fond de carte
+Hilfsebenen###Données complémentaires
+Inline-Skating###Patinage en ligne
+lizenziert unter###sous licence
+Mountainbike###Vélo tout-terrain
+Radwege###Pistes cyclables
+Schummerung###Relief
+Straßen###Routes
+Verwaltungsgrenzen###Limites administratives
+Wetter###Météo
+Zeichenwerkzeuge###Outils de dessin
+Zeichnen###Dessin
+Steuerelemente###Outils
+Zeigt diese Gruppe###Afficher ce groupe
+Versteckt diese Gruppe###Masquer ce groupe
+Zeigt diese Ebene###Afficher ce calque
+Versteckt diese Ebene###Masquer ce calque
+Wählt diese Ebene als Basisebene###Sélectionner comme calque de base
+Zeigt dieses Steuerelement###Afficher cet outil
+Versteckt dieses Steuerelement###Masquer cet outil
+Verringert die Deckkraft der Ebene###Réduire l'opacité de ce calque
+Erhöht die Deckkraft der Ebene###Augmenter l'opacité de ce calque
+Verringert die Deckkraft des Steuerelements###Réduire l'opacité de cet outil
+Erhöht die Deckkraft des Steuerelements###Augmenter l'opacité de cet outil
+Navigationsfenster###Navigation
+Reit- und Wanderkarte###Carte de randonnée
+Statue###Statue
+Aquädukt###Aqueduc
+Ehemaliger Wassermühlenstandort###Empl. d'un ancien moulin à eau
+Ehemaliger Windmühlenstandort###Empl. d'un ancien moulin à vent
+Ehemaliger Schacht###Ancien puits
+Ehemaliger Stollen###Ancienne galerie
+Wappen###Armoiries / Blason
+Bergehalde###Terril minier
+Schlackenhalde###Terril de scories
+Müllhalde###Décharge
+Bohrung###Puits de forage / sondage
+Museumsbahnlinie###Chemin de fer historique
+stillgelegt###fermé
+nahezu komplett entfernt###rasé(e)
+Stehen lassen###Garder ouvert
+Historisches Gefängnis###Prison historique
+Suche###Chercher
+Kartenebenen###Calques de la carte
+Fenster schließen###Fermer la fenêtre
+Köhlerei###Charbonnière
+Töpferei###Poterie
+Ziegelei###Briqueterie
+Kalkbrandofen###Four à chaux
+Pechhütte###Four à goudron
+Glashütte###Four à verre
+Brennofen###Four
+Kohlenmeiler###Charbonnière
+Schornstein###Cheminée
+Portal###Portail
+Tunnelportal###Entrée de tunnel
+Fachwerkhaus###Maison à colombages
+Felsenkeller###Cave
+Maultierpfad###Chemin muletier
+Umgebindehaus###Maison de Haute-Lusace
+Wohnturm###Maison-tour
+Wehrturm###Tour (fortification)
+Wachturm###Tour de guet
+Skisprungschanze###Tremplin de saut à ski
+Optischer Telegraf###Sémaphore
+Historisches Militärgelände###Site militaire historique
+Historische Straße###Voie ancienne
+Arbeitslager###Camp de travail
+Ehemaliges Bergwerk###Ancienne mine
+Erbaut###Bâti en
+Historische Karten###Cartes historiques
+Verweise auf Fremdkarten###Liens vers des cartes extérieures
+Objekte Bearbeiten###Modifier des objets
+Downloads###Téléchargements
+Karten-Zoom###Zoom
+Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###Veuillez s'il vous plaît d'abord zoomer de ${zoom} à ${minZoom}
+Zoomt auf Ausdehnung###Zoom à la taille
+Entfernt das Layer###Effacer le calque
+Lokale Dateien###Fichiers locaux
+GPX einlesen###Chargement des traces gps
+Einstellungen in Cookie speichern###Enregistrer les paramètres dans un cookie
+Cookie gespeichert###Cookie sauvegardé
+Permalink###Permalien
+Übersichtskarte über verfügbare historische Karten###Synthèse des cartes historiques
+Historische Karten im Ausschnitt###Liste des cartes historiques
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Cliquez pour agrandir l'image, voir l'auteur, la licence et les détails de l'image
+Historisches Schienenfahrzeug###Véhicule ferroviaire historique
+Historisches Ausstellungsstück###Exposition d’intérêt historique
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###Lire le(s) fichier(s) GPX depuis le système local
+Reiten###Équitation
+Die Datei ${name} ist ${size} Bytes groß###Le fichier ${name} fait ${size} octets.
+Das Laden kann etwas dauern. Fortsetzen?###Le téléchargement peut prendre du temps. Continuer?
+Ende###Fin en
+Hilfe###Aide
+Messwerkzeug###Mesure d'une longueur
+Kriegsgräberstätte###Cimetière militaire
+Umgebung mit###Environs par
+Pflanzjahr###Année de plantation
+Mehr Infos von###Plus d'infos avec
+vor Christus###avant J.-C.
+vor###avant
+nach###après
+Anfang###début
+um###aux environs de
+Mitte###mi
+gegen Ende###fin
+Kunstwerk###Œuvre d'art
+Transformatorenturm###Tour de transformateur
+OSM deutscher Stil###OSM German style
+Reit- und Wanderkarte###Riding and hiking map
+Topgrafische Karte von Maxbe###Topgraphic map of Maxbe
+Regionen###Natural regions, mountain ranges,
+Historische Grenzen (experimentell)###Historical boundaries (experimental)
+Jahrhundert###ème siècle

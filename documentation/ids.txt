@@ -1,0 +1,170 @@
+Belgien 1918              Ga
+KLEKs MTB 1920            Gb
+KLEKs MTB 1880            Gc
+Austriece 1910            Gd
+Berlin 1860               Ge
+Siebenbürgen 1862         Gf
+PLZ-Grenzen               Gg
+Höhenlinien               Gh
+Spandau 1938              Gi
+Dresden 1833              Gj
+Moskau 1836               Gk
+NLS Maps API              Gl
+Zeichnen                  Gm
+planuri_tragere_20k       Gn
+Deutsches Reich 1893      Go
+German Maps 1936          Gp
+Newport 1845              Gq
+Umgebung von Wien 1941    Gr
+Schummerung               Gs
+Belgrad1940               Gt
+Budapest 1933             Gu
+Verwaltungsgrenzen        Gv
+Schwarzwald(Nord) 1920    Gw
+Helsinki_1900             Gx
+Lyon_1888                 Gy
+Postleitzahlen            Gz
+
+
+Tartu_1892                Ma
+Umeå 1937                 Mb
+Zuerich_1910              Mc
+Zuerich_1504              Md
+Lindau_1822               Me
+Cherbourg_1943            Mf
+Markgröningen_1751        Mg
+Urmesstisch_Berlin_1835-1840 Mh
+Topografische kaart Vandermaelen (1846-1854) Mi
+Atlas cadastral parcellaire de la Belgique, P.C. Popp, 1842-1879  Mj
+Atlas der Buurtwegen (ca 1840), Vlaanderen  Mk
+Frickx-kaart (1744), Vlaanderen             Ml
+Ferrariskaart (1777), Vlaanderen            Mm
+Duebener-Heide-1895                         Mn
+Duebener-Heide_Flurnamen_1800               Mo
+Berlin 1907                                 Mp
+Preußische Kartenaufnahme Rheinland (1843-1878)   Mq
+Top. Aufnahme der Pfalz (1836-1841)               Mr
+Rheinland 1803-1820                               Ms
+USA 1900                                          Mt
+Sachsen vor 1945                                  Mu
+Sachsen DDR                                       Mv
+Sachsen 1990-1996                                 Mw
+Berlin 1940                                       Mx
+Freiburg 1944                                     My
+Zürich Denkmalschutzobjekte                       Mz
+Zürich Archäologische Zonen                       Na
+Wien 1912                                         Nb
+Rostock 1911                                      Nc
+Kliverkarte                                       Nd
+Denkmal-Hamburg                                   Ne
+Grenzsteine-Hamburg                               Nf
+Gartendenkmal-Hamburg                             Ng
+Baudenkmal-Hamburg                                Nh
+Denkmal-Ensemble-Hamburg                          Ni
+Baudenkmal Berlin                                 Nj
+Bodendenkmale Berlin                              Nk
+Denkmal-Ensemble Berlin                           Nl
+Gartendenkmal Berlin                              Nm
+Gesamtanlage Berlin                               No
+Gewässer Hamburg                                  Np
+Moers Denkmal-Flächen                             Nq
+Moers Denkmal-Punkte                              Nr
+Moers Denkmal-Linien                              Ns
+Bonnebladen 1865                                  Nt
+Dutch Topographical & Military Map 1850           Nu
+Rostock_Tarnow_1790                               Nv
+Rostock_1788                                      Nw
+Rostock Wiebeking 1786                            Nx
+Wien 1684                                         Ny
+Gent 1841                                         Nz
+Schweiz 1941-1964                                 Oa
+Duhamel-Atlas					  Ob
+Atlas Fourcy (Paris)				  Oc
+Heimatkarte Saargebiet 1927                       Od
+Mines_D_Anzin                                     Oe
+Oberschlesisches Steinkohlebecken 1902		  Of
+Stockholm 1861                                    Og
+Göteborg 1888                                     0h
+Zürich 1793 (Müllerplan)                          Oi
+Zürich 1900                                       Oj
+Zürich 1864 (Kellerplan)                          Ok
+Zürich 1860                                       Ol
+TayNinh 1898                                      Om
+New London County Baker 1854                      On
+Fairfield County Chace 1856, Hartford County Woodford 1855  Op
+Litchfield County Hopkins 1854, Windham County Woodford 1856 Oq
+Polen 1920                                        Or
+Frankreich 1799                                   Os
+Egypt 1885                                        Ot
+Brasil 1911                                       Ou
+yogoslawien                                       Ov
+Finmarken 1861                                    Ow
+Memorial Atlas of Ireland 1901                    Ox
+Ireland British War Office                        Oy
+Leipzig 1850-1892                                 Oz
+
+Eestimaa füüsiline kaart (1922)                   Va
+Japan 1890                                        Vb
+Spezialkarte der osterreichisch-ungarischen Monarchie     Vc
+Digital Map of the Roman Empire                   Vd
+Sächsische_Kantoneinteilung_(1814)                Ve
+Tel Aviv 1936                                     Vf
+Topographische Karte über das Grossherzogthum Baden  Vg
+Atlas_Tyrolensis                                  Vh
+Verkehrskarte Magdeburg 1922                      Vi
+Carte industrielle de la région parisienne        Vj
+Reisekarte Deutschland 1859                       Vk
+Ostbelgien Grenze                                 Vl
+Ostbelgien Grenze 1936                            Vm
+Westrussland 1905                                 Vn
+
+Marker                   Sa
+TK25                     Sb
+TK50                     Sc
+TK100                    Se
+TK200                    Sg
+Distance                 Sd
+Uebersichtskarte         Sf
+Kompass                  Sk
+Tooltipschalter          Sn
+Routing                  Sr
+Geolocation              Sl
+Zeichenwerkzeuge         Sz
+
+DTK200-V                                      Ka
+Bundesamt für Kartographie und Geodäsie 2017  Kb
+OpenCycleMap             Kc
+OSM deutscher Stil       Kd
+OSM style français       Kf
+Hike & Bike Map          Kh
+Landscape                Kl
+mapnik                   Km
+OpenTopoMap              Kp
+MapQuestOpen             Kq
+Reit- und Wanderkarte    Kr
+Pioneer                  Ks
+TransportMap             Kt
+Outdoors                 Ku
+No Background            Kv
+Mapnik b/w               Kw
+OSM Japan                Kx
+Neighbourhood            Ky
+OpenRailwayMap           Kz
+
+Inline-Skating           Li
+Mountainbike             Lm
+Radwege                  Lr
+Wanderwege               Lw
+Reiten                   Lj
+
+
+
+
+ausgedehnte Objekte     Ha
+Labels-Regionen         Hb
+Labels-Admin            Hc
+Regionsgrenzen          Hd
+Einzelobjekte           He
+Eisenbahnen             Hr
+Straßen                 Hs
+Historische Grenzen     Hg

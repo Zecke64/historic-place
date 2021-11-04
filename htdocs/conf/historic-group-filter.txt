@@ -1,0 +1,380 @@
+#-------------------------------------------------------------------------------
+#	$Id: historic-group-filter.txt,v 1.5 2017/12/03 09:55:55 wolf Exp $
+#-------------------------------------------------------------------------------
+
+--define-subgroups image,userinfo
+	--include	image=*
+
+--define-subgroups	userinfo
+	--include	wikidata|wikipedia|wikipedia:*|website|inscription:url|url=*
+
+--group	Wke
+	--include	heritage=1
+
+--group	Area
+	--include	boundary=protected_area&protect_class=22
+
+--group	Razed
+ 	--include	historic=razed:windmill|razed:watermill|razed:mine|razed:adit|razed:mine|razed:mineshaft|razed:mine_shaft
+  	--include	razed:man_made=watermill|windmill
+  	--include	razed=yes&man_made=windmill|watermill|drill_hole|adit|mine|mineshaft|spoil_heap
+	--include	razed:man_made=adit|drill_hole|mine|mineshaft|spoil_heap
+	--include	razed:man_made=water_tower&historic=*
+	--include	demolished:historic=citywalls
+
+--group	War_cemetery
+	--include	cemetery=war_cemetery
+	--include	historic=tomb&tomb=war_grave
+
+--group	Jewish_grave
+	--include	landuse=cemetery&religion=jewish&heritage|historic|wikipedia=*
+	--include	landuse=cemetery&religion=jewish&boundary=protected_area
+	--include	amenity=grave_yard&religion=jewish&heritage|wikipedia|historic=*
+
+--group	Reservoir_covered
+	--include	man_made=reservoir_covered&heritage|historic=*
+
+--group	Optical_telegraph
+	--include	historic|razed:historic=optical_telegraph
+
+--group	Abandoned_place
+	--include	 abandoned:place|razed:place=*
+	--include	 abandoned=village
+
+--group	Historic_place
+	--include	 historic:place=*
+
+--group	Timber_frame
+	--include	building:architecture=timber_frame
+
+--group	Umgebinde
+	--include	building:architecture=umgebinde
+
+--group	Lavoir
+	--include	historic=lavoir
+
+--group	Pinge
+	--include	historic=mine&natural=sinkhole
+
+--group	Aquädukt
+	--include	historic=aqueduct
+
+--group	Coats_of_arms
+	--include	historic=coat_of_arms
+	--include	historic=stone&stone_type=coat_of_arms
+
+--group	Prison_camp
+	--include	abandoned:amenity=prison_camp|prison
+	--include	amenity=prison&prison=prison_camp
+
+--group	Bunker
+	--include	building|military=bunker&historic=*
+	--include	building=bunker&abandoned:military=*
+	--include	military=bunker&bunker_type=pillbox
+	--include	historic|abandoned:military|disused:military|abandoned:building|disused:building=bunker
+
+--group	Quarry
+	--include	historic|abandoned:landuse|disused:landuse=quarry
+	--include	landuse=quarry&historic=yes
+
+--group	Bomb_crater
+	--include	historic=bomb_crater
+
+--group	Industrial
+	--include	historic=industrial
+
+--group	Townhall
+	--include	amenity=townhall&historic=*
+
+--group	Pillory
+	--include	historic=pillory|stocks
+
+--no-group
+	--include	historic=no
+
+--group	Boundary_stone
+	--include	historic=boundary_stone
+	--include	boundary=marker&marker=stone&historic=*
+	--include	boundary=marker&marker=rock|engraving|sandstone|granite_stone
+
+--group	Monastery
+	--include	building|amenity=monastery&historic=*
+	--include	historic|abandoned:historic|abandoned:amenity=monastery
+	--include	historic=abbey
+
+--group	Bismarckturm
+	--include	historic|abandoned:historic|disused:historic=tower|memorial&network|tower:network=Bismarckturm
+	--include	building|man_made|disused:man_made|abandoned:man_made|razed:man_made=tower&network|tower:network=Bismarckturm
+
+--group	Tower
+	--include	historic|abandoned:historic|disused:historic=tower
+	--include	building=tower&historic|heritag=*
+	--include	historic=water_tower
+	--include	man_made=tower&historic|heritage=*
+	--include	man_made=campanile
+	--include	disused:man_made|abandoned:man_made=tower&historic|heritage=*
+	--include	man_made|disused:man_made|abandoned:man_made=water_tower|lighthouse&historic=*
+
+--group	City_gate
+	--include	historic=city_gate
+
+--group	Tomb
+	--include	historic=tomb
+
+--group	Suehnekreuz
+	--include	historic=stone&stone_type=conciliation_cross
+	--include	historic=memorial&memorial:type=de:mordwange
+
+--group	Findling
+	--include	natural=stone&image|name|url|website|wikipedia|wikipedia:*|protected|heritage|wikidata=*
+
+--group	Stone
+	--include	historic=stone
+
+--group	Chapel
+	--include	historic=chapel
+	--include	building=chapel&historic=*
+
+--group	Wayside_chapel
+	--include	historic=wayside_chapel
+
+--group	Wayside_shrine
+	--include	historic=wayside_shrine|tree_shrine
+
+--group	Wayside_cross
+	--include	historic=wayside_cross
+
+--group	Gipfelkreuz
+	--include	summit:cross=yes
+	--include	man_made=cross
+
+--group	Survey_point
+	--include	man_made=survey_point&heritage|historic=*
+	--include	abandoned:man_made|razed:man_made=survey_point
+
+--group	Saxony_Milestone
+	--include	historic=milestone&network=Kursächsische_Postmeilensäule|Königlich_sächsischer_Meilenstein
+
+--group	Milestone
+	--include	historic=milestone
+
+--group	Spring
+	--use-subgroups image,userinfo
+	--include	natural=spring&historic=*
+
+--group	Stolperstein
+	--use-subgroups image,userinfo
+	--include	historic=memorial&memorial:type=stolperstein
+	--include	historic=memorial&memorial=stolperstein
+
+--group	Threshing_floor
+	--include	historic=threshing_floor
+
+--group	Tree
+	--include	natural=tree|tree_row&name=*
+	--include	natural=tree|tree_row&denotation=natural_monument
+	--include	natural=tree|tree_row&historic=memorial|monument|heritage
+	--include	natural=tree|tree_row&heritage=*
+
+--group	Aircraft
+	--include	historic=aircraft
+
+--group	Cannon
+	--include	historic=cannon
+
+--group	Lok
+	--include	historic=locomotive
+
+--group	Ship
+	--include	historic=wreck|ship
+
+--group	Watermill
+	--include	man_made|disused:man_made|abandoned:man_made=watermill
+
+--group	Windmill
+	--include	man_made|disused:man_made|abandoned:man_made=windmill
+
+--group	Headframe
+	--include	man_made=mineshaft&abandoned|disused|historic=yes&headframe=yes
+	--include	abandoned:man_made|disused:man_made|historic=mineshaft&headframe=*
+
+--group	Mineshaft
+	--include	man_made=mineshaft&abandoned|disused|historic=yes
+	--include	abandoned:man_made|disused:man_made|historic=mineshaft
+
+--group Portal
+	--include	man_made=portal&historic|heritage=*
+
+--group Chimney
+	--include	man_made=chimney&historic|heritage=*
+
+--group	Cellar
+        --include	man_made=cellar_entrance
+
+--group	Adit
+	--include	man_made=adit&abandoned|disused|historic=yes
+	--include	abandoned:man_made|disused:man_made=adit
+
+--group	Drill_hole
+	--include	man_made=drill_hole&abandoned|disused|historic=yes
+
+--group	Spoil_heap
+	--include	man_made=spoil_heap&abandoned|disused|historic=yes
+	--include	abandoned:landuse=landfill&landfill=*
+	--include	landuse=landfill&landfill=*&abandoned|disused|historic=yes
+
+--group	Kiln
+	--include	historic=charcoal_kiln|charcoal_pile|lime_kiln|kiln
+	--include	man_made=kiln|tar_kiln&historic=*
+	--include	abandoned:man_made|disused:man_made=kiln
+
+--group	Mine
+	--include	historic=mine
+	--include	man_made=mine&abandoned|disused|historic=yes
+	--include	abandoned:man_made|disused:man_made=mine
+
+--group	Farm
+	--include	historic=farm|summer_mountain_farm
+	--include	historic:place=farm
+
+--group	Pump_manual
+	--use-subgroups image,userinfo
+	--include	man_made=water_well&pump=manual
+
+--group	Water_well
+	--include	man_made=water_well&historic=*
+	--include	amenity=fountain&historic=*
+
+--group	Palaeontological_site
+	--include	geological=palaeontological_site
+
+--group	Runestone
+	--include	historic=runestone|rune_stone
+
+--group	Battlefield
+	--include	historic=battlefield
+
+--group	Archaeological_site
+	--include	historic=archaeological_site|pa
+
+--group Manor
+	--include	historic=manor
+	--include	historic=castle&castle_type=manor
+
+--group	Castle
+	--include	historic|razed:historic=castle|fort|palace
+
+--group	City_wall
+	--include	historic=citywalls|city_wall
+	--include	barrier=city_wall
+
+--group	Wall
+	--include	historic=wall|castle_wall
+	--include	building|wall=castle_wall
+	--include	barrier=wall&historic=yes
+
+--group	Bridge
+	--use-subgroups image,userinfo
+	--include	historic=bridge
+	--include	man_made=bridge&historic|heritage=*
+	--include	bridge=*&historic|heritage=*
+
+--group Railway
+	--use-subgroups image,userinfo
+	--include	historic=rail|railway|station_site|railway_station
+	--include	historic:railway|railway:historic=*
+	--include	railway=abandoned
+	--include-if-member	railway=*
+
+--group	Gallows
+	--include	historic=gallows
+
+--group	Ski
+	--use-subgroups image,userinfo
+	--include	abandoned:sport=ski_jumping
+
+--group	Ruins
+	--use-subgroups image,userinfo
+	--include	historic=ruins
+
+--group	Technical_monument
+	--use-subgroups	image,userinfo
+	--include	description|historic=technical_monument
+
+--group	Exhibit
+	--include	historic=exhibit|railway_car
+
+--group	Monument
+	--include	historic=monument
+
+--group	Plate
+	--use-subgroups image,userinfo
+	--include	historic=memorial&memorial:type=plaque|plate
+	--include	historic=memorial&memorial=plaque
+	--include	historic=plaque
+
+--group	Plaque
+	--use-subgroups image,userinfo
+	--include	historic=memorial&memorial=blue_plaque
+	--include	historic=blue_plaque
+
+--group	Military
+	--include	historic:landuse=military
+	--include	abandoned:military|razed:military=*
+
+--group	Memorial
+	--use-subgroups image,userinfo
+	--include	historic=memorial
+	--include	man_made=obelisk&historic=*
+
+--group	Place_of_worship
+	--include	amenity=place_of_worship&heritage|historic|image|url|website|wikidata|wikipedia|wikipedia:*=*
+	--include	amenity=place_of_worship&building=hermitage
+	--include	historic=church|hermitage|place_of_worship
+
+--group	Heritage_site
+	--include	heritage=1|2|3|4|5|6|7|8|9|10|yes&type=site
+
+--group	Heritage02
+	--include	heritage=2
+--group	Heritage03
+	--include	heritage=3
+--group	Heritage04
+	--include	heritage=4
+--group	Heritage05
+	--include	heritage=5
+--group	Heritage06
+	--include	heritage=6
+--group	Heritage07
+	--include	heritage=7
+--group	Heritage08
+	--include	heritage=8
+--group	Heritage09
+	--include	heritage=9
+--group	Heritage10
+	--include	heritage=10
+
+--group	Heritage00
+	--include	heritage=yes
+	--include	historic=heritage|protected_building
+	--include	preservation=*
+
+--group	Building
+	--include	historic=building|house
+	--include	historic=*&building=*
+
+--group	Road
+	--include	route=historic|road&historic=road|roman_road|Altstraße|altstraße|mule_path|packhorse_trail|hollow_way
+	--include	historic=road|roman_road|Altstraße|altstraße|mule_path|packhorse_trail|hollow_way
+	--include	abandoned:historic=mule_path|packhorse_trail
+
+--group	Info
+	--include	board_type=history
+
+--group	Sonstiges
+	--use-subgroups image,userinfo
+	--include	historic=*
+
+#-------------------------------------------------------------------------------
+#	$Id: historic-group-filter.txt,v 1.5 2017/12/03 09:55:55 wolf Exp $
+#-------------------------------------------------------------------------------

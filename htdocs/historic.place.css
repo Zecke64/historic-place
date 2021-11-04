@@ -1,0 +1,184 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#hintergrund {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	z-index: 1;
+}
+
+#content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	overflow: auto;
+}
+
+#Special_maps{
+	position:absolute; top:33%; left:70%;font-weight:bold; 
+	font-family: "Times New Roman", serif;
+}
+#Wiki {
+	position:absolute; top:30%; left:10%;font-weight:bold;
+	font-family: "Times New Roman", serif;
+}
+#menu {
+	position:absolute; top:30%; left:40%;font-weight:bold;
+	font-family: "Times New Roman", serif;
+}
+
+#anbieterkennung {
+	position:absolute; top:85%; left:5%;font-weight:bold;
+}
+
+#News {
+	position:absolute; top:78%; left:5%;font-weight:bold;
+	font-family: "Times New Roman", serif;
+	font-size:150%;
+}
+#FaceBook {
+	position:absolute; top:70%; left:5%;font-weight:bold;
+	font-family: "Times New Roman", serif;
+	font-size:100%;
+}
+
+
+// Der Tooltip für die latest news
+
+span#hint:hover { background-color: #3D6199; }
+
+div.tooltip {
+	background-color:rgba(255,221,187,0.9);
+	position: absolute;
+	left: 150px;
+	top: -25px;
+	z-index: 1000000;
+	width: 400px;
+	border-radius: 5px;
+	font-family: "Arial", sans-serif;
+	font-size:50%;
+}
+
+div.tooltip p {
+	margin: 10px;
+	color: #4C4C4C;
+}
+
+#Donate {
+	position:absolute; top:91%; left:5%;font-weight:bold;
+	font-family: "Times New Roman", serif;
+	font-size:150%;
+}
+
+#menu {
+	font-size:150%;
+	position:absolute;  
+}
+
+#menu ul {
+	list-style-type:none;
+	list-style-image:none;
+	margin:0px;
+	padding:0px;
+}
+
+#menu li.topmenu {
+	float:left;
+}
+
+#wiki {
+	font-size:150%;
+	position:absolute;  
+}
+
+#wiki ul {
+	list-style-type:none;
+	list-style-image:none;
+	margin:0px;
+	padding:0px;
+}
+
+#wiki li.topmenu {
+	float:left;
+}
+
+#Special_maps {
+	font-size:150%;
+	position:absolute;  
+}
+
+#Special_maps ul {
+	list-style-type:none;
+	list-style-image:none;
+	margin:0px;
+	padding:0px;
+}
+
+#Special_maps li.topmenu {
+	float:left;
+}
+
+.topmenu a {
+	float:left;
+	width:310px; 
+	text-align:center;
+}
+
+.topmenu ul{
+	display:none;
+}
+
+.topmenu a{
+	padding:1px 5px;
+	text-decoration:none;
+	margin:0;  
+}
+
+.submenu a{
+	text-align: left;
+	padding:1px 5px;
+	border:1px solid rgba(195,116,0,0.3);
+	border-collapse:collapse;
+
+	font-weight:bold;
+	text-decoration:none;
+
+	margin:0;  
+
+	font-size:14px;
+	width:310px; 
+	position:relative;
+	background-color:rgba(255,221,187,0.5);
+	clear:both; /* special IE6 */
+}
+
+
+#menu a:hover, .topmenu.on a {
+	color:#4C4C4C;
+	background-color:#ffddbb !important;
+}
+
+#wiki a:hover, .topmenu.on a {
+	color:#4C4C4C;
+	background-color:#ffddbb !important; 
+}
+
+#Special_maps a:hover, .topmenu.on a {
+	color:#4C4C4C;
+	background-color:#ffddbb !important;
+}
+
+.topmenu:hover ul {
+	display:block;  
+	z-index:500;
+}
+

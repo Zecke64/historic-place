@@ -1,0 +1,1309 @@
+<html>
+<head>
+<LINK REL="SHORTCUT ICON" HREF="favicon.ico">
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type"></meta>
+<meta property="og:title" content="Historic Place" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://gk.historic.place/HPLACE_MAP/" />
+<meta property="og:image" content="https://gk.historic.place/m/HistoricPlaceFBVorschau.jpg" />
+<meta property="og:description" content="...an open map of the world" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$$Historische Objekte%%</title>
+
+<!--<script type="text/javascript" src="https://www.openlayers.org/api/OpenLayers.js"></script>-->
+<script type="text/javascript" src="../../../ol/OpenLayers.js"></script>
+<script type="text/javascript" src="../../../j/OpenStreetMap.js"></script>
+<script type="text/javascript" src="../../../j/geolocation.js"></script>
+<script type="text/javascript" src="../../../j/loadstatus.js"></script>
+<!-- <script type="text/javascript" src="https://nls.tileserver.com/api.js"></script> -->
+<script type="text/javascript" src="../../../j/nls.api.js"></script>
+<script type="text/javascript" src="../../../j/maplink.js"></script>
+<script type="text/javascript" src="../../../j/mouseposition_gk.js"></script>
+<script type="text/javascript" src="../../../j/multimarkz.js"></script>
+<script type="text/javascript" src="../../../j/nominatim_translation_SPRACHE.js"></script>
+<script type="text/javascript" src="../../../j/popupmarker.js"></script>
+<script type="text/javascript" src="../../../j/searchbox.js"></script>
+<script type="text/javascript" src="../../../j/updownswitch.js"></script>
+<script type="text/javascript" src="../../../j/zoomstatus.js"></script>
+<script type="text/javascript" src="../../../j/zoomwithdisplay.js"></script>
+<script type="text/javascript" src="../../../j/layerchanger.js"></script>
+<!--<script type="text/javascript" src="../../../j/distance.js"></script>-->
+<script type="text/javascript" src="../../../j/localtracks.js"></script>
+<script type="text/javascript" src="../../../j/cookies.js"></script>
+<script type="text/javascript" src="../../../j/tk.js"></script>
+<script type="text/javascript" src="../../../j/measure_tool.js"></script>
+<script type="text/javascript" src="../../../j/osrm5_analyzer.js"></script>
+<script type="text/javascript" src="../../../j/jsonp.js"></script>
+<script type="text/javascript" src="../../../j/usertiles.js"></script>
+<script type="text/javascript" src="../../../j/OpenLayers_Layer_Vector_backgroundImage_Patch.js"></script>
+<script type="text/javascript" src="../../../j/layerlabels.js"></script>
+
+<!-- internationalisierte Skripte -->
+<script type="text/javascript" src="config.js"></script>
+<script type="text/javascript" src="histmap.js"></script>
+<script type="text/javascript" src="../../../j/i18n.js"></script>
+
+<!-- fuer alle Sprachen gleich -->
+<link rel="stylesheet" type="text/css" href="../../histmap.css" />
+<link rel="stylesheet" type="text/css" href="../../icon.css" />
+<link rel="stylesheet" type="text/css" href="../../layerchanger.css" />
+
+<script src="../../../j/jquery.js"></script>
+<script>
+    $(function(){
+      $("#includedContent").load("../../../latestnews.html");
+    });
+</script>
+
+</head>
+
+<body>
+
+
+<!--============  Sprachauswahl ==================-->
+<div id="legend" title="Help Tools">
+	<div id="flagicon"><a href="../../../" onclick="" title="Home, sweet home!"><img src="../../../m/hphome.png"></a></div>
+	<div id="flagicon"><a href="#Anfang" onclick="toggleInfo()" title="$$Legende und Infos%%"><img src="../../../i/info.png" width="20px" height="20px"></a></div>
+	<div id="flagicon"><a onclick="toggleInfo2()" title="Copyright"><img src="../../../i/Copyright.png" width="20px" height="20px"></a> </div>
+	<div id="flagicon"><a href="https://www.facebook.com/groups/585054798320182/" target="_blank" onclick="" title="FaceBook group"><img src="../../../i/fb-group.png" width="19px" height="19px" /></a></div>
+        <div class="flagicon" id="News" title="">
+        <span class=chint id="hint">
+          <a href="https://wiki.openstreetmap.org/wiki/Historic.Place/News">
+          <img src="../../../m/newskreis.png" width="20px" height="20px">
+          </a>
+        </span>
+        </div>
+
+        <div id="includedContent" style="display: none;"></div>
+
+        <script type="text/javascript">
+
+                // Tooltip fuer News
+
+                $(document).ready(function() {
+                  $("span#hint").hover(function () {
+                    $(this).append('<div class="newstip" id="tt"><p></p></div>');
+                    $('#tt').html($('#includedContent').html());
+                    $('#tt').hide().fadeIn(500);
+                          }, function () {
+                    $("div.newstip").remove();
+                  });
+                });
+
+        </script>
+
+	<div class="flagicon" id="keks" title="$$Einstellungen in Cookie speichern%%" onclick="storeCookie();">
+          <img src="../../../m/diskette.png" width="19px" height="19px">
+        </div>
+	<div id="cookie-saved" > $$Cookie gespeichert%% </div>
+
+        <div class="flagicon" id="globusdiv" title="$$Historische Karten im Ausschnitt%%: 0" onclick="open_group('oldmap');" >
+          <img id="globus" src="../../../m/globus-blau.png" width="21px" height="21px">
+        </div>
+         <div id="flagicon"><a onclick="toggleInfo3()" title="$$Sprachauswahl%%"><img src="../../../i/Language.png"></a></div>
+        <div id="flagicon"><a href="https://wiki.openstreetmap.org/wiki/Historical_Objects/DE:Help" target="_blank" onclick="" title="$$Hilfe%%"><img src="../../../m/question.png" width="20px" height="19px" style="margin-right: 30px;" /></a></div>
+
+<div class="hide" id="description3">
+	<a href="#" onclick="switch_lang('de')" title="Deutsch"><img src="../../../m/flag-de.png" align="left">de</a><br/>
+	<a href="#" onclick="switch_lang('en')" title="English"><img src="../../../m/flag-ukdom.png" align="left">en</a><br/>
+	<a href="#" onclick="switch_lang('nl')" title="Nederlands"><img src="../../../m/flag-nl.png" align="left">nl</a><br/>
+	<a href="#" onclick="switch_lang('fr')" title="Français"><img src="../../../m/flag-fr.png" align="left">fr</a><br/>
+	<a href="#" onclick="switch_lang('pt-br')" title="Português do Brasil"><img src="../../../m/flag-pt-br.png" align="left">pt-br</a><br/>
+	<a href="#" onclick="switch_lang('cs')" title="Česky"><img src="../../../m/flag-cs.png" align="left">cs</a><br/>
+	<a href="#" onclick="switch_lang('es')" title="Español (Castellano)"><img src="../../../m/flag-es.png" align="left">es</a><br/>
+	<a href="#" onclick="switch_lang('gl')" title="Galego"><img src="../../../m/flag-gl.png" align="left">gl</a><br/>
+	<a href="#" onclick="switch_lang('ro')" title="Română"><img src="../../../m/flag-ro.png" align="left">ro</a><br/>
+	<a href="#" onclick="switch_lang('tr')" title="Türk"><img src="../../../m/flag-tr.png" align="left">tr</a><br/>
+	<a href="#" onclick="switch_lang('ru')" title="ру́сский"><img src="../../../m/flag-ru.png" align="left">ru</a><br/>
+	<a href="#" onclick="switch_lang('da')" title="Dansk"><img src="../../../m/flag-da.png" align="left">da</a><br/>
+	<a href="#" onclick="switch_lang('pl')" title="Polski"><img src="../../../m/flag-pl.png" align="left">pl</a><br/>
+	<a href="#" onclick="switch_lang('ja')" title="日本語"><img src="../../../m/flag-ja.png" align="left">ja</a><br/>
+	<a href="#" onclick="switch_lang('hu')" title="magyar"><img src="../../../m/flag-hu.png" align="left">hu</a><br/>
+	<a href="#" onclick="switch_lang('ko')" title="한국어"><img src="../../../m/flag-ko.png" align="left">ko</a><br/>
+	<a href="#" onclick="switch_lang('uk')" title="українська"><img src="../../../m/flag-uk.png" align="left">uk</a><br/>
+
+<a href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Translations" target='_blank' title="Your Language"><img src="../../../m/flag-none.png" align="left">Your Language</a>
+	
+</div>
+</div>
+<!--============  Infobox-Switch  ==================-->
+
+<!--<div class="noprint" id="descriptionToggle" onclick="toggleInfo()">Legende & Info anzeigen</div> -->
+
+<!--============  Infobox  ==================-->
+<div class="hide" id="description2">
+<h2>Copyright</h2>
+<ul type="circle">
+<li><a href="../../../c/kontakt-formular2.php" target="_blank" >Report copyright violation</a>
+<li>All map tiles copyrighted by
+<a href="https://www.openstreetmap.org/copyright/en" target="_blank" >OpenStreetMap und Mitwirkende</a>
+<a href="https://creativecommons.org/licenses/by-sa/2.0/" target="_blank" >CC BY-SA)</a></li>
+<!--<li>Layer OpenMapSurfer Administrative Boundaries  copyrighted by<br/>
+<a href="https://giscience.uni-hd.de" target="_blank">GIScience Research Group</a> @ University of Heidelberg,
+                        + Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors,
+                        + licensed under <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">ODbL</a></li>-->
+<!--<li> Layer Vorarlberg-Urmappe 1857 copyrighted by <a href="https://www.vorarlberg.at">"© Land Vorarlberg"</a></li>-->
+<li> Search by <a href="https://wiki.openstreetmap.org/wiki/Nominatim_usage_policy" target="_blank">Nominatim, + licensed under <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">ODbL</a></li>
+<li> Map based on <a href="https://openlayers.org/" target="_blank">Openlayers</a></li>
+<li> Shading Layer data by <a href="https://nasa.gov/" target="_blank">NASA SRTM</a></li>
+<li> Hike & Bike Map by <a href="https://wiki.openstreetmap.org/wiki/Hike_%26_Bike_Map" target="_blank">Hike & Bike Map</a> @ Colin Marquardt,
+                        + Data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors,
+                        + licensed under <a href="https://opendatacommons.org/licenses/odbl/" target="_blank">ODbL</a></li>
+<li>Historical maps layer from <br/>
+<!--<a href="https://www.swisstopo.admin.ch" target="_blank">Bundesamt für Landestopografie swisstopo</a>, <a href="https://opendata.swiss/de/dataset/geologische-generalkarte-der-schweiz-1-2000001" target="_blank">opendata swiss</a><br/>-->
+<a href="https://digitalcollections.nypl.org" target="_blank">The New York Public Library Digital Collections</a><br/>
+<a href="https://opendata.leipzig.de/" target="_blank">Open Data, Stadt Leipzig</a><br/>
+<a href="https://www.tcd.ie/library/map-library/" target="_blank">Glucksman Map Library, Trinity College Dublin</a><br/>
+<a href="https://library.nuigalway.ie/" target="_blank">James Hardiman Library, National University of Ireland</a><br/>
+<a href="https://www.digar.ee/arhiiv" target="_blank">Estonian National Library (DIGAR)</a><br/>
+<a href="https://www.library.ethz.ch/de/" target="_blank">ETH-Bibliothek Zürich,</a>, <a href="https://creativecommons.org/publicdomain/mark/1.0/deed.de" target="_blank">Public Domain Mark</a><br/>
+<a href="https://kartverket.no/Kart/Historiske-kart/Historiske-kart-galleri/" target="_blank">Kartverket (Norges Geografiske Oppmåling)</a>, <a href="https://creativecommons.org/licenses/by/4.0/deed.no" target="_blank">(CC BY 4.0)</a><br/>
+<a href="https://www.geographicus.com/" target="_blank">Geographicus Rare Antique Maps, </a> <a href="https://commons.wikimedia.org/wiki/Commons:Licensing#Material_in_the_public_domain" target="_blank">Public domain</a><br/>
+<a href="https://www.bpl.org/" target="_blank">Boston Public Library,</a> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">(CC BY-NC-SA)</a><br/>
+<a href="https://www.digitalcommonwealth.org/" target="_blank">Digital Commonwealth,</a> <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" target="_blank">(CC BY-NC-SA)</a><br/>
+<a href="http://magic.lib.uconn.edu/" target="_blank">UCONN University of Connecticut Libraries - MAGIC,</a> <a href="https://creativecommons.org/licenses/by-nc/2.0/" target="_blank">(CC BY-NC 2.0)</a><br/>
+<a href="https://www.loc.gov" target="_blank">Library of Congress, Geography and Map Division,</a> <a href="https://creativecommons.org/licenses/by-nc/2.0/" target="_blank">(CC BY-NC 2.0)</a><br/>
+<a href="https://data.stadt-zuerich.ch/dataset" target="_blank">Open Data Zürich,</a> <a href="https://opendefinition.org/licenses/cc-zero/" target="_blank">(Creative Commons CCZero)</a><br/>
+<a href="https://www.zb.uzh.ch/index.html.de" target="_blank">Zentralbibliothek Zürich, Kartensammlung,</a> <a href="https://opendefinition.org/licenses/cc-by-sa/" target="_blank">(Creative Commons Attribution Share-Alike)</a><br/>
+<a href="https://lib.ugent.be/nl" target="_blank">Universiteitsbibliotheek Gent</a>, <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/be/deed.nl" target="_blank">(CC BY-NC-SA 2.0 BE)</a><br/>
+<a href="https://www.govdata.de/dl-de/zero-2-0" target="_blank">Stadt Mo­ers, (dl-de/zero-2-0)</a><br/>
+<a href="https://daten.berlin.de/datensaetze?field_publisher_tid=1446" target="_blank">Landesdenkmalamt Berlin</a>, <a href="https://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf" target="_blank">GeoNutzV-Berlin</a><br/>
+<a href="https://transparenz.hamburg.de/" target="_blank">Freie und Hansestadt Hamburg, Kulturbehörde</a>, <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">(dl-de/by-2-0)</a><br/>
+<a href="https://opendata.rug.nl/datasets?group_id=cfe67a82c2754794a6ff0dfbf0e84603" target="_blank">Kadaster, University of Groningen</a><br/>
+<a href="https://www.opendata-hro.de/dataset/plan-von-rostock_1911/resource/18e531e2-b28b-4ae2-9630-940bf60df6ad" target="_blank">© Hansestadt Rostock</a>, <a href="https://opendatacommons.org/licenses/by/1.0/" target="_blank">(ODC-By) v1.0</a><br/>
+<a href="https://www.data.gv.at/katalog/dataset/35102370-ad3b-41e5-a5c3-567750be2711" target="_blank">© Stadt Wien</a>, <a href="https://creativecommons.org/licenses/by/3.0/at/deed.de" target="_blank">(CC BY 3.0 AT)</a><br/>
+<a href="https://stadtplan.freiburg.de/mapbender/frames/index.php?&gui_id=stadtplan" target="_blank">© Stadt Freiburg</a>, <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">(DL-DE-BY-2.0)</a><br/>
+<a href="https://daten.berlin.de/datensaetze" target="_blank">Open Data Berlin</a><br/>
+<a href="https://www.geosn.sachsen.de/" target="_blank">© Staatsbetrieb Geobasisinformation und Vermessung Sachsen (GeoSN), 2016</a><br/>
+<a href="https://www.lvermgeo.rlp.de" target="_blank">©GeoBasis-DE / LVermGeoRP 2016</a><br/>
+<a href="https://nationalmap.gov/historical/" target="_blank">United States Geological Survey - Historical Topographic Maps </a><br/>
+<a href="https://warper.wmflabs.org/" target="_blank">Wikimaps Warper</a><br/>
+<a href="http://www.geo-spatial.org/" target="_blank">geo-spatial.org</a><br/>
+<a href="https://www.llgc.org.uk/en/" target="_blank">National Library of Wales</a><br/>
+<a href="http://www.ra.ee/kaardid/index.php/en/map/view?id=229226" target="_blank">National Archives of Estonia</a><br/>
+<a href="https://gallica.bnf.fr/" target="_blank">gallica.bnf.fr / Bibliothèque nationale de France</a><br/>
+<a href="http://visualiseur.bnf.fr/CadresFenetre?O=IFN-8439740&M=imageseule" target="_blank">Bibliothèque nationale de France</a><br/>
+<a href="https://www.hri.fi/data/fi/dataset/opaskartta-helsingin-kaupungista-vuodelta-1900" target="_blank">Helsinki Region Infoshare</a><br/>
+<a href="http://english.mapywig.org/news.php" target="_blank">Map Archive of Wojskowy Instytut Geograficzny 1919 - 1939 (non-commercial use)</a><br/>
+<!--<a href="https://www.kleks-online.de/" target="_blank">KLEKS + licensed under <a href="https://www.kleks-online.de/wms_historische_karten.php" target="_blank">KLEKS-WMS</a><br/>-->
+<a href="https://maps.nls.uk/projects/api/index.html" target="_blank">National Library of Scotland</a><br/>
+<a href="https://lib.byu.edu/collections/german-maps/" target="_blank"> BYU Harold B. Lee Library</a><br/>
+<a href="https://www.davidrumsey.com" target="_blank">David Rumsey Map Collection</a><br/>
+<a href="https://www.utexas.edu/" target="_blank"> The University of Texas Libraries at Austin.</a><br/>
+<a href="https://www.landesarchiv-bw.de/web/" target="_blank"> Landesarchiv Baden-Württemberg.</a><br/>
+<a href="https://www.agiv.be/" target="_blank">  AGIV Agentschap voor Geografische Informatie Vlaanderen.</a><br/>
+<a href="https://www.lda-lsa.de/" target="_blank"> Archiv,Landesamt für Denkmalpflege und Archäologie Sachsen-Anhalt.</a><br/>
+<a href="https://www.sulb.uni-saarland.de/" target="_blank"> Saarländische Universitäts- und Landesbibliothek (SULB)</a><br/>
+Bibliothèque de l’École des mines de Paris, <a href="https://www.bib.mines-paristech.fr/" target="_blank"> MINES ParisTech</a><br/>
+<a href="https://www.riksarkivet.se/goteborg" target="_blank"> Riksarkivet, Landsarkivet i Göteborg</a><br/>
+<a href="https://stockholmskallan.se/" target="_blank"> Stockholms stadsarkiv</a><br/>
+<a href="http://commons.pelagios.org/credits/" target="_blank">Pelagios Commons</a><br/>
+<a href="https://dare.ht.lu.se" target="_blank">Department of Archaeology and Ancient History, Lund University, Sweden</a><br/>
+<a href="https://www.ub.uni-heidelberg.de/helios/digi/karten/welcome.html" target="_blank">Universitätsbibliothek Heidelberg Ministerium für Wissenschaft, Forschung und Kunst Baden-Württemberg</a><br/>
+<a href="https://www.tirol.gv.at/kunst-kultur/landesarchiv/archiv-und-quelle/24/" target="_blank">Tiroler Landesarchiv -Historische Kartenwerke Tirol-, <a href="https://en.wikipedia.org/wiki/Public_domain" target="_blank">Public domain</a><br/>
+<a href="https://www.bsb-muenchen.de/" target="_blank">Bayerische Staatsbibliothek München-, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a><br/>
+Ostbelgien Grenze 1873 by: Extract from IGN maps with the authorization A3647 Of the National Geographic Institute <a href="https://www.ign.be"target="_blank">www.ign.be</a><br/>
+More Infos: <a href="https://wiki.openstreetmap.org/wiki/DE:Historical_Objects/Historische_Karten" target="_blank">Historische Karten</a><br/>
+<!--<li> MapQuestOpen Tiles Courtesy of <a href="https://www.mapquest.com/" target="_blank">MapQuest</a> <img src="../../../i/MQ.png"></li>-->
+<li> Layer Landscape and Pioneer from <a href="https://www.thunderforest.com/" target="_blank">Thunderforest.com</a></li>
+<li> Layer Nop's Reit- und Wanderkarte $$von%%<a href="https://www.wanderreitkarte.de" target="_blank">www.wanderreitkarte.de</a><br/>Die Karte basiert auf Daten von <a href="https://openstreetmap.de" target="_blank">OpenStreetMap und Mitwirkenden</a> sowie Höhenmodellen von <a href="http://srtm.csi.cgiar.org" target="_blank">CIAT</a> und NASA.</li>
+<li> $$Die Routen-Layer%% <br/>
+$$Wanderwege%% $$von%% <a href="https://hiking.waymarkedtrails.org" target="_blank" >hiking.waymarkedtrails.org</a><br/>
+$$Radwege%% $$von%% <a href="https://cycling.waymarkedtrails.org" target="_blank" >cycling.waymarkedtrails.org</a><br/>
+$$Mountainbike%% $$von%% <a href="https://mtb.waymarkedtrails.org" target="_blank" >mtb.waymarkedtrails.org</a><br/>
+$$Inline-Skating%% $$von%% <a href="https://skating.waymarkedtrails.org" target="_blank" >skating.waymarkedtrails.org</a><br/>
+$$lizenziert unter%% <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.de" target="_blank">Creative Commons Attribution-Share Alike 3.0 Germany Lizenz</a>.</li>
+<li>Layer OSM deutscher Stil $$von%% <a href="https://openstreetmap.de" target="_blank">openstreetmap.de</a></li>
+<li>Layer OpenTopoMap<a href="https://openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>-Mitwirkende, SRTM | Kartendarstellung: © <a href="https://opentopomap.org" target="_blank">OpenTopoMap</a></li>
+<li>Digital Elevation Model over Europe  <a href="https://www.eea.europa.eu/data-and-maps/data/eu-dem" target="_blank">"Produced using Copernicus data and information funded by the European Union - EU-DEM layers"</a>, download from <a href="https://opendem.info/index.html" target="_blank">OpenDEM</a><br/> Data sources <a href="https://www2.jpl.nasa.gov/srtm/" target="_blank">SRTM</a>, <a href="https://asterweb.jpl.nasa.gov/gdem.asp" target="_blank">ASTER GDEM</a></li>
+<!--<li>Routing $$von%% <a href="https://project-osrm.org/" target="_blank">Open Source Routing Machine</a></li>-->
+<li>Railways $$von%% <a href="https://www.openrailwaymap.org/" target="_blank">Open Railway Map ORG.</a></li>
+<li>$$Grundkarte%% Zoom 0-5 Polygone von <a href="https://osmdata.openstreetmap.de/" target="_blank">OpenStreetMapData</a> und <a href="http://www.imagico.de/map/polygon_rendering.php" target="_blank">imagico.de</a></li>
+<li>$$Grundkarte%% Zoom 6-7 Made with <a href="https://www.naturalearthdata.com/about/terms-of-use" target="_blank">Natural Earth</a></li>
+<li>$$Grundkarte%% Zoom 8-9 Made with <a href="https://openrouteservice.org/" target="_blank">© openrouteservice.org</a> and <a href="https://www.openstreetmap.fr/mentions-legales/"target="_blank">Yohan Boniface & Humanitarian OpenStreetMap Team,OSM France</a></li>
+<li>$$Grundkarte%% Zoom 10 Made with <a href="https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use"target="_blank">Wikimedia Maps</a></li>
+<li>Region-Label and Admin-Label Font $$von%%  Roger White (Public domain)</li>
+<li>All POI data copyrighted by
+<a href="https://opendatacommons.org/licenses/odbl/" target="_blank" >ODbL</a></li>
+</ul>
+
+<a name="Credits"><h2>$$Danksagung%%</h2></a>
+
+<ul>
+<li><a href="https://www.fossgis.de/wiki/Hauptseite" target="_blank">FOSSGIS E.V.<br/><img src="../../../i/Fossgis.png"></a></li>
+</ul>
+<p>
+$$Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:%%</p>
+<ul>
+<li>Netzwolf</li>
+</ul>
+<p>
+$$Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:%%</p>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:L%C3%BCbeck" target="_blank">Lübeck</a></li>
+</ul>
+<p>
+$$Für die Wiki-Arbeit rund um die Geschichtskarten an:%%</p>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Reneman" target="_blank">Reneman</a></li>
+</ul>
+<ul>
+<li><a href="https://www.openstreetmap.org/user/geozeisig" target="_blank">geozeisig</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.osm.org/wiki/User:Zecke" target="_blank">Zecke</a></li>
+</ul>
+<p>
+$$Für Übersetzungen :%%</p>
+<ul>
+<li><a href="https://www.openstreetmap.org/user/pyrog" target="_blank">pyrog</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Escada" target="_blank">Escada</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.osm.org/wiki/User:Zecke" target="_blank">Zecke</a></li>
+</ul>
+<ul>
+<li><a href="https://www.openstreetmap.org/user/nesol" target="_blank">nesol</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Xkomczax" target="_blank">Xkomczax</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/MychOSM" target="_blank">Comenius Project MychOSM: </a><br/>
+Carmen Nicolin, Mara Sescioreanu, Madalina Arta Ionescu, 
+Susana Salvador Díaz,
+Carlos Alonso Rey,
+Judith Vicente Martínez,
+Jorge Braga Martínez,
+Sergio Acevedo Iglesias,
+Noelia Correa Gómez,
+Cristina Eiras Rodriguez,
+Ufuk Korkmaz, 
+Manfred Reiter, Uwe Engstler, Gerhard Faß
+</li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Bigopenmac" target="_blank">Bigopenmac</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Kim_Bach" target="_blank">Kim Bach</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Cybereric" target="_blank">Cybereric</a></li>
+</ul>
+<ul>
+<li><a href="https://www.openstreetmap.org/user/olo81" target="_blank">olo81</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Higa4" target="_blank">Higa4</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:BAB" target="_blank">BAB</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:고급협동조합" target="_blank">고급협동조합</a></li>
+</ul>
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/User:Павел_Гетманцев" target="_blank">Павел_Гетманцев</a></li>
+</ul>
+</div>
+
+
+
+
+<div class="hide" id="description">
+<a name="Anfang"></a>
+
+<p style="border-width:medium; border-color:blue; border-style:dotted; padding:5px;">
+<span id="mtime">?</span>
+</p>
+<ul>
+<li><a href="#Legende">$$Legende%%</a></li>
+</ul>
+<ul>
+<li><a href="#Mapperinfo">$$Infos für OSM-Mapper%%</a></li>
+</ul>
+
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects" target="_blank">$$Wiki zur Karte%%</a></li>
+</ul>
+<ul>
+<li><a href="mailto:lutz@historic.place">$$Kontakt%%</a></li>
+</ul>
+
+
+<div class="references">
+
+
+<a name="Legende"><h2>$$Legende%%</h2></a>
+
+<h3>$$Ab Zoom 5 sichtbar%%</h3>
+
+<table>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Weltkulturerbe"><img src="../../../m/wke.png" /></a></td>
+		<td>$$UNESCO Welterbe%%</td>
+		<td align="center" valign="middle"><span id="weltkulturerbecount"> </span> </td>
+	</tr>
+</table>
+
+
+<h3>$$Ab Zoom 10 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+        <tr>
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr>        
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Palast"><img src="../../../m/castle2.png" /></a></td>
+		<td>$$Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)%%</td>
+		
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Palast"><img src="../../../m/castle2-r.png" /></a></td>
+		<td>$$Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Palast"><img src="../../../m/palast.png" /></a></td>
+		<td>$$Palast%%</td>
+		<td align="center" valign="middle"><span id="palastcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Palast"><img src="../../../m/palast-r.png" /></a></td>
+		<td>$$Palast (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Schloss"><img src="../../../m/schloss.png" /></a></td>
+		<td>$$Schloss%%</td>
+		<td align="center" valign="middle"><span id="schloßcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Schloss"><img src="../../../m/schloss-r.png" /></a></td>
+		<td>$$Schloss (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Burg"><img src="../../../m/burg.png" /></a></td>
+		<td>$$Burg%%</td>
+		<td align="center" valign="middle"><span id="burgcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Burg"><img src="../../../m/burg-r.png" /></a></td>
+		<td>$$Burg (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Festung"><img src="../../../m/castle.png" /></a></td>
+		<td>$$Festung/Kreml%%</td>
+		<td align="center" valign="middle"><span id="fortcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Festung"><img src="../../../m/castle-r.png" /></a></td>
+		<td>$$Festung/Kreml (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Burg"><img src="../../../m/shiro.png" /></a></td>
+		<td>$$Shiro (Japanische Burg)%%</td>
+		<td align="center" valign="middle"><span id="shirocount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Burg"><img src="../../../m/shiro-r.png" /></a></td>
+		<td>$$Shiro (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank"  href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Rittergut"><img src="../../../m/manor.png" /></a></td>
+		<td>$$Rittergut/Herrenhaus%%</td>
+		<td align="center" valign="middle"><span id="manorcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Rittergut"><img src="../../../m/manor-r.png" /></a></td>
+		<td>$$Rittergut/Herrenhaus (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Kloster"><img src="../../../m/kloster.png" /></a></td>
+		<td>$$Kloster%%</td>
+		<td align="center" valign="middle"><span id="monasterycount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Kloster"><img src="../../../m/kloster-r.png" /></a></td>
+		<td>$$Kloster (Ruine)%%</td>
+	</tr>
+	<tr>
+	<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Straße"><img src="../../../m/histroad.png" /><img src="../../../m/esel.png" /></a></td>
+	<td>$$Historische Straße%%</td>
+	<td align="center" valign="middle"><span id="roadcount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Ab Zoom 11 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+
+        <tr>
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr> 
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gefangenenlager"><img src="../../../m/concentration_camp.png" /></a></td>
+		<td>$$Konzentrationslager%%</td>
+		<td align="center" valign="middle"><span id="campcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gefangenenlager"><img src="../../../m/pow_camp.png" /></a></td>
+		<td>$$Kriegsgefangenenlager%%</td>
+		<td align="center" valign="middle"><span id="pow_campcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gefangenenlager"><img src="../../../m/prison.png" /></a></td>
+		<td>$$Historisches Gefängnis%%</td>
+		<td align="center" valign="middle"><span id="prisoncount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Windmuehle"><img src="../../../m/windmill.png" /></a></td>
+		<td>$$Windmühle%%</td>
+		<td align="center" valign="middle"><span id="windmillcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Windmuehle"><img src="../../../m/windmill-r.png" /></a></td>
+		<td >$$Windmühle (Ruine)%%</td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wassermuehle"><img src="../../../m/watermill.png" /></a></td>
+		<td>$$Wassermühle%%</td>
+		<td align="center" valign="middle"><span id="watermillcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wassermuehle"><img src="../../../m/watermill-r.png" /></a></td>
+		<td>$$Wassermühle (Ruine)%%</td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Galgen"><img src="../../../m/gallows.png" /></a></td>
+		<td>$$Historischer Galgen%%</td>
+		<td align="center" valign="middle"><span id="gallowscount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Ab Zoom 12 sichtbar%%</h3>
+
+<table border="0" >
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+
+       <tr>
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr> 
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/archaeologie.png" /></a></td>
+		<td>$$Archäologische Stätte - allgemein%%</td>
+		<td align="center" valign="middle"><span id="archaeological_sitecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/megalith.png" /></a></td>
+		<td>$$Großsteingrab - Dolmen%%</td>
+		<td align="center" valign="middle"><span id="grosssteingrabcount"> </span> </td>
+	</tr>
+    <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/nuraghe.png" /></a></td>
+		<td>Nuraghe</td>
+		<td align="center" valign="middle"><span id="nuraghecount"> </span> </td>
+	</tr>
+	<tr>
+	    <td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/tholos.png" /></a></td>
+		<td>Tholos</td>
+		<td align="center" valign="middle"><span id="tholoscount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/cist.png" /></a></td>
+		<td>Cist</td>
+		<td align="center" valign="middle"><span id="cistcount"> </span> </td>
+	</tr>
+    <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/stone_ship.png" /></a></td>
+		<td>Stone ship</td>
+		<td align="center" valign="middle"><span id="stone_shipcount"> </span> </td>
+	</tr>
+		<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/menhir.png" /></a></td>
+		<td>$$Steingrab - Menhir%%</td>
+		<td align="center" valign="middle"><span id="menhircount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/passage_grave.png" /></a></td>
+		<td>$$Ganggrab (Langbett)%%</td>
+		<td align="center" valign="middle"><span id="passage_gravecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/alignment.png" /></a></td>
+		<td>$$Steinreihe%%</td>
+		<td align="center" valign="middle"><span id="alignmentcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/stone_circle.png" /></a></td>
+		<td>$$Steinkreis%%</td>
+		<td align="center" valign="middle"><span id="stone_circlecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/chamber.png" /></a></td>
+		<td>$$Fragmente%%</td>
+		<td align="center" valign="middle"><span id="chambercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/tumulus.png" /></a></td>
+		<td>$$Hügelgrab (Tumulus)%%</td>
+		<td align="center" valign="middle"><span id="tumuluscount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/fort.png" /></a></td>
+		<td>$$Wallanlage%%</td>
+		<td align="center" valign="middle"><span id="fortificationcount"> </span> </td>
+	</tr>
+    <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/petroglyph.png" /></a></td>
+		<td>Petroglyph</td>
+		<td align="center" valign="middle"><span id="petroglyphcount"> </span> </td>
+	</tr>
+    <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/archaeological_city.png" /></a></td>
+		<td>City</td>
+		<td align="center" valign="middle"><span id="archaeological_citycount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Fundstaette"><img src="../../../m/palaeontological_site.png" /></a></td>
+		<td>$$Paläontologische Stätte%%</td>
+		<td align="center" valign="middle"><span id="geologicalcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Archaeologie"><img src="../../../m/fort.png" /></a></td>
+		<td>$$Pā (Māori) Befestigungsanlagen%%</td>
+		<td align="center" valign="middle"><span id="pacount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Schlachtfeld"><img src="../../../m/battlefield.png" /></a></td>
+		<td>$$Schlachtfeld%%</td>
+		<td align="center" valign="middle"><span id="battlefieldcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Runenstein"><img src="../../../m/runestone.png" /></a></td>
+		<td>$$Runenstein%%</td>
+		<td align="center" valign="middle"><span id="rune_stonecount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wuestung"><img src="../../../m/wuestung.png" /></a></td>
+		<td>$$Wüstung%%</td>
+		<td align="center" valign="middle"><span id="villagecount"> </span> </td>
+	</tr>
+
+	
+
+</table>
+
+<h3>$$Ab Zoom 13 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+        <tr>
+        
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+                
+        </tr> 
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Monument"><img src="../../../m/monument.png" /></a></td>
+		<td>$$Monument%%</td>
+		<td align="center" valign="middle"><span id="monumentcount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/monuments/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Baum"><img src="../../../m/tree.png" /></a></td>
+		<td>$$Naturdenkmal%%</td>
+		<td align="center" valign="middle"><span id="baumcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Findling"><img src="../../../m/stein.png" /></a></td>
+		<td>$$Findling%%</td>
+		<td align="center" valign="middle"><span id="findlingcount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Dreschplatz"><img src="../../../m/dreschplatz.png" /></a></td>
+		<td>$$Historischer Dreschplatz/Tenne%%</td>
+		<td align="center" valign="middle"><span id="threshing_floorcount"> </span> </td>
+	</tr>
+	 <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerk"><img src="../../../m/mine.png" /></a></td>
+		<td>$$Bergwerk/Schachtanlage/Schacht%%</td>
+		<td align="center" valign="middle"><span id="minecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerk"><img src="../../../m/mine-d.png" /></a></td>
+		<td>$$Stillgelegtes Bergwerk/stillgelegter Schacht%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Binge"><img src="../../../m/binge.png" /></a></td>
+		<td>$$Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung%%</td>
+		<td align="center" valign="middle"><span id="pingecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergstollen"><img src="../../../m/stollen2.png" /></a></td>
+		<td>$$Stollen (allgemein)%%</td>
+		<td align="center" valign="middle"><span id="aditcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergehalde"><img src="../../../m/halde.png" /></a></td>
+		<td>$$Bergehalde%%</td>
+		<td align="center" valign="middle"><span id="haldecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerkstollen"><img src="../../../m/stollen.png" /><img src="../../../m/stollen-or.png" /></a></td>
+		<td>$$Bergwerksstollen%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerkstollen"><img src="../../../m/stollen-d.png" /></a></td>
+		<td>$$Bergwerksstollen (aufgegeben)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Stein"><img src="../../../m/hstein.png" /></a></td>
+		<td>$$Historischer Stein%%</td>
+		<td align="center" valign="middle"><span id="stonecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Suehnestein"><img src="../../../m/suehnekreuz.png" /></a></td>
+		<td>$$Sühnestein%%</td>
+		<td align="center" valign="middle"><span id="kreuzecount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/suehnesteine/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Farm"><img src="../../../m/farm.png" /></a></td>
+		<td>$$Historische Farm%%</td>
+		<td align="center" valign="middle"><span id="farmcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Cellar"><img src="../../../m/cellar.png" /></a></td>
+		<td>$$Felsenkeller%%</td>
+		<td align="center" valign="middle"><span id="cellarcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Lok"><img src="../../../m/Lok.png" /></a></td>
+		<td>$$Historisches Schienenfahrzeug%%</td>
+		<td align="center" valign="middle"><span id="Lokcount"> </span> </td>
+	</tr>
+	
+</table>
+
+<h3>$$Ab Zoom 14 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+
+        <tr>
+        
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+                
+        </tr> 
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Meilensteine"><img src="../../../m/milestone.png" /></a></td>
+		<td>$$Meilenstein%%</td>
+		<td align="center" valign="middle"><span id="milestonecount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/Meilensteine/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Vermessungspunkt"><img src="../../../m/trigpoint.png" /></a></td>
+		<td>$$Historischer Vermessungspunkt%%</td>
+		<td align="center" valign="middle"><span id="survey_pointcount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/K%C3%B6niglich-S%C3%A4chsische_Triangulation/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historisches_Stadttor"><img src="../../../m/stadttor.png" /></a></td>
+		<td>$$Historisches Stadttor%%</td>
+		<td align="center" valign="middle"><span id="city_gatecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Turm"><img src="../../../m/turm.png" /></a></td>
+		<td>$$Historischer Turm%%</td>
+		<td align="center" valign="middle"><span id="towercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Turm"><img src="../../../m/turm-r.png" /></a></td>
+		<td>$$Historischer Turm (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Turm"><img src="../../../m/belltower.png" /></a></td>
+		<td>$$Glockenturm%%</td>
+		<td align="center" valign="middle"><span id="bell_towercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Turm"><img src="../../../m/belltower-r.png" /></a></td>
+		<td>$$Glockenturm (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Turm"><img src="../../../m/aussichtsturm.png" /></a></td>
+		<td>$$Aussichtsturm%%</td>
+		<td align="center" valign="middle"><span id="observationcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wachturm"><img src="../../../m/wachturm.png" /></a></td>
+		<td>$$Wachturm%%</td>
+		<td align="center" valign="middle"><span id="wachturmcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Leuchtturm"><img src="../../../m/leuchtturm.png" /></a></td>
+		<td>$$Leuchtturm%%</td>
+		<td align="center" valign="middle"><span id="lighthousecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wasserturm"><img src="../../../m/watertower.png" /></a></td>
+		<td>$$Wasserturm%%</td>
+		<td align="center" valign="middle"><span id="water_towercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Technisches_Denkmal"><img src="../../../m/t-heritage.png" /></a></td>
+		<td>$$Technisches Denkmal%%</td>
+		<td align="center" valign="middle"><span id="technical_monumentcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Steinbruch"><img src="../../../m/steinbruch.png" /></a></td>
+		<td>$$Steinbruch%%</td>
+		<td align="center" valign="middle"><span id="quarrycount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bunker"><img src="../../../m/bunker.png" /></a></td>
+		<td>$$Bunker%%</td>
+		<td align="center" valign="middle"><span id="bunkercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bunker"><img src="../../../m/bunker-r.png" /></a></td>
+		<td>$$Bunker (Ruine)%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historisches_Flugzeug"><img src="../../../m/airport.png" /></a></td>
+		<td>$$Historisches Luftfahrzeug%%</td>
+		<td align="center" valign="middle"><span id="aircraftcount"> </span> </td>
+	</tr>
+	 <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Schiffswrack"><img src="../../../m/wreck.png" /></a></td>
+		<td>$$Schiffswrack%%</td>
+		<td align="center" valign="middle"><span id="wrackcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historisches_Schiff"><img src="../../../m/ship.png" /></a></td>
+		<td>$$Historisches Schiff%%</td>
+		<td align="center" valign="middle"><span id="shipcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Pranger"><img src="../../../m/pranger.png" /></a></td>
+		<td>$$Pranger%%</td>
+		<td align="center" valign="middle"><span id="pillorycount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Ab Zoom 15 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+
+         <tr>
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Military"><img src="../../../m/military.png" /></a></td>
+		<td>$$Historisches Militärgelände%%</td>
+		<td align="center" valign="middle"><span id="militarycount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Rathaus"><img src="../../../m/rathaus.png" /></a></td>
+		<td>$$Rathaus%%</td>
+		<td align="center" valign="middle"><span id="townhallcount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Denkmal"><img src="../../../m/memorial.png" /></a></td>
+		<td>$$Denkmal%%</td>
+		<td align="center" valign="middle"><span id="memorialcount"> </span> </td>
+	</tr>
+	 <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Statue"><img src="../../../m/statue.png" /></a></td>
+		<td>$$Statue%%</td>
+		<td align="center" valign="middle"><span id="statuecount"> </span> </td>
+	</tr>
+	 <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Obelisk"><img src="../../../m/obelisk-antik.png" /></a></td>
+		<td>$$Obelisk%%</td>
+		<td align="center" valign="middle"><span id="obeliskcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gedenktafeln"><img src="../../../m/plate.png" /></a></td>
+		<td>$$Gedenktafel%%</td>
+		<td align="center" valign="middle"><span id="platecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gedenkplakette"><img src="../../../m/blue_plaque.png" /></a></td>
+		<td>$$Gedenkplakette%%</td>
+		<td align="center" valign="middle"><span id="plakettecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Grabstaette"><img src="../../../m/tomb.png" /></a></td>
+		<td>$$Historisches Grab%%</td>
+		<td align="center" valign="middle"><span id="tombcount"> </span> </td>
+	</tr>
+         <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gipfelkreuz"><img src="../../../m/peakcross.png" /></a></td>
+		<td>$$Gipfelkreuz%%</td>
+		<td align="center" valign="middle"><span id="crosscount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wegkreuz"><img src="../../../m/cross.png" /></a></td>
+		<td>$$Wegkreuz%%</td>
+		<td align="center" valign="middle"><span id="wayside_crosscount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bildstock"><img src="../../../m/shrine.png" /></a></td>
+		<td>$$Bildstock%%</td>
+		<td align="center" valign="middle"><span id="wayside_shrinecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Kapelle"><img src="../../../m/kapelle.png" /></td>
+		<td>$$Weg-Kapelle%%</td>
+		<td align="center" valign="middle"><span id="wayside_chapelcount"> </span> </td>
+	</tr>
+	<tr>
+	        <td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Sakralbau"><img src="../../../m/image_beten.png" /></a></td>
+		<td>$$Religiöse Stätte (mit Link)%%</td>
+		<td align="center" valign="middle"><span id="place_of_worshipcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Sakralbau"><img src="../../../m/christian.png" /><img src="../../../m/jewish.png" /><img src="../../../m/muslim.png" /><img src="../../../m/buddhist.png" /><br><img src="../../../m/shinto.png" /><img src="../../../m/hindu.png" /><img src="../../../m/orthodox.png" /><img src="../../../m/taoist.png" /></a></td>
+		<td>$$Religiöse Stätte (religionsspezifisch)%%</td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Stadtmauer"><img src="../../../m/wall.png" /></a></td>
+		<td>$$Historische Stadt-Mauer/Historische Mauer%%</td>
+		<td align="center" valign="middle"><span id="wallcount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Kanone"><img src="../../../m/cannon.png" /></a></td>
+		<td>$$Kanone%%</td>
+		<td align="center" valign="middle"><span id="cannoncount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bombenkrater"><img src="../../../m/bombe.png" /></a></td>
+		<td>$$Bombenkrater%%</td>
+		<td align="center" valign="middle"><span id="bomb_cratercount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Quelle"><img src="../../../m/quelle.png" /></a></td>
+		<td>$$Historische Quelle%%</td>
+		<td align="center" valign="middle"><span id="springcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Lavoir"><img src="../../../m/lavoir.png" /></a></td>
+		<td>$$Waschplatz%%</td>
+		<td align="center" valign="middle"><span id="lavoircount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bridge"><img src="../../../m/bridge.png" /></a></td>
+		<td>$$Historische Brücke%%</td>
+		<td align="center" valign="middle"><span id="bridgecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bridge"><img src="../../../m/bridge-broken.png" /></a></td>
+		<td>$$Historische Brücke (Ruine)%%</td>
+		
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Aqueduct"><img src="../../../m/aquaeduct.png" /></a></td>
+		<td>$$Aquädukt%%</td>
+		<td align="center" valign="middle"><span id="aqueductcount"> </span> </td>
+	</tr>
+		<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Kiln"><img src="../../../m/meiler.png" /><img src="../../../m/meileraus.png" /></a></td>
+		<td>$$Brennofen%%, $$Köhlerei%%, $$Töpferei%%, $$Ziegelei%%, $$Kalkbrandofen%%, $$Pechhütte%%, $$Glashütte%%</td>
+		<td align="center" valign="middle"><span id="kilncount"> </span> </td>
+	</tr>
+	
+		<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerk"><img src="../../../m/mine-razed.png" /></a></td>
+		<td>$$Bergwerk/Schachtanlage/Schacht%% ($$nahezu komplett entfernt%%)</td>
+		<td align="center" valign="middle"><span id="mine-rcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bergwerkstollen"><img src="../../../m/stollen-razed.png" /><img src="../../../m/stollen-or-razed.png" /></a></td>
+		<td>$$Bergwerksstollen%% ($$nahezu komplett entfernt%%)</td>
+		<td align="center" valign="middle"><span id="adit-rcount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Windmuehle"><img src="../../../m/razed-windmill.png" /></a></td>
+		<td >$$Ehemaliger Windmühlenstandort%%</td>
+		<td align="center" valign="middle"><span id="windmill-rcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wassermuehle"><img src="../../../m/razed-watermill.png" /></a></td>
+		<td>$$Ehemaliger Wassermühlenstandort%%</td>
+		<td align="center" valign="middle"><span id="watermill-rcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Bohrung"><img src="../../../m/bohrung.png" /></a></td>
+		<td>$$Bohrung%%</td>
+		<td align="center" valign="middle"><span id="bohrungcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Wappen"><img src="../../../m/Coats_of_arms.png" /></a></td>
+		<td>$$Wappen%%</td>
+		<td align="center" valign="middle"><span id="wappencount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Fachwerk"><img src="../../../m/umgebindehaus.png" /></a></td>
+		<td>$$Fachwerkhaus%%</td>
+		<td align="center" valign="middle"><span id="fachwerkcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Telegraph"><img src="../../../m/optical_telegraph.png" /></a></td>
+		<td>$$Optischer Telegraf%%</td>
+		<td align="center" valign="middle"><span id="telegraphcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Ski"><img src="../../../m/ski.png" /></a></td>
+		<td>$$Skisprungschanze%%</td>
+		<td align="center" valign="middle"><span id="skicount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Portal"><img src="../../../m/portal.png" /></a></td>
+		<td>$$Tunnelportal%%</td>
+		<td align="center" valign="middle"><span id="portalcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Schornstein"><img src="../../../m/chimney.png" /></a></td>
+		<td>$$Schornstein%%</td>
+		<td align="center" valign="middle"><span id="schornsteincount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Ab Zoom 16 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+        <tr>
+        
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr> 
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Industriebauten"><img src="../../../m/industrie.png" /></a></td>
+		<td>$$Historische Industriebauten%%</td>
+		<td align="center" valign="middle"><span id="industrialcount"> </span> </td>
+	</tr>
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Grenzsteine"><img src="../../../m/historic_boundary_stone.png" /></a></td>
+		<td>$$Grenzstein%%</td>
+		<td align="center" valign="middle"><span id="boundary_stonecount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/sachsen-preu%C3%9Fen/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Grenzsteine"><img src="../../../m/boundary_marker.png" /></a></td>
+		<td>$$Grenzstein%%</td>
+		<td align="center" valign="middle"><span id="boundary_markercount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Stolpersteine"><img src="../../../m/stolperstein.png" /></a></td>
+		<td>$$Stolpersteine%%</td>
+		<td align="center" valign="middle"><span id="stolpersteincount"> </span> </td>
+		<td align="center" valign="middle" class="imgcol"><a target="_blank" href="https://www.historic.place/themes/stolpersteine/"><img src="../../../m/sk.png" /></a></td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Eisenbahnstrecke"><img src="../../../m/zug-h.png" /></a></td>
+		<td>$$Historische Eisenbahnstrecke%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historischer_Bahnhof"><img src="../../../m/railway_station.png" /></a></td>
+		<td>$$Historischer Eisenbahn-Haltepunkt%%</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Historische_Ruine"><img src="../../../m/ruins.png" /></a></td>
+		<td>$$Ruine%%</td>
+		<td align="center" valign="middle"><span id="ruinscount"> </span> </td>
+	</tr>
+		<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Brunnen"><img src="../../../m/brunnen.png" /></a></td>
+		<td>$$Historischer Brunnen / Zierbrunnen%%</td>
+		<td align="center" valign="middle"><span id="fountaincount"> </span> </td>
+	</tr>
+		<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Ausstellungsstück"><img src="../../../m/exhibit.png" /></a></td>
+		<td>$$Historisches Ausstellungsstück%%</td>
+		<td align="center" valign="middle"><span id="exhibitcount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Handschwengelpumpe"><img src="../../../m/pumpe.png" /></a></td>
+		<td>$$Handschwengelpumpe%%</td>
+		<td align="center" valign="middle"><span id="pumpcount"> </span> </td>
+	</tr>
+	
+
+
+</table>
+
+<h3>$$Ab Zoom 17 sichtbar%%</h3>
+
+<table border="0">
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+        <tr>
+        
+                <th align="center" valign="top">$$Icon%%</th>
+                <th align="center" valign="top">$$Beschreibung%%</th>
+                <th align="center" valign="top">$$Anzahl%%</th>
+                <th align="center" valign="top">$$Weitere Karten%%</th>
+        </tr> 
+        <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#HGebaeude"><img src="../../../m/house.png" /></a></td>
+		<td>$$Historisches Gebäude%%</td>
+		<td align="center" valign="middle"><span id="buildingcount"> </span> </td>
+	</tr>
+         <tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Gebaeude"><img src="../../../m/heritage.png" /><img src="../../../m/heritage-en.png" /><img src="../../../m/mhs.png" /><img src="../../../m/nid.png" /><img src="../../../m/raa.png" /><br><img src="../../../m/nrw.png" /><img src="../../../m/npu.png" /><img src="../../../m/uzkb.png" /><img src="../../../m/bda.png" /><img src="../../../m/cadw.png" /><img src="../../../m/he.png" /><img src="../../../m/hs.png" /><img src="../../../m/Belarus_Heritage.png" /><img src="../../../m/kpd.png" /></a></td>
+		<td>$$Denkmalschutz%%</td>
+		<td align="center" valign="middle"><span id="heritagecount"> </span> </td>
+	</tr>
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Information"><img src="../../../m/board.png" /></a></td>
+		<td>$$Info-Tafel mit historischem Bezug%%</td>
+		<td align="center" valign="middle"><span id="boardcount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Objekte mit Zusatzinfos%%</h3>
+
+<table>
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#mit_Link"><img src="../../../m/image2.png" /></a></td>
+		<td>$$Objekte mit Zusatz-Link%%</td>
+		<td align="center" valign="middle"><span id="linkcount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Andere Objekte mit historischem Bezug%%</h3>
+
+<table>
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Reddot"><img src="../../../m/reddot.png" /></a></td>
+		<td></td>
+	</tr>
+</table>
+
+
+<h3>$$Ausrichtung des Objektes im Popup%%</h3>
+
+<table>
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:10%"><col style="width:50%"><col style="width:20%"><col style="width:20%">
+        </colgroup> 
+	<tr>
+		<td class="imgcol"><a target="_blank" href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/Karteneigenschaften#Direction"><img src="../../../m/direction_ese.png" /></a></td>
+		<td></td>
+		<td align="center" valign="middle"><span id="directioncount"> </span> </td>
+	</tr>
+</table>
+
+<h3>$$Eisenbahnen%% (Openrailwaymap)</h3>
+
+<table style="width:100%;  table-layout:fixed;">
+        <colgroup>
+        <col style="width:20%"><col style="width:80%">
+        </colgroup> 
+	<tr>
+		<td class="imgcol"><img src="../../../m/bahndisused.png" /></td>
+		<td align="left" valign="middle">$$Historische Eisenbahnstrecke%% ($$stillgelegt%%)</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><img src="../../../m/bahnabandoned.png" /></td>
+		<td align="left" valign="middle">$$Historische Eisenbahnstrecke%% ($$aufgegeben%%)</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><img src="../../../m/bahnrazed.png" /></td>
+		<td align="left" valign="middle">$$Historische Eisenbahnstrecke%% ($$nahezu komplett entfernt%%)</td>
+	</tr>
+	<tr>
+		<td class="imgcol"><img src="../../../m/museumsbahn.png" /></td>
+		<td>$$Museumsbahnlinie%%</td>
+	</tr>
+</table>
+
+</div>
+
+<a name="Mapperinfo"><h2>$$Infos für Mapper%%</h2></a>
+
+<p>
+$$Für Josm existiert eine Vorlage zum Mappen Historischer Objekte%%
+</p>
+
+<ul>
+<li><a href="https://wiki.openstreetmap.org/wiki/DE:Historical Objects/JOSM_preset" target="_blank"> $$JOSM_Vorlage%%</a></li>
+</ul>
+
+
+
+
+</div>
+
+<!--============  Geolocation  ==================-->
+
+<!--<div id="Geolocation" onclick="geolocate()">
+	<img src="../../../i/geolocation.png" height="32px" title="$$auf aktuellen Standort zoomen%%" />
+</div>-->
+
+<!--============  Map  ==================-->
+
+<noscript>
+<div class="noscript">
+<p>
+$$Zur Anzeige der Karte ist JavaScript erforderlich.%%
+</p>
+<p>
+Bitte aktivieren Sie JavaScript in ihren Browsereinstellungen.
+Falls Sie <code>NoScript</code> verwenden, denken Sie daran,
+auch <code>openstreetmap.org</code> und <code>openlayers.org</code> freizuschalten,
+damit die erforderlichen JavaScript-Dateien geladen werden k&ouml;nnen.
+</p>
+</div>
+</noscript>
+<div id="helptext-osrm" style="display: none; cursor: default";>
+<ul>
+<li>Klick auf Karte erzeugt Wegpunkt;</li>
+<li>Strg-Klick auf Wegpunkt löscht diesen;</li>
+<li>Das aktive Ende des Weges ist rot markiert,</li>
+<li>Klick auf Weganfang ändert die Wegrichtung;</li>
+<li>"Entf" löscht den rot markierten Punkt;</li>
+<li>"Esc" löscht den Weg;</li>
+<li>"Pos1" dreht den Weg;</li>
+<li>"Einf" sucht eine Route für den Weg;</li>
+<li>"TAB" zoomt auf Weg und Route;</li>
+<li>"Ende" versteckt die Luftlinie.</li>
+</ul>
+
+<p>
+<button name="gpx">Download GPX</button>
+<button name="geojson">Download GeoJSON</button>
+<button name="kml">Download KML</button>
+<button name="osm">Download OSM</button>
+</p>
+</div>
+<div id="helptext" style="display: none; cursor: default";>
+<ul>
+<li>Klick auf Karte erzeugt Wegpunkt;</li>
+<li>Strg-Klick auf Wegpunkt löscht diesen;</li>
+<li>Das aktive Ende des Weges ist rot markiert,</li>
+<li>Klick auf Weganfang ändert die Wegrichtung;</li>
+<li>"Entf" löscht den rot markierten Punkt;</li>
+<li>"ESC" löscht den Weg;</li>
+<li>"Pos1" dreht den Weg;</li>
+<li>"TAB" zoomt auf den Weg.</li>
+</ul>
+
+<p>
+<button name="gpx">Download GPX</button>
+<button name="geojson">Download GeoJSON</button>
+<button name="kml">Download KML</button>
+<button name="osm">Download OSM</button>
+</p>
+</div>
+<div id="map"></div>
+
+<!--============  compass  ==================-->
+
+<div id="compass">
+<img src="../../../i/angles_300x233.png" />
+</div>
+
+<!--============  Facebook Like ==================-->
+
+<!--<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_En/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>-->
+
+<!--====================================================================BANNER=================================================================================================================================================================-->
+
+<!--    <div id="banner">
+      <a target="_blank" href="https://donate.openstreetmap.org/"><img alt="OpenStreetMap Funding Drive 2016" title="OpenStreetMap Funding Drive 2016" src="../../../i/donate-2016-a39d94bdc44cb131919d0c5243393650b594ea3fb7d43b057bc345b973cba8ea.jpg" /></a>
+<div class="close-wrap" id="_osm_banner_donate2016"><span class="icon close"></span></div>
+
+    </div>-->
+<!--============  Banner ausblenden  ==================-->
+<!-- 
+<script type="text/javascript"> 
+
+
+$(document).ready(function(){ 
+
+
+      $("#banner").delay(25000).fadeOut(1000); 
+
+
+}); 
+
+
+</script> -->
+<!--===================================================================================================================================================================================================================================================-->
+<!--============  dummy destination  ==================-->
+
+<iframe name="josmremote" width="1" height="1"></iframe>
+<div style="position: absolute; left: 0; top: 0; width: 0; height: 0;" id="xjosm"></div>
+<iframe style="display: none" id="xjosm" name="josm"></iframe>
+
+
+<a href="#" id="permalink" title="$$Permalink%%"><img src="../../../i/permalink.png" width="20px" height="20px"></a>
+
+</body>
+</html>

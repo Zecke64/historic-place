@@ -1,0 +1,22 @@
+RewriteEngine		on
+RewriteBase		/m/neu
+
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1-r.png		!-f
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1.png		-f
+RewriteRule	(.*)-r.png				$1.png		[L]
+
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1_image.png	!-f
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1.png		-f
+RewriteRule	(.*)_image.png				$1.png		[L]
+
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1-r_image.png	!-f
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1-r.png		-f
+RewriteRule	(.*)-r_image.png			$1-r.png	[L]
+
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1-r_image.png	!-f
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1_image.png	-f
+RewriteRule	(.*)-r_image.png			$1_image.png	[L]
+
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1-r_image.png	!-f
+RewriteCond	%{DOCUMENT_ROOT}/m/neu/$1.png		-f
+RewriteRule	(.*)-r_image.png			$1.png		[L]

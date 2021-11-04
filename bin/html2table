@@ -1,0 +1,18 @@
+#!/bin/bash
+#
+#	make plain text tables from HTML download
+#
+#	html2table <infile> <outfile>
+#
+
+[ $# -ne 2 ] && echo -e "html2table <infile> <outfile>\n" && exit 1
+
+inf="$1"
+outf="$2"
+
+#fgrep "<td>" $inf | sed -ne '/ <\/td>/N;s/ <\/td>\n/###/' -e 's/<td> //gp' > $outf
+fgrep "<td>" $inf | sed -ne '/<\/td>/N;s/<\/td>\n/###/' -e 's/<td>//gp' > $outf
+sed -i -e 's/^[ \t]*//;s/[ \t]*$//;' \
+       -e 's/&#160;/ /g'  \
+       $outf
+#sed -i 's/&#160;/ /g' $outf		# non breaking space = &nbsp;

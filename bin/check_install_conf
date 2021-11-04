@@ -1,0 +1,32 @@
+#
+#	consistency checks for config variables
+#	use it with source to inherit the environment
+#
+#	. check_install_conf
+#
+
+
+type -t raus || raus () {
+	echo "$2"
+	exit $1
+}
+
+
+[ -d "$hp_root" -a -d "$hp_root/.git" ] || raus 2 "hp_root not found"
+[ -d "$hp_webroot" ] || mkdir "$hp_webroot" || raus 2 "Web root $hp_root could not be created."
+[ -d "$hp_dyn" ] || mkdir "$hp_dyn" || raus 2 "Dynamic data path $hp_dyn could not be created."
+if [ ! -d "$hp_dyn/thumbcache" ]; then
+        mkdir "$hp_dyn/thumbcache" || raus 2 "problem creating thumbcache"
+        chmod 2777 "$hp_dyn/thumbcache"
+fi
+
+[ -d "$hp_config" ] || mkdir "$hp_config" || raus 2 "path to secret keys $hp_config could not be created."
+
+[ -d "$hp_database" ] || raus 2 "Database directory $hp_database not found."
+[ -s "$hp_database/historic.csv" ] || raus 1 "Warning: No database found in $hp_data"
+
+[ "$hp_install_index" = "1" ] || hp_install_index=0
+[ -z "$hp_map" ] && hp_map="historische_objekte"
+[ -z "$hp_languages" ] && raus 2 "please specify languages"
+
+return 0

@@ -1,0 +1,30 @@
+… = /opt/www/gk.historic.place/ 	Hauptkarte (Basisverzeichnis)
+
+… = /opt/www/tiles.historic.place/ 	Historische Karten-Tiles (Basisverzeichnis)
+
+… = /opt/www/themes.historic.place/ 	Spezialkarten (Basisverzeichnis)
+
+…/bin/					← per Cron gestartet Skripte
+…/bin/ckcomma.pl			← sucht in JS-Files nach überz. Komma, die den IE crashen.
+
+…/dyn/thumbcache			← Thumbnails
+
+…/htdocs/				← im Web sichtbar
+
+…/htdocs/c/				← Skripte fürs Web
+…/htdocs/c/csv.phtml			← liefert POIs aus
+…/htdocs/c/bbox.phtml			← liefert JSON aus
+…/htdocs/c/thumbcache.php		← erzeugt und liefert Thumbnails
+
+…/htdocs/m/				← Icon-Graphiken
+…/htdocs/i/				← sonstige Graphiken
+
+…/htdocs/csv/				← das Datenmaterial
+…/htdocs/texte/				← Anzahl der Poi in der Datenbank
+
+…/htdocs/historische_objekte/		← die Karte
+
+…/htdocs/historische_objekte/index.html
+…/htdocs/historische_objekte/histmap.js	← Allgemeine Logik der Karte
+…/htdocs/historische_objekte/histmap.css	← Design der Karte
+…/htdocs/historische_objekte/config.js		← Regeln für die Darstellung

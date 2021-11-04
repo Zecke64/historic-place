@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -x
+
+LOG=/opt/www/data.historic.place/cache/csv/update-all.log
+
+{
+
+cd /opt/www/gk.historic.place/bin
+
+./update-generic.sh historic
+./update-generic.sh regions
+./update-generic.sh monuments overview
+./update-generic.sh stolpersteine overview
+
+echo -e "\n----------- Zaehler fuer historische Objekte -----------"
+./zaehler.sh
+
+echo -e "\n----------- Historic Vector -----------"
+./get-historic-vector.sh
+
+echo -e "\n----------- Monument Statistik -----------"
+./overpass-monument.sh
+
+} 2>&1 | tee -a $LOG

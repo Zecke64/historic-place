@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "Magdeburg",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 744002211445 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 10.086252064705645, 53.126829740783712 ], [ 12.679020075688779, 53.12023695009362 ], [ 12.503239193588227, 51.361320273275282 ], [ 10.097238369836932, 51.378466878628686 ], [ 10.086252064705645, 53.126829740783712 ] ] ] } }
+]
+}

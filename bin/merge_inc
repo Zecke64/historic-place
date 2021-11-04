@@ -1,0 +1,33 @@
+#!/bin/bash
+#
+#	simuliert ein "include"
+#
+#	liefert temp file zurück
+#
+
+#set -x
+
+usage () {
+        echo -e "\nmerge_histmap <src file> <dest file>\n"
+        exit 1
+}
+
+[ $# -ne 2 ] && usage
+src="$1"
+dest="$2"
+
+{
+	IFS=
+	while read -r line; do
+		if [[ "$line" =~ HPLACE_INCLUDE ]]; then
+			unset IFS
+			set -- $line
+			cat $2
+			IFS=
+		else
+			echo "$line"
+		fi
+	done < "$src"
+} > "$dest"
+
+exit 0

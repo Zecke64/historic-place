@@ -1,0 +1,32 @@
+ 
+Beispiele - Datenbereiche der deutschen Bundeslaender
+=====================================================
+Baden-Wuerttemberg      (47.5, 7.4, 49.9, 10.6)
+Bayern                  (47.2, 8.9, 50.6, 13.9)
+Berlin                  (52.3, 13.0, 52.7, 13.8)
+Brandenburg             (51.3, 11.1, 53.7, 14.9)
+Bremen                  (52.9, 8.4, 53.7, 9.1)
+Hamburg                 (53.5, 9.5, 53.8, 10.4)
+Hessen                  (49.3, 7.6, 51.7, 10.3)
+Mecklenburg-Vorpommern  (53.0, 10.4, 55.0, 14.4)
+Niedersachsen           (51.2, 6.4, 54.2, 11.6)
+Nordrhein-Westfalen     (50.2, 5.4, 52.6, 9.5)
+Rheinland-Pfalz         (48.9, 6.1, 51.0, 8.5)
+Saarland                (49.1, 6.3, 49.7, 7.4)
+Sachsen                 (50.1, 11.8, 51.8, 15.1)
+Sachsen-Anhalt          (50.9, 10.5, 53.2, 13.2)
+Schleswig-Holstein      (53.3, 7.8, 55.1, 11.4)
+Thueringen              (50.1, 9.8, 51.7, 12.7)
+
+Beispiele - Datenbereiche einiger Laender
+=========================================
+Deutschland             (47.2, 5.8, 55.1, 15.1)
+Oesterreich             (46.3, 9.3, 49.1, 17.2)
+Schweiz                 (45.8, 5.9, 47.9, 10.5)
+Alpen                   (45.2, 5.5, 48.7, 16.7)
+Italien                 (35.2, 6.6, 47.1, 19.2)
+Frankreich              (42, -5, 51, 8)
+Belgien                 (49.5, 2.3, 51.6, 6.4)
+Niederlande             (50.7, 3.2, 53.6, 7.2)
+Daenemark               (54.4, 7.7, 58.1, 15.5)
+Schweden                (55, 10.5, 69, 24.2)

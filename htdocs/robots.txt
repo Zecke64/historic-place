@@ -1,0 +1,9 @@
+User-Agent: *
+Disallow: /c/
+Disallow: /csv/
+Disallow: /i/
+Disallow: /j/
+Disallow: /m/
+
+User-Agent: Googlebot-Image
+Disallow: /

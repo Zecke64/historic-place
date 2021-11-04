@@ -1,0 +1,46 @@
+#!/bin/bash
+#
+# wir besorgen die oberste Zeile der Wiki-News-Seite für den Tooltip
+#
+
+src="https://wiki.openstreetmap.org/wiki/Historic.Place/News"
+dst=/opt/www/gk.historic.place/htdocs/latestnews.html
+
+################################################
+raus () {
+	[ -n "$debug" ] && echo "$2"
+	exit $1
+}
+
+################################################
+
+debug="$1"
+
+# erstmal checken ob sich was geändert hat
+
+str=`curl --silent -I "$src" | grep "Last"`
+set -- $str
+shift 
+
+idate=`date +%s -d "$*"`
+ldate=$(stat -c %Y "$dst")
+[ -n "$ldate" ] && [ $idate -le $ldate ] && [ -z "$debug" ] && raus 0 "local $ldate neuer als URL $idate"
+
+# was neues da, dann laden
+
+echo "<p><i>Latest news:</i>" > $dst
+
+wget -q -O - "$src" | sed -n '/id="Latest_news/{n;p;n;p}' >> $dst
+
+echo "
+<p>
+<small>(Click newspaper icon to see all news!)</small>
+<p>" >> $dst
+
+# ein wenig Formatierung
+sed -i 	-e 's#<dt>#<dd><b>#g' 					\
+	-e 's#</dt>#</b></dd>#g' 				\
+	-e 's#href="/#href="https://wiki.openstreetmap.org/#g'	\
+	$dst
+
+raus 0 "Seite neu geladen"

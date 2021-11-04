@@ -1,0 +1,12 @@
+#
+# Blacklist für URLs
+#
+# Format eines Eintrags:
+# <Datum> <url> <Kommentar>
+#
+# Datum und url dürfen keine Leerzeichen enthalten
+# Zeilen, die mit # beginnen, sind Kommentare
+# Leerzeilen werden ignoriert
+#
+# Beispiel:
+# 2016-09-30 http://commons.wikimedia.org/wiki/File:Stollen_Buchschachen.jpg Test zecke

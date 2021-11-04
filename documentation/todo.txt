@@ -1,0 +1,9 @@
+- public version of GIT repo
+- Layer_boundaries generated automatically
+- get rid of language specific directories
+- complete documentation
+- license statement
+- Testseiten, (Burgen!) im Apache umhängen
+- Themenseiten modernisieren
+- Skripten in Deployment integrieren
+

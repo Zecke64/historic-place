@@ -1,0 +1,68 @@
+Änderungen an index*.html anbringen
+===================================
+
+Man nimmt als Ausgangspunkt die deutsche Version eines Files, also z.B. index.html
+Man ersetzt von Hand einmal (!) alle Textstrings, die potientiell übersetzt werden sollen,
+durch $$Textstring%%, nennt das File master.html. 
+
+Jetzt müssen die zu übedrsetzenden Textstrings extrahiert werden.
+Man ruft das Skript extract_strings.sh auf
+
+    extract_strings.sh master.html table.en
+
+Hierbei werden die markierten Strings aus dem masterfile rausgezogen und in eine 
+Übersetzungstabelle (Textfile) eingefügt (gemischt!). D.h. wenn es den String schon gibt, 
+bleibt der alte Eintrag stehen, ansonsten wird er (sortiert) eingefügt. Die Tabelle ist 
+folgendermaßen strukturiert:
+
+<string1 deutsch>###<string1 ausländisch>
+<string2 deutsch>###<string2 ausländisch>
+<string3 deutsch>###<string3 ausländisch>
+    ...
+
+Nicht übersetzte (neue) Begriffe sehen darin so aus:
+
+<string n deutsch>###
+
+Dieser Schritt ist bereits erfolgt, das Masterfile liegt unter (...)/translations/master.html, 
+die Tabellen für alle Sprachen unter (...)/translations/table.*
+
+Spätere Änderungen an index.html bitte zuerst auf einer Spielwiese testen und dann direkt in 
+master.html anbringen. Hat man neue Strings hinzugefügt oder welche geändert, muss man den
+Extraktionsschritt einmal für jede Sprache neu ausführen, um die Translation tables upzudaten.
+
+Dafür gibt es das Skript update_tables
+	
+	update_tables <geändertes Quellfile>
+
+
+Übersetzen
+==========
+
+Der nächste Schritt besteht darin, die Tabelle zu vervollständigen, d.h. jeder Begriff sollte 
+eine Übersetzung haben. Das muss man pro Sprache nur einmal machen, später höchstens bei 
+Änderungen die Differenzen nachziehen. Dubletten werden automatisch entfernt.
+
+Die Übersetzungen werden direkt in die Files (...)/translations/table.* hinter den Trenner ###
+geschrieben.
+
+
+Erzeugen der neuen Index-Files
+==============================
+
+Die neuen Indexfiles erzeugt man mit dem Skript update_translations.sh (ohne Parameter). Sie werden 
+gleich an die richtige Stelle kopiert. Die vorherige Version wird jeweils als index-*.html.last 
+gesichert. Bei Fehlern in der Übersetzungstabelle bricht das Skript ab.
+
+
+Neue Sprache
+============
+
+Für eine neu hinzugekommene Sprache xy ist folgendes zu tun (nachdem die Verzeichnisse angelegt sind
+und die *.js files dort liegen):
+- Kopieren von table.en nach table.xy
+- Übersetzen von table.xy
+- Anpassen von update_translations.sh (neue Sprache in den languages-string mit aufnehmen und
+  in dem links-dictionary festlegen, auch welches Wiki die Links zeigen sollen)
+- update_translations.sh aufrufen
+

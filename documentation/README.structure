@@ -1,0 +1,7 @@
+Historic.Place projects lives somewhere in th directory, let's call it <hproot>. 
+Let's assume the web server is Apache 2.4 as on the original web site.
+H.P consists of a web site and surrounding scripts and config files. The web site lives under
+<hproot>/htdocs. It is important that Apache points to this directory as document_root.
+The website itself makes use of one server side PHP scripts. These can access everything
+under <hproot> via filesystem calls to "../*". By doing so, the server side scripts can
+e.g. have access to secret API keys for foreign image hosters, lying in the <hproot>/config directory. Even if the source code is public, nobody can access the keys from the web.

@@ -1,0 +1,1236 @@
+{
+   "data_format": 1,
+   "data_url": "http://gk.historic.place/taginfo/historic.place.json",
+   "project": {
+	   "name": "historic.place",
+	   "description": "Map of Historical objects",
+	   "project_url": "http://www.historic.place",
+	   "icon_url": "http://gk.historic.place/m/aquaeduct.png",
+	   "contact_name": "Lutz",
+	   "contact_email": "lutz@historic.place"
+   },
+   "tags": [
+   {
+       "key": "historic",
+       "value": "memorial",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/memorial.png"
+   },
+   {
+       "key": "historic",
+       "value": "optical_telegraph",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/optical_telegraph.png"
+   },
+   {
+       "key": "memorial",
+       "value": "statue",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/statue.png"
+   },
+   {
+       "key": "memorial",
+       "value": "obelisk",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/obelisk.png"
+   },
+   {
+       "key": "memorial",
+       "value": "plaque",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/blue_plaque.png"
+   },
+      {
+       "key": "memorial",
+       "value": "blue_plaque",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/blue_plaque.png"
+   },
+   {
+       "key": "memorial:type",
+       "value": "statue",
+       "object_types": ["area", "node"],
+       "description": "deprecated",
+       "icon_url": "http://gk.historic.place/m/statue.png"
+   },
+   {
+       "key": "memorial:type",
+       "value": "plate",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/plate.png"
+   },
+   {
+       "key": "memorial:type",
+       "value": "obelisk",
+       "object_types": ["area", "node"],
+       "description": "deprecated",
+       "icon_url": "http://gk.historic.place/m/obelisk.png"
+   },
+   {
+       "key": "memorial:type",
+       "value": "stolperstein",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/stern.png"
+   },
+   {
+       "key": "memorial:type",
+       "value": "plaque",
+       "object_types": ["node"],
+       "description": "deprecated",
+       "icon_url": "http://gk.historic.place/m/blue_plaque.png"
+   },
+   {
+       "key": "historic",
+       "value": "plaque",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/blue_plaque.png"
+   },
+   {
+       "key": "historic",
+       "value": "monument",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/monument.png"
+   },
+   {
+       "key": "historic",
+       "value": "heritage",
+       "object_types": ["way","area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/heritage.png"
+   },
+   {
+       "key": "heritage",
+       "value": "1",
+       "object_types": ["way","area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/wke.png"
+   },
+   {
+       "key": "heritage",
+       "object_types": ["way","area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/heritage.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "npu",
+       "icon_url": "http://gk.historic.place/m/npu.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "eh",
+       "description": "deprecated",
+       "icon_url": "http://gk.historic.place/m/heritage-en.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "mhs",
+       "icon_url": "http://gk.historic.place/m/mhs.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "nid",
+       "icon_url": "http://gk.historic.place/m/nid.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "raa",
+       "icon_url": "http://gk.historic.place/m/raa.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "uzkb",
+       "icon_url": "http://gk.historic.place/m/uzkb.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "bda",
+       "icon_url": "http://gk.historic.place/m/bda.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "he",
+       "icon_url": "http://gk.historic.place/m/he.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "Historic England",
+       "icon_url": "http://gk.historic.place/m/he.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "hs",
+       "icon_url": "http://gk.historic.place/m/hs.png"
+   },
+   {
+       "key": "heritage:operator",
+       "value": "cadw",
+       "icon_url": "http://gk.historic.place/m/cadw.png"
+   },
+   {
+       "key": "geological",
+       "value": "palaeontological_site",
+       "object_types": ["way","area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/palaeontological_site.png"
+   },
+      {
+       "key": "historic",
+       "value": "boundary_stone",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/historic_boundary_stone.png"
+   },
+      {
+       "key": "boundary",
+       "value": "marker",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/boundary_marker.png"
+   },
+   {
+       "key": "historic",
+       "value": "milestone",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/milestone.png"
+   },
+   {
+       "key": "historic",
+       "value": "manor",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/manor.png"
+   },
+   {
+       "key": "historic",
+       "value": "castle",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/castle2.png"
+   },
+   {
+       "key": "historic",
+       "value": "locomotive",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/Lok.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "manor",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/manor.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "palace",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/palast.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "stately",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/schloss.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "defensive",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/burg.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "shiro",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/shiro.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "fortress",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/castle.png"
+   },
+   {
+       "key": "castle_type",
+       "value": "kremlin",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/castle.png"
+   },
+   {
+       "key": "historic",
+       "value": "fort",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/castle.png"
+   },
+   {
+       "key": "historic",
+       "value": "palace",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/palast.png"
+   },
+   {
+       "key": "historic",
+       "value": "mine",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine.png"
+   },
+   {
+       "key": "historic",
+       "value": "mine_shaft",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine.png"
+   },
+   {
+       "key": "man_made",
+       "value": "mine_shaft",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine.png"
+   },
+   {
+       "key": "man_made",
+       "value": "mine",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine.png"
+   },
+   {
+       "key": "abandoned:man_made",
+       "value": "mine_shaft",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine-d.png"
+   },
+   {
+       "key": "razed:man_made",
+       "value": "mine_shaft",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/mine-razed.png"
+   },
+   {
+       "key": "razed:man_made",
+       "value": "windmill",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/razed-windmill.png"
+   },
+   {
+       "key": "razed:man_made",
+       "value": "watermill",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/razed-watermill.png"
+   },
+   {
+       "key": "razed:man_made",
+       "value": "adit",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/stollen-razed.png"
+   },
+   {
+       "key": "razed:historic",
+       "value": "optical_telegraph",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/optical_telegraph.png"
+   },
+   {
+       "key": "man_made",
+       "value": "adit",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/stollen2.png"
+   },
+   {
+       "key": "man_made",
+       "value": "reservoir_covered",
+       "object_types": ["area", "node"],
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/reservoir_covered.png"
+   },
+   {
+       "key": "resource",
+       "description": "with man_made=adit",
+       "icon_url": "http://gk.historic.place/m/stollen.png"
+   },
+   {
+       "key": "historic",
+       "value": "battlefield",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/battlefield.png"
+   },
+   {
+       "key": "historic",
+       "value": "archaeological_site",
+       "object_types": ["area", "node", "relation", "way"],
+       "icon_url": "http://gk.historic.place/m/archaeologie.png"
+   },
+   {
+       "key": "historic",
+       "value": "stone",
+       "object_types": ["node"],
+       "doc_url": "http://wiki.openstreetmap.org/wiki/Tag:historic%3Dstone",
+       "icon_url": "http://gk.historic.place/m/hstein.png"
+   },
+   {
+       "key": "stone_type",
+       "value": "coat_of_arms",
+       "object_types": ["node"],
+       "description": "with historic=stone",
+       "doc_url": "http://wiki.openstreetmap.org/wiki/Tag:historic%3Dstone",
+       "icon_url": "http://gk.historic.place/m/Coats_of_arms.png"
+   },
+   {
+       "key": "stone_type",
+       "value": "conciliation_cross",
+       "object_types": ["node"],
+       "description": "with historic=stone",
+       "doc_url": "http://wiki.openstreetmap.org/wiki/Tag:historic%3Dstone",
+       "icon_url": "http://gk.historic.place/m/suehnekreuz.png"
+   },
+   {
+       "key": "historic",
+       "value": "ruins",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/ruins.png"
+   },
+   {
+       "key": "site_type",
+       "value": "megalith",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and megalith_type"
+   },
+   {
+       "key": "site_type",
+       "value": "tumulus",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site",
+       "icon_url": "http://gk.historic.place/m/tumulus.png"
+   },
+   {
+       "key": "site_type",
+       "value": "fortification",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site",
+       "icon_url": "http://gk.historic.place/m/fort.png"
+   },
+   {
+       "key": "site_type",
+       "value": "petroglyph",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site",
+       "icon_url": "http://gk.historic.place/m/petroglyph.png"
+   },
+   {
+       "key": "site_type",
+       "value": "city",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site",
+       "icon_url": "http://gk.historic.place/m/archaeological_city.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "menhir",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/menhir.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "dolmen",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/megalith.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "passage_grave",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/passage_grave.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "stone_circle",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/stone_circle.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "alignment",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/alignment.png"
+   },
+   {
+       "key": "megalith_type",
+       "value": "chamber",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/chamber.png"
+   },
+    {
+       "key": "megalith_type",
+       "value": "tholos",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/tholos.png"
+   },
+    {
+       "key": "megalith_type",
+       "value": "cist",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/cist.png"
+   },
+    {
+       "key": "megalith_type",
+       "value": "nuraghe",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/nuraghe.png"
+   },
+    {
+       "key": "megalith_type",
+       "value": "stone_ship",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=archaeological_site and site_type=megalith",
+       "icon_url": "http://gk.historic.place/m/stone_ship.png"
+   },
+   {
+       "key": "historic",
+       "value": "pa",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/fort.png"
+   },
+   {
+       "key": "historic",
+       "value": "technical_monument",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/t-heritage.png"
+   },
+   {
+       "key": "historic",
+       "value": "monastery",
+       "object_types": ["area", "node", "relation"],
+       "icon_url": "http://gk.historic.place/m/kloster.png"
+   },
+   {
+       "key": "building",
+       "value": "monastery",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=yes",
+       "icon_url": "http://gk.historic.place/m/kloster.png"
+   },
+   {
+       "key": "amenity",
+       "value": "monastery",
+       "object_types": ["area", "node", "relation"],
+       "description": "with historic=yes",
+       "icon_url": "http://gk.historic.place/m/kloster.png"
+   },
+   {
+       "key": "amenity",
+       "value": "place_of_worship",
+       "object_types": ["area", "node", "relation"],
+       "description": "with image=, website=, wikipedia=, wikidata=",
+       "icon_url": "http://gk.historic.place/m/beten.png"
+   },
+   {
+       "key": "historic",
+       "value": "church",
+       "object_types": ["area", "node", "relation"],
+       "description": "with image=, website=, wikipedia=, wikidata=",
+       "icon_url": "http://gk.historic.place/m/beten.png"
+   },
+   {
+       "key": "religion",
+       "value": "christian",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/christian.png"
+   },
+   {
+       "key": "denomination",
+       "value": "orthodox",
+       "description": "with amenity=place_of_worship and religion=christian",
+       "icon_url": "http://gk.historic.place/m/orthodox.png"
+   },
+   {
+       "key": "religion",
+       "value": "jewish",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/jewish.png"
+   },
+   {
+       "key": "religion",
+       "value": "muslim",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/muslim.png"
+   },
+   {
+       "key": "religion",
+       "value": "buddhist",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/buddhist.png"
+   },
+   {
+       "key": "religion",
+       "value": "shinto",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/shinto.png"
+   },
+   {
+       "key": "religion",
+       "value": "hindu",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/hindu.png"
+   },
+   {
+       "key": "religion",
+       "value": "taoist",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/taoist.png"
+   },
+   {
+       "key": "religion",
+       "value": "pastafarian",
+       "description": "with amenity=place_of_worship",
+       "icon_url": "http://gk.historic.place/m/fsm.png"
+   },
+   {
+       "key": "historic",
+       "value": "chapel",
+       "icon_url": "http://gk.historic.place/m/kapelle.png"
+   },
+   {
+       "key": "building",
+       "value": "chapel",
+       "object_types": ["area", "node"],
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/kapelle.png"
+   },
+   {
+       "key": "historic",
+       "value": "wayside_chapel",
+       "object_types": ["area", "node"],
+       "icon_url": "http://gk.historic.place/m/kapelle.png"
+   },
+   {
+       "key": "historic",
+       "value": "tree_shrine",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/shrine.png"
+   },
+   {
+       "key": "historic",
+       "value": "wayside_shrine",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/shrine.png"
+   },
+   {
+       "key": "historic",
+       "value": "wayside_cross",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/cross.png"
+   },
+   {
+       "key": "historic",
+       "value": "rune_stone",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/runestone.png"
+   },
+   {
+       "key": "historic",
+       "value": "wreck",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/wreck.png"
+   },
+   {
+       "key": "landfill",
+       "value": "spoil_heap",
+       "object_types": ["area","node"],
+       "description": "with abandoned:landuse=landfill",
+       "icon_url": "http://gk.historic.place/m/halde.png"
+   },
+   {
+       "key": "man_made",
+       "value": "spoil_heap",
+       "object_types": ["area","node"],
+       "description": "with historic and abandoned=yes or disused=yes",
+       "icon_url": "http://gk.historic.place/m/halde.png"
+   },
+   {
+       "key": "historic",
+       "value": "ship",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/ship.png"
+   },
+   {
+       "key": "historic",
+       "value": "tomb",
+       "object_types": ["area","node"],
+       "icon_url": "http://gk.historic.place/m/tomb.png"
+   },
+   {
+       "key": "historic",
+       "value": "aircraft",
+       "object_types": ["node"],
+       "icon_url": "http://gk.historic.place/m/airport.png"
+   },
+   {
+       "key": "historic",
+       "value": "farm",
+       "object_types": ["area","node"],
+       "icon_url": "http://gk.historic.place/m/farm.png"
+   },
+   {
+       "key": "historic",
+       "value": "city_gate",
+       "object_types": ["area","node"],
+       "icon_url": "http://gk.historic.place/m/stadttor.png"
+   },
+   {
+       "key": "historic",
+       "value": "wall",
+       "object_types": ["area","node","way","relation"],
+       "icon_url": "http://gk.historic.place/m/wall.png"
+   },
+   {
+       "key": "historic",
+       "value": "citywalls",
+       "object_types": ["area","node","way","relation"],
+       "icon_url": "http://gk.historic.place/m/wall.png"
+   },
+   {
+       "key": "barrier",
+       "value": "city_wall",
+       "object_types": ["area","node","way","relation"],
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/wall.png"
+   },
+   {
+       "key": "barrier",
+       "value": "wall",
+       "object_types": ["area","node","way","relation"],
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/wall.png"
+   },
+   {
+       "key": "historic",
+       "value": "tower",
+       "object_types": ["area","node","relation"],
+       "icon_url": "http://gk.historic.place/m/turm.png"
+   },
+   {
+       "key": "historic",
+       "value": "tower",
+       "object_types": ["area","node","relation"],
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/turm-r.png"
+   },
+   {
+       "key": "man_made",
+       "value": "tower",
+       "object_types": ["area","node","relation"],
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/turm.png"
+   },
+   {
+       "key": "man_made",
+       "value": "tower",
+       "object_types": ["area","node","relation"],
+       "description": "with historic and ruins=yes",
+       "icon_url": "http://gk.historic.place/m/turm-r.png"
+   },
+   {
+       "key": "tower:type",
+       "value": "bell_tower",
+       "description": "with man_made=tower or historic=tower and ruins=yes",
+       "icon_url": "http://gk.historic.place/m/belltower-r.png"
+   },
+   {
+       "key": "tower:type",
+       "value": "bell_tower",
+       "description": "with man_made=tower or historic=tower",
+       "icon_url": "http://gk.historic.place/m/belltower.png"
+   },
+   {
+       "key": "tower:type",
+       "value": "observation",
+       "description": "with man_made=tower or historic=tower",
+       "icon_url": "http://gk.historic.place/m/aussichtsturm.png"
+   },
+   {
+       "key": "tower:type",
+       "value": "watchtower",
+       "description": "with man_made=tower or historic=tower",
+       "icon_url": "http://gk.historic.place/m/wachturm.png"
+   },
+   {
+       "key": "historic",
+       "value": "threshing_floor",
+       "icon_url": "http://gk.historic.place/m/dreschplatz.png"
+   },
+   {
+       "key": "historic",
+       "value": "gallows",
+       "icon_url": "http://gk.historic.place/m/gallows.png"
+   },
+   {
+       "key": "abandoned:place",
+       "value": "village",
+       "icon_url": "http://gk.historic.place/m/wuestung.png"
+   },
+   {
+       "key": "abandoned",
+       "value": "village",
+       "icon_url": "http://gk.historic.place/m/wuestung.png"
+   },
+   {
+       "key": "man_made",
+       "value": "survey_point",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/trigpoint.png"
+   },
+   {
+       "key": "man_made",
+       "value": "windmill",
+       "icon_url": "http://gk.historic.place/m/windmill.png"
+   },
+   {
+       "key": "man_made",
+       "value": "windmill",
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/windmill-r.png"
+   },
+   {
+       "key": "abandoned:man_made",
+       "value": "windmill",
+       "icon_url": "http://gk.historic.place/m/windmill.png"
+   },
+   {
+       "key": "man_made",
+       "value": "watermill",
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/watermill-r.png"
+   },
+   {
+       "key": "abandoned:man_made",
+       "value": "watermill",
+       "icon_url": "http://gk.historic.place/m/watermill.png"
+   },
+   {
+       "key": "man_made",
+       "value": "watermill",
+       "icon_url": "http://gk.historic.place/m/watermill.png"
+   },
+   {
+       "key": "natural",
+       "value": "tree",
+       "description": "with denotation=natural_monument",
+       "icon_url": "http://gk.historic.place/m/tree.png"
+   },
+   {
+       "key": "natural",
+       "value": "stone",
+       "description": "with image, url, website, memorial:website, heritage:website, wikipedia, name, protected, heritage, wikidata",
+       "icon_url": "http://gk.historic.place/m/stein.png"
+   },
+   {
+       "key": "military",
+       "value": "bunker",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/bunker.png"
+   },
+   {
+       "key": "military",
+       "value": "bunker",
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/bunker-r.png"
+   },
+   {
+       "key": "building",
+       "value": "bunker",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/bunker.png"
+   },
+   {
+       "key": "building",
+       "value": "bunker",
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/bunker-r.png"
+   },
+   {
+       "key": "historic",
+       "value": "cannon",
+       "icon_url": "http://gk.historic.place/m/cannon.png"
+   },
+   {
+       "key": "historic",
+       "value": "quarry",
+       "icon_url": "http://gk.historic.place/m/steinbruch.png"
+   },
+   {
+       "key": "landuse",
+       "value": "quarry",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/steinbruch.png"
+   },
+   {
+       "key": "man_made",
+       "value": "lighthouse",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/leuchtturm.png"
+   },
+   {
+       "key": "historic",
+       "value": "bomb_crater",
+       "icon_url": "http://gk.historic.place/m/bombe.png"
+   },
+   {
+       "key": "man_made",
+       "value": "water_well",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/brunnen.png"
+   },
+   {
+       "key": "amenity",
+       "value": "fountain",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/brunnen.png"
+   },
+   {
+       "key": "historic",
+       "value": "industrial",
+       "icon_url": "http://gk.historic.place/m/industrie.png"
+   },
+   {
+       "key": "man_made",
+       "value": "chimney",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/chimney.png"
+   },
+   {
+       "key": "board_type",
+       "value": "history",
+       "description": "with information=board",
+       "icon_url": "http://gk.historic.place/m/board.png"
+   },
+   {
+       "key": "summit:cross",
+       "value": "yes",
+       "description": "with natural=peak",
+       "icon_url": "http://gk.historic.place/m/peakcross.png"
+   },
+   {
+       "key": "man_made",
+       "value": "cross",
+       "description": "with natural=peak",
+       "icon_url": "http://gk.historic.place/m/peakcross.png"
+   },
+   {
+       "key": "historic",
+       "value": "building",
+       "icon_url": "http://gk.historic.place/m/house.png"
+   },
+   {
+       "key": "historic",
+       "value": "house",
+       "icon_url": "http://gk.historic.place/m/house.png"
+   },
+   {
+       "key": "natural",
+       "value": "spring",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/quelle.png"
+   },
+   {
+       "key": "pump",
+       "value": "manual",
+       "description": "with man_made=water_well and historic",
+       "icon_url": "http://gk.historic.place/m/pumpe.png"
+   },
+   {
+       "key": "amenity",
+       "value": "townhall",
+       "description": "with historic or heritage",
+       "icon_url": "http://gk.historic.place/m/rathaus.png"
+   },
+   {
+       "key": "man_made",
+       "value": "water_tower",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/watertower.png"
+   },
+   {
+       "key": "historic",
+       "value": "pillory",
+       "icon_url": "http://gk.historic.place/m/pranger.png"
+   },
+   {
+       "key": "historic",
+       "value": "lavoir",
+       "icon_url": "http://gk.historic.place/m/lavoir.png"
+   },
+   {
+       "key": "historic",
+       "value": "bridge",
+       "icon_url": "http://gk.historic.place/m/bridge.png"
+   },
+   {
+       "key": "historic",
+       "value": "bridge",
+       "description": "with ruins",
+       "icon_url": "http://gk.historic.place/m/bridge-broken.png"
+   },
+   {
+       "key": "historic",
+       "value": "aqueduct",
+       "icon_url": "http://gk.historic.place/m/aquaeduct.png"
+   },
+   {
+       "key": "man_made",
+       "value": "obelisk",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/obelisk-antik.png"
+   },
+   {
+       "key": "man_made",
+       "value": "kiln",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/meiler.png"
+   },
+   {
+       "key": "abandoned:man_made",
+       "value": "kiln",
+       "icon_url": "http://gk.historic.place/m/meileraus.png"
+   },
+   {
+       "key": "disused:man_made",
+       "value": "kiln",
+       "description": "with historic",
+       "icon_url": "http://gk.historic.place/m/meileraus.png"
+   },
+   {
+       "key": "man_made",
+       "value": "kiln",
+       "description": "with historic and abandoned=yes or disused=yes",
+       "icon_url": "http://gk.historic.place/m/meileraus.png"
+   },
+   {
+       "key": "abandoned:amenity",
+       "value": "prison_camp"
+   },
+   {
+       "key": "prison_camp",
+       "value": "concentration_camp",
+       "description": "with abandoned:amenity=prison_camp",
+       "icon_url": "http://gk.historic.place/m/concentration_camp.png"
+   },
+   {
+       "key": "prison_camp",
+       "value": "pow_camp",
+       "description": "with abandoned:amenity=prison_camp",
+       "icon_url": "http://gk.historic.place/m/pow_camp.png"
+   },
+   {
+       "key": "prison_camp",
+       "value": "labor_camp",
+       "description": "with abandoned:amenity=prison_camp",
+       "icon_url": "http://gk.historic.place/m/pow_camp.png"
+   },
+   {
+       "key": "abandoned:amenity",
+       "value": "prison",
+       "icon_url": "http://gk.historic.place/m/prison.png"
+   },
+   {
+       "key": "image",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "wikipedia",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "wikimedia_commons",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "wikidata",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "website",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "url",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "memorial:website",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "heritage:website",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:OnroerendErfgoed",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:mhs",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:bldam",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:lda",
+       "description": "Berlin im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+    {
+       "key": "ref:rce",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+  {
+       "key": "ref:he",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/he.png"
+   },
+  {
+       "key": "HE_ref",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/he.png"
+   },
+  {
+       "key": "ref:cadw",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/cadw.png"
+   },
+  {
+       "key": "ref:hs",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/hs.png"
+   },
+  {
+       "key": "ref:bda",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/bda.png"
+   },
+  {
+       "key": "ref:clt",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/heritage.png"
+   },
+  {
+       "key": "ref:npu",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/npu.png"
+   },
+   {
+       "key": "ref:kgs",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/heritage.png"
+   },
+    {
+       "key": "ref:LfDH",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+    {
+       "key": "ref:lfdh",
+       "description": "im popup (deprecated)",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:FR:MemorialGenWeb",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "openplaques:id",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "ref:whc",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/image2.png"
+   },
+   {
+       "key": "start_date",
+       "description": "im popup"
+   },
+   {
+       "key": "end_date",
+       "description": "im popup"
+   },
+   {
+       "key": "direction",
+       "description": "im popup",
+       "icon_url": "http://gk.historic.place/m/direction_ne.png"
+   },
+   {
+       "key": "historic"
+   },
+   {
+       "key": "ruins"
+   },
+   {
+       "key": "boundary",
+       "value": "protected_area",
+       "description": "with protect_class=22",
+       "icon_url": "http://gk.historic.place/m/heritage.png"
+   },
+   {
+       "key": "abandoned:military",
+       "value": "bunker",
+       "description": "with ruins=yes",
+       "icon_url": "http://gk.historic.place/m/bunker-r.png"
+   },
+   {
+       "key": "abandoned:military",
+       "value": "bunker",
+       "icon_url": "http://gk.historic.place/m/bunker.png"
+   },
+   {
+       "key": "abandoned:sport",
+       "value": "ski_jumping",
+       "icon_url": "http://gk.historic.place/m/ski.png"
+   },
+   {
+       "key": "historic",
+       "value": "summer_mountain_farm",
+       "icon_url": "http://gk.historic.place/m/farm.png"
+   },
+   {
+       "key": "building:architecture",
+       "value": "timber_frame",
+       "icon_url": "http://gk.historic.place/m/umgebindehaus.png"
+   },
+   {
+       "key": "building:architecture",
+       "value": "umgebinde",
+       "icon_url": "http://gk.historic.place/m/umgebindehaus.png"
+   },
+   {
+       "key": "historic",
+       "value": "exhibit",
+       "icon_url": "http://gk.historic.place/m/exhibit.png"
+   },
+   {
+       "key": "historic",
+       "value": "optical_telegraph",
+       "icon_url": "http://gk.historic.place/m/optical_telegraph.png"
+   },
+   {
+       "key": "razed:historic",
+       "value": "optical_telegraph",
+       "icon_url": "http://gk.historic.place/m/optical_telegraph.png"
+   }
+   
+   ]
+}

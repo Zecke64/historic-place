@@ -1,0 +1,44 @@
+#!/bin/bash
+#
+#	sucktables - zieht Übersetzungstabellen aus dem Wiki und wandelt sie um
+#
+#	sucktables <zieldirectory>
+#
+#	07.12.2013 zecke
+#
+
+
+raus () {
+	echo "$*"
+	exit 1
+}
+
+
+wikibase="http://wiki.openstreetmap.org/wiki/DE:Historical_Objects/Translations"
+
+home="$( cd "$(dirname "$0")" ; cd .. ; pwd -P )"
+bin=$home/bin
+
+. "$home/install.conf" && . "$bin/check_install_conf" || raus "config not found"
+
+languages="$hp_languages"
+
+[ $# -ne 1 ] && echo -e "sucktables <zieldirectory>\n" && exit 1
+work="$1"
+
+tmpf=`mktemp -t "sucktables.XXXXXX"`
+
+for lang in $languages; do
+	[ "$lang" = "de" ] && continue
+	url="$wikibase/table.$lang"
+	wget -q -O $tmpf "$url"
+	[ $? -ne 0 ] && echo "Problem: $url" && continue
+	"$bin"/html2table $tmpf "$work"/table.$lang
+
+	# für manche Sprachen ' ersetzen durch Akzent
+	# [ "$lang" = "uk" ] && sed -i 's/\x27/\xB4/g' "$work"/table.$lang
+
+	echo "geladen: $url"
+done
+
+rm -f $tmpf

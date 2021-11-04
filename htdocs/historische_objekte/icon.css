@@ -1,0 +1,151 @@
+/* Markeranpassung an Baselayers */
+
+/* mapnik */
+
+div.olMapViewport.mapnik div.olPopupMarker.Memorial {
+	
+	background: none;
+}
+
+/*div.olMapViewport.mapnik div.olPopupMarker.Heritage03 {
+	
+	background: #fefdcd;
+}*/
+
+/* OpenCycleMap */
+
+div.olMapViewport.ocm div.olPopupMarker {
+
+	background: #fefdcd;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.Boundary_stone {
+
+	background: none;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.Ruins {
+
+	background: none;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.Sonstiges {
+
+	background: none;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.City_wall {
+
+	background: none;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.Findling {
+
+	background: none;
+
+}
+
+div.olMapViewport.ocm div.olPopupMarker.Plate {
+
+	background: none;
+
+}
+
+/* Reit-und Wanderkarte */
+
+div.olMapViewport.ruwk div.olPopupMarker {
+
+	background: #fefdcd;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.Boundary_stone {
+
+	background: none;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.Ruins {
+
+	background: none;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.Sonstiges {
+
+	background: none;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.City_wall {
+
+	background: none;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.Findling {
+
+	background: none;
+
+}
+
+div.olMapViewport.ruwk div.olPopupMarker.Plate {
+
+	background: none;
+
+}
+
+/* OpenTopoMap */
+
+
+
+div.olMapViewport.otm div.olPopupMarker {
+
+	background: #fefdcd;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.Boundary_stone {
+
+	background: none;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.Ruins {
+
+	background: none;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.Sonstiges {
+
+	background: none;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.City_wall {
+
+	background: none;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.Findling {
+
+	background: none;
+
+}
+
+div.olMapViewport.otm div.olPopupMarker.Plate {
+
+	background: none;
+
+}
+
+
+
+/* Markeranpassung an Baselayers */

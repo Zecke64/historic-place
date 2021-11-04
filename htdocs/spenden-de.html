@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+       "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Historic.Place: Spenden</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="language" content="de" />
+	<meta name="robots" content="index,nofollow" />
+	<meta name="author" content="" />
+	<meta name="revisit-After" content="7 days" />
+	<meta name="distribution" content="global" />
+	
+	<!-- required for media queries to work for responsive layout -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+	
+	<link rel="icon" href="favicon.ico">
+	<link rel="Shortcut Icon" href="favicon.ico">
+
+
+</head>
+ 
+        <div id="contact" class="page-header">
+    	<h2>Spenden für Historic.Place</h2>
+        <p>
+        <a href="spenden-de.html" onclick="" title="Deutsch"><img src="/m/flag-de.png" /></a>
+        <a href="spenden-en.html" onclick="" title="English"><img src="/m/flag-uk.png" /></a>
+    	<p>
+    		Historic.Place ist als Teil von OpenStreetMap ein freies Projekt. Niemand muss für die Nutzung der Daten zahlen.<br>
+    		Der Betrieb der Infrastruktur verursacht aber Kosten, die wir ausschließlich durch Spenden decken.
+    	</p>
+
+Aktuell sind die Serverkosten bezahlt bis:
+
+<div style="width: 50%; border:1px solid #0070DF;">
+
+	<script>
+	// die nächsten beiden Zeilen anpassen...
+	var Jahr = "2021";			// fuer dieses Jahr gilt die Grafik
+	var bezahltbis = "Feb. 01, "+Jahr;	// englisches Format wichtig
+
+	var StartDatum = "January 01, "+Jahr; // Format: Monat Tag, Jahr (englische Monatsnamen verwenden!) 
+	var EndDatum  =  "December 31, "+Jahr;
+	var Anfang = new Date(StartDatum).getTime();
+	var Prozent = Math.floor(((new Date(bezahltbis).getTime() - Anfang) / (new Date(EndDatum).getTime() - Anfang)) * 100);
+	if (Prozent > 100) Prozent = 100;
+	if (Prozent < 1 ) Prozent = 0;
+	document.write("<div style='width: " + Prozent + "%; background: #AAD5FF; text-align: right;'>" + bezahltbis + "<\/div>");
+	</script>
+
+</div>
+
+
+    	<p>Eine direkte Spende könnt ihr uns wie folgt zukommen lassen:</p>
+		<h3>Überweisung</h3>
+		<p>
+			Eine Banküberweisung an das folgende Konto
+		</p>
+		<p>
+			<strong>FOSSGIS e.V.</strong><br/>
+			BLZ: 551 900 00 Mainzer Volksbank<br />
+			Kto.: 415938026<br/>
+			IBAN: DE93 5519 0000 0415 9380 26<br/>
+			BIC: MVBM DE 55<br/>
+		</p>
+		<p>
+	        <strong>Verwendungszweck:</strong>  Historic.Place
+		</p>
+		(Der Verwendungszweck ist wichtig, sonst landet das Geld in anderen Töpfen...)
+		<h3>PayPal</h3>
+			<p>Mittels elektronischem Transfer über PayPal:</p>
+			<form style="padding-left: 15px;" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+				<input type="hidden" name="cmd" value="_s-xclick" />
+				<input type="hidden" name="hosted_button_id" value="RS6SXGFCA65GC" />
+				<input style="height:35px;" class="span3" type="image" src="/m/hpspenden48.png" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal." />
+				<img alt="" border="0" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+			</form>
+		<p>
+	        <strong>Verwendungszweck:</strong>  Historic.Place
+		</p>
+		<br>
+		Jede Spende ist willkommen. Bei Spenden ab 100 € verschickt der Fossgis e.V. eine Spendenquittung.
+		<br>
+		Das Team von Historic.Place bedankt sich ganz herzlich!
+		<br>
+		<br>
+</div>
+<div id="flagicon"><a href="/" onclick="" title="Home, sweet home!"><img src="/m/hphome.png"></a></div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+#!/bin/bash
+#
+#	zieht alle Strings aus dem Quellfile und mischt sie in alle Tabellen 
+#
+#	24.11.2013 zecke
+#
+#	DEPRECATED - needs rework
+#
+
+home=/opt/www/gk.historic.place
+tabledir=$home/translations
+tablecopy=$home/htdocs/historische_objekte/translate/tables
+
+sourcefile="$1"
+[ -z "$sourcefile" ] && echo "Error:   $0 <source file>" && exit 1
+
+cd $tabledir
+
+for table in `ls -1 table.*`; do
+	echo "$sourcefile   $table"
+	$home/bin/extract_strings.sh "$sourcefile" "$table"
+	cp "$table" "$tablecopy"
+done

@@ -1,0 +1,37 @@
+#
+#	Config file for historic.place build script
+#
+#	this config file should be placed outside the GIT repository to allow for individual
+#	configurations. It will be called as aparameter to the install script
+#	install.sh <path_to_this_config_file>
+#
+#	please copy this sample file and fill in the correct paths
+#
+
+# Path of local GIT repository
+# hp_root=/home/path/to/GIT/repo
+
+# Apache document root for Historic.place web
+# hp_webroot=/var/www/mywebs/historic.place/htdocs
+
+# URL for Historic.place web
+# hp_url="https://my.web.server/historic.place/"
+
+# path to cache for dynamic data (image thumbnails) - outside document root
+# hp_dyn=/var/cache/historic.place/dyn
+
+# path to secret config files - should be readable by www-data but outside document root
+# hp_config=/home/me/historic.place
+
+# Path to database of historic objects (created by mole)
+# hp_database=/var/cache/historic.place/database
+
+# Overwrite existing n page index.html? (0 = no, 1 = yes)
+# hp_install_index=0
+
+# Name of the map (part of URL)
+# hp_map=historische_objekte
+
+# Languages
+# hp_languages="de en nl fr pt-br cs es gl ro tr ru da pl ja hu"
+

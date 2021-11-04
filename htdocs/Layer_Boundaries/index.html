@@ -1,0 +1,892 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Historic.Place-Layer_Boundaries</title>
+
+<script type="text/javascript" src="../ol/OpenLayers.js"></script>
+<script type="text/javascript" src="../j/OpenStreetMap.js"></script>
+<script type="text/javascript" src="../j/searchbox.js"></script>
+<script type="text/javascript" src="../j/layerchanger.js"></script>
+<link rel="stylesheet" type="text/css" href="../j/layerchanger.css" />
+<link rel="stylesheet" type="text/css" href="../HPLACE_MAP/histmap.css" />
+<script type="text/javascript">
+//------------------------------------------------------------------------------------
+//	Die anonyme Onload-Function baut das Kartenobjekt aus Komponenten zusammen.
+//------------------------------------------------------------------------------------
+
+window.onload = function () {
+
+	//----------------------------------------------------------------------------
+	//	Karte - der Name ('map') muss mit der id des <div> uebereinstimmen.
+	//----------------------------------------------------------------------------
+
+	var map = new OpenLayers.Map ('map');
+
+	//----------------------------------------------------------------------------
+	//	Default-Koordinatensystem fuer alle Controls
+	//----------------------------------------------------------------------------
+
+	map.displayProjection = new OpenLayers.Projection('EPSG:4326');
+
+	//============================================================================
+	//	Controls
+	//============================================================================
+	//----------------------------------------------------------------------------
+	//	Layer changer
+	//----------------------------------------------------------------------------
+
+        // LC ist global, wird auch von globus-Button aus getriggert
+
+	map.addControl (LC = new OpenLayers.Control.LayerChanger({
+
+	  
+	  //--------------------------------------------------------------------
+		//	Leere Layergruppen werden *nicht* dargestellt.
+		//	Angezeigte Gruppen bekommen die hier gewählte Reihenfolge.
+		//--------------------------------------------------------------------
+		//	Drei Gruppen 'main', 'data' und 'ctrl' werden automatisch
+		//	angelegt, wenn sie hier nicht definiert sind, und zwar wird
+		//	'main' vorangestellt und 'data' und 'ctrl' werden angehängt.
+		//--------------------------------------------------------------------
+		//	Ist dieses Attribut nicht definiert oder ein leeres Array,
+		//	entspricht die Anzeige der vom LayerSwitcher bekannten.
+		//--------------------------------------------------------------------
+		//	Baselayers ohne "layerGroup:" kommen die Gruppe 'main',
+		//	andere Layer in die Gruppe 'data', und Controls nach 'ctrl'.
+		//--------------------------------------------------------------------
+                enableAutoClose: true,
+		controlOpacity: true,
+		minOpacity:             0.2,
+
+
+		// Gruppen "main" und "data" werden automatisch ergaenzt.
+		layerGroups: [
+		        {id: 'Austria', name: 'Austria', hidden: true},
+		        {id: 'Belgium', name: 'Belgium', hidden: true},
+			{id: 'Česky', name: 'Česky', hidden: true},
+			{id: 'Dansk', name: 'Dansk', hidden: true},
+			{id: 'Estonia', name: 'Estonia', hidden: true},
+			{id: 'Finland', name: 'Finland', hidden: true},
+			{id: 'France', name: 'France', hidden: true},
+			{id: 'Germany', name: 'Germany', hidden: true},
+			{id: 'Germany-Citys', name: 'Germany-Citys', hidden: true},
+			{id: 'Great Britain', name: 'Great Britain', hidden: true},
+			{id: 'Hungary', name: 'Hungary', hidden: true},
+			{id: 'Nederlands', name: 'Nederlands', hidden: true},
+			{id: 'Romania', name: 'Romania', hidden: true},
+			{id: 'Russia', name: 'Russia', hidden: true},
+			{id: 'Serbia', name: 'Serbia', hidden: true},
+			{id: 'Sweden', name: 'Sweden', hidden: true},
+			{id: 'Switzerland', name: 'Switzerland', hidden: true},
+			{id: 'USA', name: 'USA', hidden: true},
+			{id: 'local', name: 'Lokale Dateien', hidden: true}
+		]
+		
+	}));
+
+	//----------------------------------------------------------------------
+	//	Suchbox
+	//----------------------------------------------------------------------
+
+	map.addControl (new OpenLayers.Control.SearchBox({
+	  
+	  	resource: OpenLayers.Util.extend(
+			OpenLayers.Control.SearchBox.prototype.resource, {
+				textLabel: 'Search:'
+				// für die historischen Objekte nehmen wir dann "Suche (Historische Objekte)"
+		}),
+		// lang: 'de',
+		textNoHits: 'Kein Treffer.',
+		resultMinZoom: 16,
+		defaultLimit: 50,
+		minDistance: 50,
+		resultMinZoom: 16,
+                autoClose: false,
+		textKeepOpen: 'Stehen lassen',
+
+		translate: function (clasz, type) {
+
+			var dict = OpenLayers.NominatimTranslation && OpenLayers.NominatimTranslation[this.lang];
+
+			var trans = dict && dict[clasz+'.'+type];
+			if (trans) { return trans; }
+
+			OpenLayers.Request.GET({
+                                url: "../c/log.php?" +
+					"log=nominatim" + "&lang=" +
+					this.lang + "&class=" + clasz + "&type=" + type
+                        });
+
+			return clasz+'='+type;
+		},
+
+		startSearch: function (q) {
+			var match = q.match(/^\s*([nwr][1-9]\d*)\s*$/);
+			if (!match) return OpenLayers.Control.SearchBox.prototype.startSearch.apply(this, arguments);
+			this.resultDiv.className='busy';
+			var control = this; // for closure
+			OpenLayers.Request.GET({
+				url: '../c/csv.phtml?db=historic-neu&id='+match[1],
+				success: function (request) {
+					control.resultDiv.className='success';
+					var lines = OpenLayers.String.trim(request.responseText+'').split('\n');
+					if (lines.length<2) {alert ('Object "' + q + '" not in database.'); return; }
+					var fields=lines[1].split('\t');
+					this.map.moveTo(new OpenLayers.LonLat(fields[1], fields[2]).
+					transform(map.displayProjection, map.getProjectionObject()), 16);
+				},
+				failure: function (request) {
+					control.resultDiv.className='failure';
+				}
+			});
+		}
+	}));
+	
+	//============================================================================
+	//	Kartenlayer
+	//============================================================================
+
+	map.addLayer (new OpenLayers.Layer.OSM.Mapnik('Mapnik'));
+	
+	map.addLayer (new OpenLayers.Layer.Vector("Bonnebladen 1865", {
+                        //  projection: "EPSG:4326",
+    			sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Nederlands',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Bonnebladen_1865.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	
+	map.addLayer (new OpenLayers.Layer.Vector("Duhamel-Atlas 1810", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Duhamel.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Dutch Topographical & Military Map 1850", {
+                        //  projection: "EPSG:4326",
+    			sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Nederlands',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Bonnebladen_1865.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	
+	map.addLayer (new OpenLayers.Layer.Vector("USA 1900", {
+                        //  projection: "EPSG:4326",
+    			sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'USA',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/usa_1900.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("KLEKs MTB 1880", {
+                        //  projection: "EPSG:4326",
+    			sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/KLEKs_MTB_1880.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("KLEKs MTB 1920", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/KLEKs_MTB_1920.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Kliver Flözkarte ~1890", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Kliver.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Markgröningen 1751", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Markgroeningen_1751.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Duebener-Heide-1895", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Duebener-Heide-1895.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Duebener-Heide_Flurnamen_1800", {
+                        // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Duebener-Heide_Flurnamen_1800.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	
+	map.addLayer (new OpenLayers.Layer.Vector("Survey_map_1920-1947", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Great Britain',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Survey_map_1920-1947.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("KDR 1893", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/kdr1893.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Rheinland 1803-1820", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Rheinland_1803-1820.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Top. Aufnahme der Pfalz (1836-1841)", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Pfalz_1836-1841.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Preußische Kartenaufnahme Rheinland (1843-1878)", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Preußische_Kartenaufnahme_1843-1878.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+    	map.addLayer (new OpenLayers.Layer.Vector("Sachsen vor 1945", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/sachsen.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+    	map.addLayer (new OpenLayers.Layer.Vector("Sachsen DDR 1976-1989", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/sachsen.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+    	map.addLayer (new OpenLayers.Layer.Vector("Sachsen 1990-1996", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/sachsen.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Zürich 1910", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Switzerland',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Zuerich_1910.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Umeå 1937", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Sweden',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Umea_1937.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Lyon 1888", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'France',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Lyon_1888.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Cherbourg 1943", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'France',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Cherbourg_1943.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Tartu 1892", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Estonia',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Tartu_1892.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Zürich 1504", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Switzerland',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Zuerich_1504.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+//	map.addLayer (new OpenLayers.Layer.Vector("Sovietice (1: 50 000)", {
+ //                        // projection: "EPSG:4326",
+ //   	                sphericalMercator: true,
+//			isBaseLayer: false,
+//			visibility: false,
+//                        strategies: [new OpenLayers.Strategy.Fixed()],
+//                        protocol: new OpenLayers.Protocol.HTTP({
+//                        url: "../shape/Mozaic_harti_sovietice_50k.json",
+//                        format: new OpenLayers.Format.GeoJSON()
+//    })
+//}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Austriece 1910 (1: 200 000)", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Romania',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Mozaic_harti_sovietice_50k.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Planuri Directoare de Tragere", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Romania',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Mozaic_harti_sovietice_50k.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Siebenbürgen 1862", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Romania',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/siebenbürgen.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Belgien 1918", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/bg1918.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Topografische kaart Vandermaelen (1846-1854)", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/flandern.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Atlas cadastral parcellaire de la Belgique, P.C. Popp, 1842-1879", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/flandern-popp.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Atlas der Buurtwegen (ca 1840), Vlaanderen", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/flandern-abw.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Frickx-kaart (1744), Vlaanderen", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/flandern.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Ferrariskaart (1777), Vlaanderen", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/flandern.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Gent 1841", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Belgium',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Gent_1841.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Newport 1845", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Great Britain',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/newport.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Spandau 1938", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Spandau_1938.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Berlin 1860", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/berlin1860.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Berlin 1907", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Berlin_1907.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Urmesstischblatter Spandau-Berlin Nord 1835-1840", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Urmesstisch_Berlin_1835-1840.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Berlin_1940", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Berlin_1940.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Dresden 1833", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/dresden1833.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Lindau 1822", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Lindau_1822.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+ }));   
+    	map.addLayer (new OpenLayers.Layer.Vector("Freiburg 1944", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Freiburg_1944.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+})); 
+        	map.addLayer (new OpenLayers.Layer.Vector("Rostock 1911", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/rostock_1911.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+        	map.addLayer (new OpenLayers.Layer.Vector("Rostock Tarnow 1790", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Rostock_Tarnow_1790.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+        	map.addLayer (new OpenLayers.Layer.Vector("Rostock Schmettau 1788", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Rostock_Schmettau_1788.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+        	map.addLayer (new OpenLayers.Layer.Vector("Rostock Wiebeking 1786", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany-Citys',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Rostock_Wiebeking_1786.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Moskau 1836", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Russia',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/moskau1836.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Budapest 1933", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Hungary',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/budapest1933.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Umgebung von Wien 1941", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Austria',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Umgebung_von_Wien_1941.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+    	map.addLayer (new OpenLayers.Layer.Vector("Wien 1912", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Austria',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/wien_1912.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+    	map.addLayer (new OpenLayers.Layer.Vector("Wien 1684", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Austria',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/wien_1684.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("Belgrad 1940", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Serbia',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Belgrad1940.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Helsinki 1900", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Finland',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Helsinki_1900.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Schwarzwald(Nord) 1920", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/Schwarzwald-Nord-1920.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("German Maps 1936", {
+                         // projection: "EPSG:4326",
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/byu1936.json",
+                        format: new OpenLayers.Format.GeoJSON()
+    })
+}));
+//	map.addLayer (new OpenLayers.Layer.Vector("Vorarlberg-Urmappe", {
+//                         // projection: "EPSG:4326",
+//    	                sphericalMercator: true,
+//			isBaseLayer: false,
+//			visibility: true,
+//                        strategies: [new OpenLayers.Strategy.Fixed()],
+//                        protocol: new OpenLayers.Protocol.HTTP({
+//                        url: "../shape/Vorarlberg.json",
+//                        format: new OpenLayers.Format.GeoJSON()
+//    })
+//}));
+
+
+	//============================================================================
+	//	Stelle Bereich in maximaler Groesse dar
+	//============================================================================
+
+	if (!map.getCenter()) {
+
+		map.zoomToExtent(
+			new OpenLayers.Bounds(-141.67867,4.43426,56.4268,73.29006).
+		transform(map.displayProjection, map.getProjectionObject()));
+	}
+};
+</script>
+</head>
+
+<body style="margin: 0">
+
+
+
+<div id="map" style="background: gray; width: 100%; height: 100%;"></div>
+
+
+</body>
+</html>

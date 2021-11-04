@@ -1,0 +1,361 @@
+Ab Zoom 10 sichtbar###Visible at zoom level 10
+Ab Zoom 11 sichtbar###Visible at zoom level 11
+Ab Zoom 12 sichtbar###Visible at zoom level 12
+Ab Zoom 13 sichtbar###Visible at zoom level 13
+Ab Zoom 14 sichtbar###Visible at zoom level 14
+Ab Zoom 15 sichtbar###Visible at zoom level 15
+Ab Zoom 16 sichtbar###Visible at zoom level 16
+Ab Zoom 17 sichtbar###Visible at zoom level 17
+Ab Zoom 18 sichtbar###Visible at zoom level 18
+Ab Zoom 5 sichtbar###Visible at zoom level 5
+Alle ${count} Einträge###All ${count} entries
+Alle Einträge###All entries
+Andere Objekte mit historischem Bezug###Other objects with historic value
+Anzahl###Count
+Archäologische Stätte - allgemein###Archeological Site - general
+Archäologische Stätte###Archeological Site
+Archäologische Stätte (Befestigung)###Archeological Site (Fortification)
+Archäologische Stätte (Ganggrab)###Archeological Site (Passage grave)
+Archäologische Stätte (Grabkammer)###Archeological Site (Burial Chamber)
+Archäologische Stätte (Großsteingrab)###Archeological Site (Dolmen)
+Archäologische Stätte (Hügelgrab)###Archeological Site (Tumulus)
+Archäologische Stätte (Megalith)###Archeological Site (Megalith)
+Archäologische Stätte (Menhir)###Archeological Site (Menhir)
+Archäologische Stätte (Steinkreis)###Archeological Site (Stone Circle)
+Archäologische Stätte (Steinreihe)###Archeological Site (Stone Row)
+auf aktuellen Standort zoomen###Zoom to current position
+aufgegeben###abandoned
+Ausrichtung des Objektes im Popup###Object orientation in the popup
+Aussichtsturm###Observation tower
+Bahnhof###Railway Station
+Bahnhofsgelände###Railway station area
+Bahnlinie###Railway
+Baumbildstock###Tree shrine
+Bearbeiten mit###Edit with
+Bearbeiten mit iD###Edit with iD
+Bearbeiten mit JOSM###Edit with JOSM
+Bearbeiten mit Potlatch###Edit with Potlatch
+Befestigungsanlage###Fortification
+bei Zoom=${next} werden weitere Daten eingeblendet###Zoom=${next} will show more data
+Bergwerk###Mine
+Bergwerk/Schachtanlage/Schacht###Mine/Mine System/Mineshaft
+Bergwerksstollen###Adit (mining)
+Bergwerksstollen (aufgegeben)###Adit (mining) - closed
+Beschreibung###Description
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Code snippets and data preparation were done by:
+Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###Pinge (depression caused by human activity such as mining)
+Bombenkrater###Bomb crater
+Historische Brücke###Historical bridge
+Historische Brücke (Ruine)###Historical bridge (ruins)
+Brunnen###Fountain
+Bunker###Bunker
+Bunker (Ruine)###Bunker (ruins)
+Burg oder Schloss###Castle
+Burg###Palace/Castle/Fort (without further specification)
+Burg (Ruine)###Palace/Castle/Fort ruins (without further specification)
+Credits###Credits
+Danksagung###Credits
+Dargestellte Einträge###Displayed entries
+denkmalgeschützt###protected
+Denkmal###Memorial
+Denkmalschutz###Monument protection
+Details###Details
+Die ersten ${count} von ${all} Einträgen###The first ${count} of ${all} entries
+Dreschplatz###Threshing floor
+Du willst ein Bild? Beteilige Dich!###Do you want a photo? Get involved!
+Erinnerungsstätte###Monument
+Farm###Farm
+Festung###Fortress
+Festung/Kreml###Kremlin
+Festung/Kreml (Ruine)###Kremlin (ruins)
+Findling###Glacial erratic
+Fläche###Area
+Flächen###areas
+Fragmente###Fragments
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###The first version of this map was made by:
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###The wiki for this map was made by:
+Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###There is a JOSM preset for historical objects
+Für Übersetzungen :###Translations
+Galgen###Gallows
+Ganggrab (Langbett)###Passage grave
+Gebäude###Building
+Gedenkplakette###Memorial plaque
+Gedenktafel###Memorial plate
+Gefängnis###Prison
+geschlossen###closed
+geschützt durch###protected by
+Geschütztes Gebäude###Protected building
+Geschütztes Gebiet###Protected area
+Gipfelkreuz###Summit cross
+Glockenturm###Belfry
+Glockenturm (Ruine)###Belfry (ruins)
+Grab###Tomb
+Grenzmarkierung###Boundary marker
+Grenzstein###Boundary stone
+Großsteingrab - Dolmen###Dolmen
+Haltepunkt###Basic station
+Handschwengelpumpe###Old manual water pump
+Handwasserpumpe###Old manual water pump
+Herrenhaus###Manor
+Historische Eisenbahnstrecke###Historical railroad
+Historische Farm###Historical farm
+Historische Industriebauten###Industrial building (historic)
+Historische Objekte###Historical Objects
+Historische Quelle###Historic spring
+Naturdenkmal###Natural monument
+Historischer Brunnen / Zierbrunnen###Historic fountain
+Historischer Dreschplatz/Tenne###Historical threshing
+Historischer Eisenbahn-Haltepunkt###Historical railroad station
+Historischer Galgen###Historical gallows
+Historischer Name###Historical name
+Historischer Stein###Historical stone
+Historischer Turm###Historical tower
+Historischer Turm (Ruine)###Historic tower (ruins)
+Historischer Vermessungspunkt###Historic survey point
+Historisches Gebäude###Historical building
+Historisches Grab###Historical tomb
+Historisches Luftfahrzeug###Historical aircraft
+Historisches Objekt###Historical Object
+Historisches Schiff###Historical ship
+Historisches Stadttor###Historic city gate
+Historische Stadt-Mauer/Historische Mauer###Historic wall
+Hügelgrab (Tumulus)###Tumulus
+Hütte###Hut
+Icon###Icon
+Industriegebäude###Industrial building
+Informationstafel###Information board
+Infos für Mapper###Mapper info
+Infos für OSM-Mapper###OSM mapper info
+Info-Tafel mit historischem Bezug###Historic information board
+Inschrift###Inscription
+Japanische Burg###Japanese castle (Shiro)
+JOSM_Vorlage###JOSM preset
+Kanone###Cannon
+Kapelle###Chapel
+Kein Treffer###No results
+Keine Vorschau verfügbar!###No preview available
+Kirche###Church
+Kloster###Monastery
+Kloster (Ruine)###Monastery (ruins)
+Kompass###Compass
+Kompass ein/aus###Compass on/off
+Kontakt###Contact
+Konzentrationslager###Concentration camp
+Koordinaten###Coordinates
+Kreml###Kremlin
+Kriegsgefangenenlager###POW camp
+Laden###Loading
+Legende###Legend
+Legende und Infos###Legend and information
+Leuchtturm###Lighthouse
+Linie###Line
+Linien###Lines
+Linien und Flächen###Lines and areas
+Link zum Bild###Link to image
+Luftfahrzeug###Aircraft
+Marterl###Wayside shrine
+Mehr Objekte anzeigen###Show more objects
+Meilenstein###Milestone
+Monument###Monument
+Moschee###Mosque
+Namen###Names
+Normale Zahl von Objekten anzeigen###Show default objects
+NS-Konzentrationslager###Nazi concentration camp
+Obelisk###Obelisk
+Objekte mit Zusatzinfos###Object with additional information
+Objekte mit Zusatz-Link###Object with web-link
+Objekt###Object
+oder###or
+OpenStreetMap und Mitwirkende###OpenStreetMap and contributors
+Paläontologische Stätte###Paleontology site
+Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)###Palace/Castle/Fort (without further specification)
+Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)###Palace/Castle/Fort ruins (without further specification)
+Palast###Palace
+Palast (Ruine)###Palace (Ruins)
+Pā (Māori) Befestigungsanlagen###Pā (Māori) fortifications
+Pinge###Pinge
+Pranger###Pillory
+Punkt###Point
+Quelle###Source
+Rathaus###Town hall
+Religiöse Stätte (mit Link)###Place of worship (with web-link)
+Religiöse Stätte###Place of worship
+Religiöse Stätte (religionsspezifisch)###Place of worship (by religion)
+Rittergut/Herrenhaus###Manor
+Rittergut/Herrenhaus (Ruine)###Manor (ruins)
+Ruine###Ruin
+Runenstein###Rune stone
+Schacht###Mineshaft
+Schiff###Ship
+Schiffswrack###Shipwreck
+Schlachtfeld###Battlefield
+Schloss###Castle (stately)
+Schloss (Ruine)###Castle (stately - ruins)
+Schrein###Shrine
+See###Lake
+Shiro (Japanische Burg)###Shiro (Japanese castle)
+Shiro (Ruine)###Shiro (ruin)
+Sprachauswahl###Language selection
+Stadtmauer###City wall
+Stadttor###City gate
+Stand der Daten###Data from
+Steinbruch###Quarry
+Steingrab - Menhir###Stone grave - Menhir
+Steinkreis###Stone circle
+Steinreihe###Stone row
+Stillgelegtes Bergwerk/stillgelegter Schacht###Mine / Mineshaft (closed)
+Stollen (allgemein)###Adit
+Stolleneingang###Adit
+Stolpersteine###Stolpersteins (memorial paving plaques)
+Stolperstein###Stolperstein (memorial paving plaque)
+Sühnekreuz###Conciliation cross
+Sühnestein###Conciliation cross
+Synagoge###Synagoge
+Technikdenkmal###Technical monument
+Technisches Denkmal###Industrial heritage
+Tempel###Temple
+Turm###Tower
+Übersicht###Overview
+UNESCO Welterbe###UNESCO World Heritage
+Vermessungspunkt###Survey point
+von###of
+Wallanlage###Rampart
+Wanderwege###Hiking trails
+Waschplatz###Washing place
+Wassermühle (Ruine)###Watermill (ruins)
+Wassermühle###Watermill
+Wasserpumpe###Water pump
+Wasserturm###Water tower
+Webseite###web site
+Wegkapelle###Wayside chapel
+Weg-Kapelle###Wayside chapel
+Wegkreuz###Wayside cross
+Bildstock###Wayside shrine
+Weitere Karten###Other maps
+Weniger Objekte anzeigen###Show fewer objects
+Wiki zur Karte###Wiki for the map
+Windmühle (Ruine)###Windmill (ruins)
+Windmühle###Windmill
+Wrack###Shipwreck
+Wüstung###Abandoned village
+Zur Anzeige der Karte ist JavaScript erforderlich.###This map requires Javascript.
+ausgedehnte Objekte###extended objects
+Die Routen-Layer###Route layers
+Einzelobjekte###Points of interest
+Eisenbahnen###Railways
+experimentell###experimental
+Freizeit###Leisure
+Grundkarte###Base map
+Hilfsebenen###Support layers
+Inline-Skating###Inline skating
+lizenziert unter###licensed by
+Mountainbike###Mountain bike
+Radwege###Cycle routes
+Schummerung###Hill shading
+Straßen###Roads
+Verwaltungsgrenzen###Administrative boundaries
+Wetter###Weather
+Zeichenwerkzeuge###Drawing Tools
+Zeichnen###Drawing
+Steuerelemente###Tools
+Zeigt diese Gruppe###Show this group
+Versteckt diese Gruppe###Hide this group
+Zeigt diese Ebene###Show this layer
+Versteckt diese Ebene###Hide this layer
+Wählt diese Ebene als Basisebene###Select as base layer
+Zeigt dieses Steuerelement###Show this tool
+Versteckt dieses Steuerelement###Hide this tool
+Verringert die Deckkraft der Ebene###Decrease opacity of this layer
+Erhöht die Deckkraft der Ebene###Increase opacity of this layer
+Verringert die Deckkraft des Steuerelements###Decrease opacity of this tool
+Erhöht die Deckkraft des Steuerelements###Increase opacity of this tool
+Navigationsfenster###Navigation pane
+Reit- und Wanderkarte###Hiking+Trail Riding Map
+Statue###Statue
+Aquädukt###Aqueduct
+Ehemaliger Windmühlenstandort###former windmill location
+Ehemaliger Wassermühlenstandort###former watermill location
+Ehemaliger Schacht###former mineshaft
+Ehemaliger Stollen###former adit
+Wappen###Coat of arms
+Bergehalde###Spoil heap
+Schlackenhalde###Slag heap
+Müllhalde###Waste dump
+Bohrung###Drill hole
+Museumsbahnlinie###Heritage railway
+stillgelegt###disused
+nahezu komplett entfernt###razed
+Stehen lassen###Keep open
+Historisches Gefängnis###Historic prison
+Suche###Search
+Kartenebenen###Map layers
+Fenster schließen###Close window
+Köhlerei###Charcoal burner
+Töpferei###Pottery
+Ziegelei###Brickyard
+Kalkbrandofen###Limestone kiln
+Pechhütte###Tar kiln
+Glashütte###Glass kiln
+Brennofen###Kiln
+Kohlenmeiler###Charcoal kiln
+Schornstein###Chimney
+Portal###Portal
+Tunnelportal###Tunnel portal
+Fachwerkhaus###Frame house
+Felsenkeller###Cellar
+Maultierpfad###Packhorse Trail
+Umgebindehaus###Upper Lusatian house
+Wohnturm###Tower house
+Wehrturm###Fortified Tower
+Wachturm###Watchtower
+Skisprungschanze###Ski jumping hill
+Optischer Telegraf###Semaphore
+Historisches Militärgelände###Historic military area
+Historische Straße###Historic road
+Arbeitslager###Labour camp
+Ehemaliges Bergwerk###Former mine
+Erbaut###Built
+Historische Karten###Historical maps
+Verweise auf Fremdkarten###References to foreign maps
+Objekte Bearbeiten###Edit objects
+Downloads###Downloads
+Karten-Zoom###Map zoom
+Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###Please zoom first from zoom ${zoom} to ${minZoom}
+Zoomt auf Ausdehnung###Zoom to extent
+Entfernt das Layer###Removes the layer
+Lokale Dateien###Local files
+GPX einlesen###Load GPX
+Einstellungen in Cookie speichern###Store settings in a cookie
+Cookie gespeichert###Cookie saved
+Permalink###Permalink
+Übersichtskarte über verfügbare historische Karten###Overview map of historical maps
+Historische Karten im Ausschnitt###Historical maps in range
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Click on preview to enlarge and see author, licence and image information
+Historisches Schienenfahrzeug###Historic rail vehicle
+Historisches Ausstellungsstück###Historical exhibit
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###Read GPX file (s) from the local file system
+Reiten###Horse riding
+Die Datei ${name} ist ${size} Bytes groß###The file ${name} is ${size} bytes big
+Das Laden kann etwas dauern. Fortsetzen?###Loading may take some time. Continue?
+Ende###End
+Hilfe###Help
+Messwerkzeug###Measuring tool
+Kriegsgräberstätte###War grave
+Umgebung mit###Surroundings of
+Pflanzjahr###year of planting
+Mehr Infos von###More info from
+vor Christus###before Christ
+vor###before
+nach###after
+Anfang###early
+um###some time around
+Mitte###some time during the middle of
+gegen Ende###late
+Kunstwerk###Work of art
+Transformatorenturm###Transformer tower
+OSM deutscher Stil###OSM German style
+Reit- und Wanderkarte###Riding and hiking map
+Topgrafische Karte von Maxbe###Topgraphic map of Maxbe
+Regionen###Natural regions, mountain ranges,
+Historische Grenzen (experimentell)###Historical boundaries (experimental)
+Jahrhundert###century

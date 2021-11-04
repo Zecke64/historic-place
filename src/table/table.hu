@@ -1,0 +1,361 @@
+Ab Zoom 10 sichtbar###10. nagyítási szinttől látható
+Ab Zoom 11 sichtbar###11. nagyítási szinttől látható
+Ab Zoom 12 sichtbar###12. nagyítási szinttől látható
+Ab Zoom 13 sichtbar###13. nagyítási szinttől látható
+Ab Zoom 14 sichtbar###14. nagyítási szinttől látható
+Ab Zoom 15 sichtbar###15. nagyítási szinttől látható
+Ab Zoom 16 sichtbar###16. nagyítási szinttől látható
+Ab Zoom 17 sichtbar###17. nagyítási szinttől látható
+Ab Zoom 18 sichtbar###18. nagyítási szinttől látható
+Ab Zoom 5 sichtbar###5. nagyítási szinttől látható
+Alle ${count} Einträge###Mind a(z) ${count} bejegyzés
+Alle Einträge###Minden bejegyzés
+Andere Objekte mit historischem Bezug###Más, történelmi vonatkozású objektumok
+Anzahl###Szám
+Archäologische Stätte - allgemein###Régészeti lelőhely (általános)
+Archäologische Stätte###Régészeti lelőhely
+Archäologische Stätte (Befestigung)###Régészeti lelőhely (erődítmény)
+Archäologische Stätte (Ganggrab)###Régészeti lelőhely (folyosósír)
+Archäologische Stätte (Grabkammer)###Régészeti lelőhely (sírkamra)
+Archäologische Stätte (Großsteingrab)###Régészeti lelőhely (dolmen)
+Archäologische Stätte (Hügelgrab)###Régészeti lelőhely (halomsír)
+Archäologische Stätte (Megalith)###Régészeti lelőhely (megalit)
+Archäologische Stätte (Menhir)###Régészeti lelőhely (menhir)
+Archäologische Stätte (Steinkreis)###Régészeti lelőhely (kőkör)
+Archäologische Stätte (Steinreihe)###Régészeti lelőhely (kősor)
+auf aktuellen Standort zoomen###nagyítás a jelenlegi helyre
+aufgegeben###elhagyott
+Ausrichtung des Objektes im Popup###Az objektum iránya a felugró ablakban
+Aussichtsturm###Kilátótorony
+Bahnhof###Vasútállomás
+Bahnhofsgelände###Vasútállomás-terület
+Bahnlinie###Vasútvonal
+Baumbildstock###Fából készült személy
+Bearbeiten mit###Szerkesztés a következővel:
+Bearbeiten mit iD###Szerkesztés iD-vel
+Bearbeiten mit JOSM###Szerkesztés JOSM-mal
+Bearbeiten mit Potlatch###Szerkesztés Potlatch-csal
+Befestigungsanlage###Erődítmény
+bei Zoom=${next} werden weitere Daten eingeblendet###a ${next} nagyítási szinten újabb adatok jelennek meg
+Bergwerk###Bánya
+Bergwerk/Schachtanlage/Schacht###Bánya / akna
+Bergwerksstollen###Bányatárna
+Bergwerksstollen (aufgegeben)###Bányatárna (elhagyott)
+Beschreibung###Leírás
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Külön köszönjük a legkülönfélébb kódrészleteket és az adatok rendelkezésre bocsátását a következőknek:
+Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###Bányászati tevékenység miatti felszíni horpadás
+Bombenkrater###Bombatölcsér
+Historische Brücke###Történelmi Híd
+Historische Brücke (Ruine)###Történelmi Híd (rom)
+Brunnen###Kút
+Bunker###Bunker
+Bunker (Ruine)###Bunker (rom)
+Burg oder Schloss###Vár vagy kastély
+Burg###Vár
+Burg (Ruine)###Vár (rom)
+Credits###Alkotók:
+Danksagung###Köszönet
+Dargestellte Einträge###Megjelenített bejegyzések
+denkmalgeschützt###műemléki védelem alatt
+Denkmal###Emlékmű
+Denkmalschutz###Műemlékvédelem
+Details###Részletek
+Die ersten ${count} von ${all} Einträgen###Az első ${count} bejegyzés ennyiből: ${all}
+Dreschplatz###Szérű
+Du willst ein Bild? Beteilige Dich!###Szeretnél egy képet? Vegyél részt!
+Erinnerungsstätte###Monumentális, épületszerű emlékmű
+Farm###Tanya
+Festung###Erőd
+Festung/Kreml###Erőd/kreml
+Festung/Kreml (Ruine)###Erőd/kreml (rom)
+Findling###Gleccser által szállított nagy kő
+Fläche###Terület
+Flächen###Területek
+Fragmente###Töredékek
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###Az első történelmi térképekért, amelyekre ezek a történelmi térképek ráépülhettek:
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###A történelmi térképekkel kapcsolatos Wiki-munkáért:
+Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###A JOSM-hoz van egy történelmi objektumok térképezésére szolgáló előbeállítás-készlet
+Für Übersetzungen :###A fordításokért:
+Galgen###Akasztófa
+Ganggrab (Langbett)###Folyosósír
+Gebäude###Épület
+Gedenkplakette###Emléktábla
+Gedenktafel###Emléktábla
+Gefängnis###Börtön
+geschlossen###zárva
+geschützt durch###Védettség:
+Geschütztes Gebäude###Védett épület
+Geschütztes Gebiet###Védett terület
+Gipfelkreuz###Csúcskereszt
+Glockenturm###Harangtorony
+Glockenturm (Ruine)###Harangtorony (rom)
+Grab###Sír
+Grenzmarkierung###Határjelzés
+Grenzstein###Határkő
+Großsteingrab - Dolmen###Nagy kősír – dolmen
+Haltepunkt###Vasúti megálló
+Handschwengelpumpe###Kéz szivattyú (Norton-kút)
+Handwasserpumpe###Kézi szivattyú
+Herrenhaus###Udvarház, kúria
+Historische Eisenbahnstrecke###Történelmi vasútvonal
+Historische Farm###Történelmi tanya
+Historische Industriebauten###Történelmi ipari épület
+Historische Objekte###Történelmi objektumok
+Historische Quelle###Történelmi forrás
+Naturdenkmal###Védett természeti kincs
+Historischer Brunnen / Zierbrunnen###Történelmi kút / díszkút
+Historischer Dreschplatz/Tenne###Történelmi szérű
+Historischer Eisenbahn-Haltepunkt###Történelmi vasúti megálló
+Historischer Galgen###Történelmi akasztófa
+Historischer Name###Történelmi név
+Historischer Stein###Történelmi kő
+Historischer Turm###Történelmi torony
+Historischer Turm (Ruine)###Történelmi torony (rom)
+Historischer Vermessungspunkt###Történelmi földmérési pont
+Historisches Gebäude###Történelmi épület
+Historisches Grab###Történelmi sír
+Historisches Luftfahrzeug###Történelmi légi jármű
+Historisches Objekt###Történelmi objektum
+Historisches Schiff###Történelmi hajó
+Historisches Stadttor###Történelmi városkapu
+Historische Stadt-Mauer/Historische Mauer###Történelmi (város)fal
+Hügelgrab (Tumulus)###Halomsír
+Hütte###Kunyhó
+Icon###Ikon
+Industriegebäude###Ipari épület
+Informationstafel###Tájékoztató tábla
+Infos für Mapper###Tájékoztatás térképkészítőknek
+Infos für OSM-Mapper###Tájékoztatás OSM-térképkészítőknek
+Info-Tafel mit historischem Bezug###Történelmi vonatkozású tájékoztató tábla
+Inschrift###Felirat
+Japanische Burg###Japán vár
+JOSM_Vorlage###JOSM preset
+Kanone###Ágyú
+Kapelle###Kápolna
+Kein Treffer###Nincs találat
+Keine Vorschau verfügbar!###Előnézet nem áll rendelkezésre
+Kirche###Templom
+Kloster###Kolostor
+Kloster (Ruine)###Kolostor (rom)
+Kompass###Iránytű
+Kompass ein/aus###Iránytű be/ki
+Kontakt###Kapcsolat
+Konzentrationslager###Koncentrációs tábor
+Koordinaten###Koordináták
+Kreml###Kreml
+Kriegsgefangenenlager###Hadifogolytábor
+Laden###Betöltés
+Legende###Jelmagyarázat
+Legende und Infos###Jelmagyarázat és tájékoztatás
+Leuchtturm###Világítótorony
+Linie###Vonal
+Linien###Vonalak
+Linien und Flächen###Vonalak és területek
+Link zum Bild###Link a képhez
+Luftfahrzeug###Légi jármű
+Marterl###Kis út menti szentély
+Mehr Objekte anzeigen###További objektumok megjelenítése
+Meilenstein###Mérföldkő
+Monument###Monumentális, épületszerű emlékmű
+Moschee###Mecset
+Namen###Nevek
+Normale Zahl von Objekten anzeigen###Alapértelmezett mennyiségű objektum megjelenítése
+NS-Konzentrationslager###Náci koncentrációs tábor
+Obelisk###Obeliszk
+Objekte mit Zusatzinfos###Objektum további információkkal
+Objekte mit Zusatz-Link###Objektum linkkel
+Objekt###Objektum
+oder###vagy
+OpenStreetMap und Mitwirkende###OpenStreetMap és szerkesztők
+Paläontologische Stätte###Őslénytani lelőhely
+Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)###Palota/vár/kastély/erőd (pontos meghatározás nélkül)
+Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)###Palota/vár/kastély/erőd romja (pontos meghatározás nélkül)
+Palast###Palota
+Palast (Ruine)###Palota (rom)
+Pā (Māori) Befestigungsanlagen###Pā (maori erődítmény)
+Pinge###Bányászati tevékenység miatti felszíni horpadás
+Pranger###Kaloda
+Punkt###Pont
+Quelle###Forrás
+Rathaus###Városháza
+Religiöse Stätte (mit Link)###Istentiszteleti hely (linkkel)
+Religiöse Stätte###Istentiszteleti hely
+Religiöse Stätte (religionsspezifisch)###Istentiszteleti hely (vallásspecifikus)
+Rittergut/Herrenhaus###Udvarház, kúria
+Rittergut/Herrenhaus (Ruine)###Udvarház, kúria (rom)
+Ruine###Rom
+Runenstein###Rúnakő
+Schacht###Bányaakna
+Schiff###Hajó
+Schiffswrack###Hajóroncs
+Schlachtfeld###Csatatér
+Schloss###Kastély
+Schloss (Ruine)###Kastély (rom)
+Schrein###Szentély
+See###Tó
+Shiro (Japanische Burg)###Siró (japán vár)
+Shiro (Ruine)###Siró (rom)
+Sprachauswahl###Nyelv kiválasztása
+Stadtmauer###Városfal
+Stadttor###Városkapu
+Stand der Daten###Adatok dátuma:
+Steinbruch###Kőfejtő
+Steingrab - Menhir###Kősír – menhir
+Steinkreis###Kőkör
+Steinreihe###Kősor
+Stillgelegtes Bergwerk/stillgelegter Schacht###Bezárt bánya, bányaakna
+Stollen (allgemein)###Bányatárna (általános)
+Stolleneingang###Bányatárna bejárata
+Stolpersteine###Botlatókövek
+Stolperstein###Botlatókő
+Sühnekreuz###Megbékélési kőkereszt
+Sühnestein###Megbékélési kő
+Synagoge###Zsinagóga
+Technikdenkmal###Ipari műemlék
+Technisches Denkmal###Ipari műemlék
+Tempel###Nem keresztény templom
+Turm###Torony
+Übersicht###Áttekintés
+UNESCO Welterbe###UNESCO világörökség
+Vermessungspunkt###Földmérési alappont
+von###of
+Wallanlage###Hajdani erődítmény
+Wanderwege###Turistautak
+Waschplatz###Mosóhely
+Wassermühle (Ruine)###Vízimalom (rom)
+Wassermühle###Vízimalom
+Wasserpumpe###Szivattyú
+Wasserturm###Víztorony
+Webseite###Weboldal
+Wegkapelle###Út menti kápolna
+Weg-Kapelle###Út menti kápolna
+Wegkreuz###Út menti kereszt
+Bildstock###Út menti kegyhely
+Weitere Karten###További térképek
+Weniger Objekte anzeigen###Kevesebb objektum megjelenítése
+Wiki zur Karte###Wiki a térképhez
+Windmühle (Ruine)###Szélmalom (rom)
+Windmühle###Szélmalom
+Wrack###Roncs
+Wüstung###Elhagyott terület
+Zur Anzeige der Karte ist JavaScript erforderlich.###A térkép megjelenítéséhez JavaScript szükséges.
+ausgedehnte Objekte###Kiterjesztett objektumok
+Die Routen-Layer###Az útvonalrégetek
+Einzelobjekte###Érdekes pontok (POI-k)
+Eisenbahnen###Vasutak
+experimentell###kísérleti
+Freizeit###Szabadidő
+Grundkarte###Alaptérkép
+Hilfsebenen###Segédrétegek
+Inline-Skating###Görkorcsolya
+lizenziert unter###licenc:
+Mountainbike###Mountain bike
+Radwege###Kerékpárutak
+Schummerung###Domborzatárnyékolás
+Straßen###Utak
+Verwaltungsgrenzen###Közigazgatási határok
+Wetter###Időjárás
+Zeichenwerkzeuge###Rajzolóeszközök
+Zeichnen###Rajzolás
+Steuerelemente###Vezérlők
+Zeigt diese Gruppe###Csoport megjelenítése
+Versteckt diese Gruppe###Csoport elrejtése
+Zeigt diese Ebene###Réteg megjelenítése
+Versteckt diese Ebene###Réteg elrejtése
+Wählt diese Ebene als Basisebene###Kijelölés alaprétegként
+Zeigt dieses Steuerelement###Vezérlő megjelenítése
+Versteckt dieses Steuerelement###Vezérlő elrejtése
+Verringert die Deckkraft der Ebene###Réteg áttetszőségének csökkentése
+Erhöht die Deckkraft der Ebene###Réteg áttetszőbbé tétele
+Verringert die Deckkraft des Steuerelements###Vezérlő áttetszőségének csökkentése
+Erhöht die Deckkraft des Steuerelements###Vezérlő áttetszőbbé tétele
+Navigationsfenster###Navigációs ablak
+Reit- und Wanderkarte###Lovas- és turistatérkép
+Statue###Szobor
+Aquädukt###Akvadukt (vízvezeték)
+Ehemaliger Windmühlenstandort###Egykori szélmalom helye
+Ehemaliger Wassermühlenstandort###Egykori vízimalom helye
+Ehemaliger Schacht###Egykori bányaakna
+Ehemaliger Stollen###Egykori bányatárna
+Wappen###Címer
+Bergehalde###Meddőhányó (bányászati melléktermékből)
+Schlackenhalde###Meddőhányó (kohósalakból)
+Müllhalde###Hulladéklerakó (szeméttelep)
+Bohrung###Fúrás
+Museumsbahnlinie###Múzeum-vasútvonal
+stillgelegt###használaton kívüli
+nahezu komplett entfernt###szinte teljesen eltávolított
+Stehen lassen###Nyitva hagyás
+Historisches Gefängnis###Történelmi börtön
+Suche###Keresés
+Kartenebenen###Térképrétegek
+Fenster schließen###Ablak bezárása
+Köhlerei###Faszénégető
+Töpferei###Fazekasműhely
+Ziegelei###Téglaégető
+Kalkbrandofen###Mészégető kemence
+Pechhütte###Fakátrányégető kemence
+Glashütte###Üveghuta
+Brennofen###Égetőkemence
+Kohlenmeiler###Faszénégető boksa
+Schornstein###Kémény
+Portal###Portál
+Tunnelportal###Alagútbejárat
+Fachwerkhaus###Favázas ház
+Felsenkeller###Sziklába vájt pince
+Maultierpfad###Öszvérösvény
+Umgebindehaus###Umgebindehaus
+Wohnturm###Lakótorony
+Wehrturm###Erődített torony
+Wachturm###Őrtorony
+Skisprungschanze###Síugró sánc
+Optischer Telegraf###Optikai távíró (szemafor)
+Historisches Militärgelände###Történelmi katonai terület
+Historische Straße###Történelmi út
+Arbeitslager###Munkatábor
+Ehemaliges Bergwerk###Egykori bánya
+Erbaut###Épült
+Historische Karten###Történelmi térképek
+Verweise auf Fremdkarten###Hivatkozások más térképekre
+Objekte Bearbeiten###Objektumok szerkesztése
+Downloads###Letöltések
+Karten-Zoom###Térkép nagyítása
+Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###Először nagyítson ${zoom}. fokozatról ${minZoom}. fokozatra
+Zoomt auf Ausdehnung###Nagyítás a kiterjesztésre
+Entfernt das Layer###Réteg eltávolítása
+Lokale Dateien###Helyi fájlok
+GPX einlesen###GPX betöltése
+Einstellungen in Cookie speichern###Beállítások tárolása cookie-ban
+Cookie gespeichert###Cookie mentve
+Permalink###Tartós link (permalink)
+Übersichtskarte über verfügbare historische Karten###Elérhető történelmi térképek áttekintése
+Historische Karten im Ausschnitt###Történelmi térképek a kivágásban
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Kattintson az előnézetre a nagyításhoz, valamint a szerző, a licenc és a képadatok megtekintéséhez
+Historisches Schienenfahrzeug###Történelmi sínjármű
+Historisches Ausstellungsstück###Történelmi kiállítási tárgy
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###GPX-fájl(ok) beolvasása a helyi fájlrendszerből
+Reiten###Lovaglás
+Die Datei ${name} ist ${size} Bytes groß###A(z) ${name} fájl mérete ${size} byte
+Das Laden kann etwas dauern. Fortsetzen?###A betöltés sokáig tarthat. Folytatja?
+Ende###Vége
+Hilfe###Súgó
+Messwerkzeug###Mérőeszköz
+Kriegsgräberstätte###Katonai temető
+Umgebung mit###Környék:
+Pflanzjahr###Ültetés éve:
+Mehr Infos von###További információk:
+vor Christus###Krisztus előtt
+vor###korábban mint
+nach###később mint
+Anfang###ennek az elején:
+um###körülbelül ekkor:
+Mitte###körülbelül ennek a közepén:
+gegen Ende###körülbelül ennek a végén:
+Kunstwerk###Műalkotás
+Transformatorenturm###Transzformátortorony
+OSM deutscher Stil###OSM német stílus
+Reit- und Wanderkarte###Lovas és gyalogos turistatérkép
+Topgrafische Karte von Maxbe###Topográfiai térkép (Maxbe)
+Regionen###Természeti régiók, hegységek
+Historische Grenzen (experimentell)###Történelmi határok (kísérleti)
+Jahrhundert###század
