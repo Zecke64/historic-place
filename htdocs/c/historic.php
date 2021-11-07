@@ -152,7 +152,7 @@ $GroupMinZooms = array (
 	"Pinge"	                => 13,
 	"Lavoir"	        => 15,
 	"War_cemetery"	        => 15,
-	"Wke"			=> 5,
+	"Wke"			=> 6,
 );
 
 if (isset($_GET["zoom"])) {
