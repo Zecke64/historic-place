@@ -1658,6 +1658,6 @@
 		clusterLimit: 50,
 
 		osmlinks: false,
-		minZoom: 5,
+		minZoom: 6,
 		blockSize: 0
 	}));
