@@ -380,7 +380,7 @@
         addHistmapWMS(
                 "Zürich 1793 (Müllerplan)", 
 		"https://www.ogd.stadt-zuerich.ch/mapproxy/wmts/1.0.0/WMTSCapabilities.xml", "Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1793__Muellerplan_",
-		"Zuerich_1793",
+		"Zuerich_1910",
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Oi',
