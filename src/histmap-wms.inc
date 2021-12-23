@@ -246,7 +246,7 @@
 
         addHistmapWMS(
                 "Freiburg 1944", 
-		"https://geoportal.freiburg.de/wms/verma_stadtplan_hist/verma_stadtplan_hist?", "Stadtplan (Jahr 1944)",
+		"https://geoportal.freiburg.de/wms/verma_stadtplan_hist/verma_stadtplan_hist?", "stadtplan_1944",
 		"Freiburg_1944",
 		{
                         positionInLayerChanger: 7,
