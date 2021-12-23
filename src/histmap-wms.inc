@@ -379,16 +379,16 @@
 
         addHistmapWMS(
                 "Zürich 1793 (Müllerplan)", 
-		"https://www.ogd.stadt-zuerich.ch/mapproxy/wmts/1.0.0/WMTSCapabilities.xml", "Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1793__Muellerplan_",
+		"https://www.ogd.stadt-zuerich.ch/wms/geoportal/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1793__Muellerplan_?", "UP_1793_STZH.tif",
 		"Zuerich_1910",
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Oi',
-		        description: 'Stadtplan von 1793 (Müllerplan), Open Data Zürich, Creative Commons CCZero',
+		        description: 'Stadtplan von 1793 (Müllerplan), Stadt Zürich, non-commercial use',
                         minZoom: 13,
                         numZoomLevels: 20,
 		        opacity: 0.8,
-		        attribution:'<a href="https://data.stadt-zuerich.ch/dataset/stadtplan-1793"target="_blank">Open Data Zürich</a>, <a href="https://opendefinition.org/licenses/cc-zero/"target="_blank">Creative Commons CCZero</a>'
+		        attribution:'<a href="https://www.stadt-zuerich.ch/geodaten/download/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1793__Muellerplan_"target="_blank">Quelle: Stadt Zürich</a>, <a href="https://www.geocat.ch/geonetwork/srv/ger/md.viewer#/full_view/f87519a7-dc70-7032-e338-367f714d9fad"target="_blank">non-commercial use</a>'
 		}
         );
 	
