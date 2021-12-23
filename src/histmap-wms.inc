@@ -384,7 +384,7 @@
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Oi',
-		        description: 'Stadtplan von 1793 (Müllerplan), Stadt Zürich, non-commercial use',
+		        description: 'Stadtplan von 1793 (Müllerplan),Quelle: Stadt Zürich, non-commercial use',
                         minZoom: 13,
                         numZoomLevels: 20,
 		        opacity: 0.8,
@@ -398,16 +398,16 @@
 
         addHistmapWMS(
                 "Zürich 1900", 
-		"https://www.gis.stadt-zuerich.ch/maps/services/wms/WMS-ZH-STZH-OGD/MapServer/WMSServer?", "Stadtplan_1900",
+		"https://www.ogd.stadt-zuerich.ch/wms/geoportal/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1900?", "UP_1900_STZH.tif",
 		"Zuerich_1910",
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Oj',
-		        description: 'Stadtplan von 1900, Open Data Zürich, Creative Commons CCZero',
+		        description: 'Stadtplan von 1900, Quelle: Stadt Zürich, non-commercial use',
                         minZoom: 13,
                         numZoomLevels: 20,
 		        opacity: 0.8,
-		        attribution:'<a href="https://data.stadt-zuerich.ch/dataset/stadtplan-1900"target="_blank">Open Data Zürich</a>, <a href="https://opendefinition.org/licenses/cc-zero/"target="_blank">Creative Commons CCZero</a>'
+		        attribution:'<a href="https://www.stadt-zuerich.ch/geodaten/download/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1900"target="_blank">Quelle: Stadt Zürich</a>, <a href="https://www.geocat.ch/geonetwork/srv/ger/md.viewer#/full_view/a29830fb-f4a1-c29d-7f1d-1fb9c303415c"target="_blank">non-commercial use</a>'
 		}
         );
 	
@@ -417,16 +417,16 @@
 
         addHistmapWMS(
                 "Zürich 1864 (Kellerplan)", 
-		"https://www.gis.stadt-zuerich.ch/maps/services/wms/WMS-ZH-STZH-OGD/MapServer/WMSServer?", "Stadtplan_1864",
+		"https://www.ogd.stadt-zuerich.ch/wms/geoportal/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1864?", "UP_1864_STZH.tif",
 		"Zuerich_1910",
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Ok',
-		        description: 'Stadtplan von 1865 (Kellerplan), Open Data Zürich, Zentralbibliothek Zürich, Kartensammlung, Creative Commons Attribution Share-Alike',
+		        description: 'Stadtplan von 1864 (Kellerplan), Creative-Commons-Zero-Lizenz (CC-0)',
                         minZoom: 13,
                         numZoomLevels: 20,
 		        opacity: 0.8,
-		        attribution:'<a href="https://data.stadt-zuerich.ch/dataset/stadtplan-1864"target="_blank">Open Data Zürich</a>,Zentralbibliothek Zürich, Kartensammlung, <a href="https://opendefinition.org/licenses/cc-by-sa/"target="_blank">Creative Commons Attribution Share-Alike</a>'
+		        attribution:'<a href="https://www.stadt-zuerich.ch/geodaten/download/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1864"target="_blank">Quelle: Stadt Zürich</a>, <a href="https://opendefinition.org/licenses/cc-zero/"target="_blank">Creative-Commons-Zero-Lizenz (CC-0)</a>'
 		}
         );
 	
@@ -436,16 +436,16 @@
 
         addHistmapWMS(
                 "Zürich 1860", 
-		"https://www.gis.stadt-zuerich.ch/maps/services/wms/WMS-ZH-STZH-OGD/MapServer/WMSServer?", "Stadtplan_1860",
+		"https://www.ogd.stadt-zuerich.ch/wms/geoportal/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1860?", "UP_1860_STZH.tif",
 		"Zuerich_1910",
 		{
                         positionInLayerChanger: 7,
                         permaId: 'Ol',
-		        description: 'Stadtplan von 1860, Open Data Zürich,Creative Commons CCZero ',
+		        description: 'Stadtplan von 1860, Quelle: Stadt Zürich, non-commercial use',
                         minZoom: 13,
                         numZoomLevels: 20,
 		        opacity: 0.8,
-		        attribution:'<a href="https://data.stadt-zuerich.ch/dataset/stadtplan-1860"target="_blank">Open Data Zürich</a>, <a href="https://opendefinition.org/licenses/cc-zero/"target="_blank">Creative Commons CCZero</a>'
+		        attribution:'<a href="https://www.stadt-zuerich.ch/geodaten/download/Historischer_Uebersichtsplan_der_Stadt_Zuerich_um_1860"target="_blank">Quelle: Stadt Zürich</a>, <a href="https://www.geocat.ch/geonetwork/srv/ger/md.viewer#/full_view/da6181dd-9c08-d592-6c9a-9103c5bd6caf"target="_blank">non-commercial use</a>'
 		}
         );
 	
