@@ -903,23 +903,6 @@
                 }
         );
 
-        //----------------------------------------------------------------------------
-        //      Eestimaa füüsiline kaart 1922
-        //----------------------------------------------------------------------------
-
-        addHistmapTiles(
-                "Eestimaa füüsiline kaart (1922)", "https://mapwarper.net/layers/tile/121", "Estland",
-                {
-                        description: 'Johannes Adolf Villard, Estland. Militär. Topographie Station, Eesti Rahvusraamatukogu, DIGAR, Tiles from Map Warper',
-                        positionInLayerChanger: 3,
-                        permaId: 'Va',
-                        tileOptions: {crossOriginKeyword: null},
-                        transitionEffect: "resize",
-                        minZoom: 7,
-                        numZoomLevels: 14,
-                        attribution:'Johannes Adolf Villard, Estland. Militär. Topographie Station, <a href="https://www.digar.ee/arhiiv/nlib-digar:213284" target="_blank">Eesti Rahvusraamatukogu, DIGAR</a>, Tiles from <a href="https://mapwarper.net/layers/121" target="_blank">Map Warper</a>'
-                }
-        );
 
         //----------------------------------------------------------------------------
         //      Former Yugoslavia
@@ -938,24 +921,7 @@
                         attribution:'<a href="https://www.lib.utexas.edu/maps/topo/former_yugoslavia/" target="_blank">The University of Texas Libraries at Austin, U.S. Defense Mapping Agency, Tiles from <a href="https://osm-hr.org/openstreetmap-hrvatska/"                                                                                                                                                                target="_blank">OpenStreetMap Hrvatska</a>'
                 }
         );
-
-        //----------------------------------------------------------------------
-        //      Spezialkarte der osterreichisch-ungarischen Monarchie
-        //----------------------------------------------------------------------
-
-        addHistmapTiles(
-                "Spezialkarte der osterreichisch-ungarischen Monarchie", "https://maps.nypl.org/warper/layers/tile/998", "Oesterreich-Ungarn",
-                {
-                        positionInLayerChanger: 7,
-                        description: 'Spezialkarte der Osterreichisch-Ungarischen Monarchie 1877-1914, K.u.K. Militargeographisches Institut, The New York Public Library Digital Collections',
-                        permaId: 'Vc',
-                        minZoom: 6,
-                        numZoomLevels: 17,
-                        opacity: 0.8,
-			attribution:'K.u.K. Militargeographisches Institut, <a href="https://digitalcollections.nypl.org/collections/spezialkarte-der-osterreichisch-ungarischen-monarchie" target="_blank">The New York Public Library Digital Collections</a>, <a href="https://maps.nypl.org/warper/layers/998" target="_blank">NYPL Map Warper</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">(CC0 1.0)</a>'
-                }
-        );
-
+        
 	//----------------------------------------------------------------------
 	//	Tel Aviv 1936
 	//----------------------------------------------------------------------
