@@ -246,7 +246,7 @@
 
         addHistmapWMS(
                 "Freiburg 1944", 
-		"https://stadtplan.freiburg.de/wms/verma_stadtplan_hist/verma_stadtplan_hist_public?", "stadtplan_1944",
+		"https://geoportal.freiburg.de/wms/verma_stadtplan_hist/verma_stadtplan_hist?", "Stadtplan (Jahr 1944)",
 		"Freiburg_1944",
 		{
                         positionInLayerChanger: 7,
@@ -255,7 +255,7 @@
                         minZoom: 14,
                         numZoomLevels: 19,
 		        opacity: 0.8,
-		        attribution:'<a href="https://stadtplan.freiburg.de/mapbender/frames/index.php?&gui_id=stadtplan"target="_blank">© Stadt Freiburg</a>, <a href="https://www.govdata.de/dl-de/by-2-0"target="_blank">(DL-DE-BY-2.0)</a>'
+		        attribution:'<a href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/16f7271f-beae-4120-9d8c-5fdcecd4d092"target="_blank">Datengrundlage: Stadt Freiburg, www.freiburg.de</a>, <a href="https://www.govdata.de/dl-de/by-2-0"target="_blank">(DL-DE-BY-2.0)</a>'
 		}
         );
 	
