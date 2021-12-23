@@ -46,7 +46,7 @@
         //----------------------------------------------------------------------
 	addHistmapWMS(
                 "Litchfield County Hopkins 1854, Windham County Woodford 1856", 
-		"https://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:LitchfieldCounty_Hopkins_1854,MAGIC:WindhamCounty_Woodford_1856",
+		"https://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:LitchfieldCounty_Hopkins_1854&layers=MAGIC:WindhamCounty_Woodford_1856",
 		"Lichtfield-Windham-County",
 		{
                         positionInLayerChanger: 7,
