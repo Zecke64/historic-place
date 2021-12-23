@@ -46,7 +46,7 @@
         //----------------------------------------------------------------------
 	addHistmapWMS(
                 "Litchfield County Hopkins 1854, Windham County Woodford 1856", 
-		"https://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:LitchfieldCounty_Hopkins_1854&layers=MAGIC:WindhamCounty_Woodford_1856",
+		"http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:LitchfieldCounty_Hopkins_1854&layers=MAGIC:WindhamCounty_Woodford_1856",
 		"Lichtfield-Windham-County",
 		{
                         positionInLayerChanger: 7,
@@ -64,7 +64,7 @@
 
         addHistmapWMS(
                 "Fairfield County Chace 1856, Hartford County Woodford 1855", 
-		"https://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:FairfieldCounty_Chace_1856,MAGIC:HartfordCounty_Woodford_1855",
+		"http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:FairfieldCounty_Chace_1856,MAGIC:HartfordCounty_Woodford_1855",
 		"Lichtfield-Windham-County",
 		{
                         positionInLayerChanger: 7,
@@ -82,7 +82,7 @@
 
         addHistmapWMS(
                 "New London County Baker 1854", 
-		"https://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:NewLondonCounty_Baker_1854",
+		"http://geoserver.lib.uconn.edu:8080/geoserver/MAGIC/wms?", "MAGIC:NewLondonCounty_Baker_1854",
 		"NewLondonCounty_Baker_1854",
 		{
                         positionInLayerChanger: 7,
