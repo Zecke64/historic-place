@@ -1052,7 +1052,7 @@
 			//------------------------------------------------------
 			if (data['ref:rce']) {
 				result.push ('<div class="heritage">Rijksdienst voor het Cultureel Erfgoed :&nbsp;<a target="_blank" href="' +
-					this.html('https://monumentenregister.cultureelerfgoed.nl/monuments/'+(data['ref:rce'])+'?MonumentId='+(data['ref:rce'])) + '">' + this.html(this.shrinkUrl(data['ref:rce'])) +
+					this.html('https://monumentenregister.cultureelerfgoed.nl/monumenten/'+(data['ref:rce'])) + '">' + this.html(this.shrinkUrl(data['ref:rce'])) +
 						'</a></div>');
 			}
 
