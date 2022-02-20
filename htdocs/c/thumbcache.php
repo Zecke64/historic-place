@@ -43,7 +43,7 @@ $LC = isset($_GET['lang']) && preg_match ('/^(de|en|fr|nl|pt-br|cs|ru|da|gl|ro|t
 
 $ERROR_IMAGE	= "./i/no-image-$LC.png";
 $ERROR_MIME	= 'image/png';
-$CACHE_DIR	= 'HPLACE_DYN/thumbcache';
+$CACHE_DIR	= '/var/opt/www/hp/dyn/thumbcache';
 
 $USER_AGENT = 'thumbcache.php ; prereads, thumbnails and caches images to display in map popup info boxes. In case of trouble contact ite owner or <lutzto@t-online.de>.';
 
@@ -422,6 +422,8 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 
 		# geändert Jan 2016 zecke: obiges verlässt sich darauf, daß Thumbnails JPG sind
 
+/*
+# geht nicht mehr seit Feb 2022
 		if (preg_match ('#//commons\.wikimedia\.org/wiki/File(?:|%3A|%3a)#', $sourceURL) &&
 			preg_match ('#Thumbnail for version[^"]+" src="(?:https?:)?(//upload.wikimedia.org/[^\\s"<>]*\bthumb/[^\\s"<>]*(?:jpe?g|png))"#i', $data, $match)) {
 
@@ -429,6 +431,18 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 				$LOG[] = "Rule:\tImage from '//upload.wikimedia.org/*.{jpg,jpeg}' on commons page.";
 				continue;
 		}
+*/
+
+                # berechne Bild-URL anhand MD5 hash, 20.02.2022 zecke
+                if (preg_match ('#//commons\.wikimedia\.org/wiki/File(:|%3a)(.*(jpg|jpeg))$#i', $sourceURL, $match) ) {
+
+                                $md5hash = md5($match[2]);
+                                $md5path = substr($md5hash,0,1) . "/" . substr($md5hash,0,2);
+                                $sourceURL = "https://upload.wikimedia.org/wikipedia/commons/thumb/${md5path}/${match[2]}/150px-${match[2]}";
+                                $LOG[] = "Rule:\tImage from '//upload.wikimedia.org/*.{jpg,jpeg}' on commons page.";
+                                continue;
+                }
+
 
 		#---------------------------------------------------------------
 		#	On any page: Link to //upload.wikimedia.org/* ?
@@ -545,7 +559,7 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 		if (preg_match ('#//www\.flickr\.com/photos/[\w@-]+/(\d+)/?$#', $sourceURL, $match)) {
 			# erstmal die XML-Seite via API laden
 
-			$apikey = file_get_contents ('HPLACE_CONFIG/flickr_api.key', true);
+			$apikey = file_get_contents ('/var/opt/www/hp/config/flickr_api.key', true);
 			$apikey = rtrim ($apikey, "\n");
 
 			$sourceURL = "https://api.flickr.com/services/rest/?api_key="   
