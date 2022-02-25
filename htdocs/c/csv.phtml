@@ -44,7 +44,9 @@ if (!$limit) $limit = 250;
 #	Groups
 #-----------------------------------------------------
 
-include "{$database}.php";
+if ( file_exists ("{$database}.php") ) {
+        include "{$database}.php";
+}
 
 if (!isset($Groups) && @$_GET['groups']) $Groups = mb_split (",", $_GET['groups']);
 
@@ -331,7 +333,8 @@ if ($cgx) {
 		$nChunks++;
 		$nEntries+=$entries;
 
-		if ($Groups && $group && !in_array ($group, $Groups)) {
+		# if ($Groups && $group && !in_array ($group, $Groups)) {
+                if (isset($Groups) && isset($group) && !in_array ($group, $Groups)) {
 			$dotpos = strpos($group, ".");
 #			if (dotpos===FALSE) continue;
 			if ($dotpos===FALSE) continue;
