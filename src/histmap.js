@@ -193,6 +193,16 @@ var allPermaIds = "";
 var allPins = "";
 
 window.onload = function () {
+    
+    //----------------------------------------------------------------------
+	//	fix default passive==true in newer FF and Chrome
+	//----------------------------------------------------------------------
+
+        var oldWinAddEvtLis = window.addEventListener;
+        window.addEventListener = function( name, listener, useCapture ) {
+		return oldWinAddEvtLis.apply( window, [ name, listener,
+		{ capture: useCapture, passive: name != 'DOMMouseScroll' }]);
+	}
 
 	//----------------------------------------------------------------------
 	//	Karte - der Name ("map") muss mit der id des <div> uebereinstimmen.
@@ -517,11 +527,6 @@ window.onload = function () {
 	//======================================================================
 
 	map.addControl (new OpenLayers.Control.Tooltip ({
-        layerGroup: 'ctrl',
-		displayInLayerSwitcher: true,
-		title: 'Lat/Lon',
-		autoActivate: false,
-		autoDeactivate: true,
 
 		active: false,	// nicht automatisch Aktiviert
 		maxIdle: null,	// kein Timeout
