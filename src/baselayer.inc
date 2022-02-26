@@ -77,13 +77,13 @@
 	}));
 	}
 
-	map.addLayer (new OpenLayers.Layer.XYZ ('Hike & Bike Map',[
-			 'https://tiles.wmflabs.org/hikebike/${z}/${x}/${y}.png'],
-	               {description: 'Colin Marquardt Hike & Bike Map',
-			permaId: 'Kh',
-			sphericalMercator: true, 
-			attribution:'&copy;<a href="https://www.openstreetmap.org/copyright"target="_blank">OpenStreetMap</a> contributors,<a href="https://hikebikemap.com/"target="_blank">Hike & Bike Map</a>@ Colin Marquardt'
-	}));
+	//map.addLayer (new OpenLayers.Layer.XYZ ('Hike & Bike Map',[
+	//		 'https://tiles.wmflabs.org/hikebike/${z}/${x}/${y}.png'],
+    //              {description: 'Colin Marquardt Hike & Bike Map',
+	//		permaId: 'Kh',
+	//		sphericalMercator: true, 
+	//		attribution:'&copy;<a href="https://www.openstreetmap.org/copyright"target="_blank">OpenStreetMap</a> contributors,<a href="https://hikebikemap.com/"target="_blank">Hike & Bike Map</a>@ Colin Marquardt'
+	//}));
 
         map.addLayer (new OpenLayers.Layer.XYZ("TransportMap", [
 			"https://tiles.historic.place/thunderforest/a/transport/${z}/${x}/${y}.png",
@@ -219,9 +219,9 @@
 	//	Mapnik sw
 	//----------------------------------------------------------------------------
 		
-	layerMapnikBW = new OpenLayers.Layer.OSM.Toolserver("bw-mapnik", {permaId: 'Kw'});
-	layerMapnikBW.setName("Mapnik black/white");
-	map.addLayer(layerMapnikBW);
+	//layerMapnikBW = new OpenLayers.Layer.OSM.Toolserver("bw-mapnik", {permaId: 'Kw'});
+	//layerMapnikBW.setName("Mapnik black/white");
+	//map.addLayer(layerMapnikBW);
 			
 	//----------------------------------------------------------------------------
 	//	GeoBasis-DE

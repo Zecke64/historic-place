@@ -2,20 +2,20 @@
 	//	Overlay: Shading
 	//----------------------------------------------------------------------------
 	
-	map.addLayer (new OpenLayers.Layer.XYZ ("$$Schummerung%%", [
-		'http://a.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png',
-		'http://b.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png',
-		'http://c.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png'],
-		{layerGroup: 'info',
-		 permaId: 'Gs',
-		 opacity: 0.5,
-		 positionInLayerChanger: 2,
-		 attribution:'elevation data by <a href="https://www.nasa.gov/"target="_blank">NASA SRTM</a>',
-		 sphericalMercator: true,
-		 isBaseLayer: false,
-		 visibility: false
-		}
-	));
+	//map.addLayer (new OpenLayers.Layer.XYZ ("$$Schummerung%%", [
+	//	'http://a.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png',
+	//	'http://b.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png',
+	//	'http://c.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png'],
+	//	{layerGroup: 'info',
+	//	 permaId: 'Gs',
+	//	 opacity: 0.5,
+	//	 positionInLayerChanger: 2,
+	//	 attribution:'elevation data by <a href="https://www.nasa.gov/"target="_blank">NASA SRTM</a>',
+	//	 sphericalMercator: true,
+	//	 isBaseLayer: false,
+	//	 visibility: false
+	//	}
+	//));
 
 	//----------------------------------------------------------------------------
 	//	Overlay: Höhenlinien
