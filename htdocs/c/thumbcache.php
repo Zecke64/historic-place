@@ -79,6 +79,26 @@ function usedTime () {
 }
 
 #-------------------------------------------------------------------------------
+#	file_get_contents sometimes very slow
+#-------------------------------------------------------------------------------
+
+function file_get_contents_curl($url) {
+    $ch = curl_init();
+
+    curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
+    curl_setopt($ch, CURLOPT_HEADER, 0);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
+    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');       
+
+    $data = curl_exec($ch);
+    curl_close($ch);
+
+    return $data;
+}
+
+#-------------------------------------------------------------------------------
 #	Error handler
 #-------------------------------------------------------------------------------
 
@@ -163,6 +183,7 @@ $message = "'$url': negative cached.";
 #	If not in cache, must fetch
 #-------------------------------------------------------------------------------
 
+#error_log ("XXX vor file_exists",0);
 $mustFetch = !file_exists ($cachePath) || $NO_CACHE;
 
 #-------------------------------------------------------------------------------
@@ -207,7 +228,7 @@ if (!$size) Fail ($message);
 #-------------------------------------------------------------------------------
 
 $mtime		= filemtime ($cachePath);
-$redirectURL	= trim (@file_get_contents ($cacheURL));
+$redirectURL	= trim (@file_get_contents_curl ($cacheURL));
 
 #-------------------------------------------------------------------------------
 #	Show messages instead of thumbnail if requested by DEBUG parameter.
@@ -280,6 +301,7 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 	$thumbURL = '';
 	$lastProtocol = "http://";
 
+
 	for ($redirect=0; $redirect<3; $redirect++) {
 
 		$LOG[] = "URL:\t{$sourceURL}";
@@ -308,6 +330,11 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 		$path    = $match[4] ? $match[4] : '/';
 		$query   = isset($match[5]) ? $match[5] : '';
 		$hash    = isset($match[6]) ? $match[6] : '';
+
+		# Umlaute in OSM-tagvalues machen Probleme wenn locale nicht passt
+		# 27.02.2022 zecke
+		$path = urlencode (urldecode ($path));
+		$path = str_replace("%2F", "/", $path);
 
 		#---------------------------------------------------------------
 		#	keep protocol for "//...." URLs
@@ -357,7 +384,11 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 		#	Fetch content of URL
 		#---------------------------------------------------------------
 
-		$data = file_get_contents ($sourceURL);
+		#$sourceURL = urlencode($sourceURL);
+
+		#$data = file_get_contents ($sourceURL);
+		$data = file_get_contents_curl ($sourceURL);
+
 
 		if ($data === FALSE || !$data) {
 
@@ -569,7 +600,7 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 				. $match[1];
 			
 			$photo_id = $match[1];
-			$data = file_get_contents ($sourceURL);
+			$data = file_get_contents_curl ($sourceURL);
 
 			if (preg_match ('#secret="(.*)" server="(\d+)" farm="(\d+)"[^>]*license="(\d+)"[\S\s]*>(free4osm)</tag>#', $data, $match)) {
 
