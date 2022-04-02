@@ -1143,6 +1143,6 @@
                         minZoom: 10,
                         numZoomLevels: 17,
                         opacity: 0.8,
-			attribution:'Karte vom Sitzenroder Forstrevier 1780 ,<a href="http://www.deutschefotothek.de/documents/obj/70400358" target="_blank"> Pönisch, Carl Ernst, Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden (SLUB)</a>, <a href="https://creativecommons.org/licenses/by-sa/3.0/de/deed.en"target="_blank">(CC0 1.0) Public Domain Dedication</a>'
+			attribution:'Karte vom Sitzenroder Forstrevier 1780 ,<a href="http://www.deutschefotothek.de/documents/obj/70400358" target="_blank"> Pönisch, Carl Ernst, Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden (SLUB)</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">(CC0 1.0) Public Domain Dedication</a>'
                 }
         );
