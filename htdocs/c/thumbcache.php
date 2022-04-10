@@ -454,9 +454,10 @@ function getThumb ($sourceURL, $cachePath, $cacheURL) {
 		# geändert Jan 2016 zecke: obiges verlässt sich darauf, daß Thumbnails JPG sind
 
 		if (preg_match ('#//commons\.wikimedia\.org/wiki/File(?:|%3A|%3a)#', $sourceURL) &&
-#			preg_match ('#Thumbnail for version[^"]+" src="(?:https?:)?(//upload.wikimedia.org/[^\\s"<>]*\bthumb/[^\\s"<>]*(?:jpe?g|png))"#i', $data, $match)) {
-                        preg_match ('#Other resolutions: <a href="(https://upload.wikimedia.org/[^"]*)"#i', $data, $match)) {
-#                       preg_match ('#fullImageLink" id="file"><a href="(https://upload.wikimedia.org/[^"]*)"#i', $data, $match)) {
+			# kleinere Vorschaubilder vorhanden --> nimm das kleinste
+                        (preg_match ('#Other resolutions: <a href="(https://upload.wikimedia.org/[^"]*)"#i', $data, $match) ||
+			# keine anderen Vorschaubilder vorhanden
+                         preg_match ('#fullImageLink" id="file"><a href="(https://upload.wikimedia.org/[^"]*)"#i', $data, $match) ) ) {
 
 				$sourceURL = $match[1];
 				$LOG[] = "Rule:\tImage from '//upload.wikimedia.org/*.{jpg,jpeg}' on commons page.";
