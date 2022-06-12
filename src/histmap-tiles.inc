@@ -1146,3 +1146,37 @@
 			attribution:'Karte vom Sitzenroder Forstrevier 1780 ,<a href="http://www.deutschefotothek.de/documents/obj/70400358" target="_blank"> Pönisch, Carl Ernst, Sächsische Landesbibliothek - Staats- und Universitätsbibliothek Dresden (SLUB)</a>, <a href="https://creativecommons.org/publicdomain/mark/1.0/deed.en" target="_blank">(CC0 1.0) Public Domain</a>'
                 }
         );
+
+        //----------------------------------------------------------------------
+        //       MTB3548 Saarbruecken 1887
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "MTB3548 Saarbruecken 1887", "city/MTB3548-Saarbruecken-1887", "MTB3548",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'MTB3548 Saarbrücken von 1887',
+                        permaId: 'Vs',
+                        minZoom: 12,
+                        numZoomLevels: 19,
+                        opacity: 0.8,
+                        attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 0315, Urheber unbekannt / CC-BY-SA 3.0 DE'
+                }
+        );
+
+        //----------------------------------------------------------------------
+        //       Carte GeoFR 161 Pfalz von 1770
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Carte GeoFR 161 Pfalz 1770", "region/GeoFR161-Pfalz-1770", "GeoFR161",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Carte GeoFR 161 Pfalz 1770',
+                        permaId: 'Vt',
+                        minZoom: 11,
+                        numZoomLevels: 16,
+                        opacity: 0.8,
+                        attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 0261, Urheber César-Francois Cassini de Thury (1714-1784) / CC-BY-SA 3.0 DE'
+                }
+        );

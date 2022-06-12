@@ -9,7 +9,7 @@
 <script type="text/javascript" src="../j/searchbox.js"></script>
 <script type="text/javascript" src="../j/layerchanger.js"></script>
 <link rel="stylesheet" type="text/css" href="../j/layerchanger.css" />
-<link rel="stylesheet" type="text/css" href="../HPLACE_MAP/histmap.css" />
+<link rel="stylesheet" type="text/css" href="../historische_objekte/histmap.css" />
 <script type="text/javascript">
 //------------------------------------------------------------------------------------
 //	Die anonyme Onload-Function baut das Kartenobjekt aus Komponenten zusammen.
@@ -853,6 +853,29 @@ window.onload = function () {
                         url: "../shape/byu1936.json",
                         format: new OpenLayers.Format.GeoJSON()
     })
+}));
+	map.addLayer (new OpenLayers.Layer.Vector("MTB 3548 Saarbrücken 1887", {
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/MTB3548.json",
+                        format: new OpenLayers.Format.GeoJSON()
+        })
+}));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Carte GeoFR 161 Pfalz 1770", {
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'Germany',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/GeoFR161.json",
+                        format: new OpenLayers.Format.GeoJSON()
+        })
 }));
 //	map.addLayer (new OpenLayers.Layer.Vector("Vorarlberg-Urmappe", {
 //                         // projection: "EPSG:4326",
