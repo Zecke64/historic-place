@@ -854,14 +854,14 @@ window.onload = function () {
                         format: new OpenLayers.Format.GeoJSON()
     })
 }));
-	map.addLayer (new OpenLayers.Layer.Vector("MTB 3548 Saarbrücken 1887", {
+	map.addLayer (new OpenLayers.Layer.Vector("MTB 35xx Saarbrücken/St. Johann 1882-87", {
     	                sphericalMercator: true,
 			isBaseLayer: false,
 			layerGroup: 'Germany',
 			visibility: true,
                         strategies: [new OpenLayers.Strategy.Fixed()],
                         protocol: new OpenLayers.Protocol.HTTP({
-                        url: "../shape/MTB3548.json",
+                        url: "../shape/MTB35xx-SB-StJ.json",
                         format: new OpenLayers.Format.GeoJSON()
         })
 }));

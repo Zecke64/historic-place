@@ -1148,19 +1148,19 @@
         );
 
         //----------------------------------------------------------------------
-        //       MTB3548 Saarbruecken 1887
+        //       MTB3548 und 3549 Saarbruecken/St. Johann 1887/82
         //----------------------------------------------------------------------
 
         addHistmapTiles(
-                "MTB3548 Saarbruecken 1887", "city/MTB3548-Saarbruecken-1887", "MTB3548",
+                "MTB35xx Saarbrücken/St. Johann 1882-87", "city/MTB35xx-SB-StJ", "MTB35xx-SB-StJ",
                 {
                         positionInLayerChanger: 7,
-                        description: 'MTB3548 Saarbrücken von 1887',
+                        description: 'MTB35xx Saarbrücken/St. Johann 1882-87',
                         permaId: 'Vs',
                         minZoom: 12,
-                        numZoomLevels: 19,
+                        numZoomLevels: 17,
                         opacity: 0.8,
-                        attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 0315, Urheber unbekannt / CC-BY-SA 3.0 DE'
+                        attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 0315 / CC-BY-SA 3.0 DE'
                 }
         );
 
