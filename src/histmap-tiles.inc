@@ -1180,3 +1180,22 @@
                         attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 0261, Urheber César-Francois Cassini de Thury (1714-1784) / CC-BY-SA 3.0 DE'
                 }
         );
+
+        //----------------------------------------------------------------------
+        //       Ostfrankreich-Vogesen Hachette 1892
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Ostfrankreich-Vogesen Hachette 1892", "region/OstFR-Vogesen-1892", "OstFR-Vogesen-1892",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Ostfrankreich-Vogesen Hachette 1892',
+                        permaId: 'Vu',
+                        minZoom: 12,
+                        numZoomLevels: 16,
+                        opacity: 0.8,
+                        attribution:'Landesarchiv Saarbrücken, Bestand K Hellwig, Nr. 959-972, Urheber Librairie Hachette et Cie. / CC-BY-SA 3.0 DE'
+                }
+        );
+
+

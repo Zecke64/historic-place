@@ -877,6 +877,19 @@ window.onload = function () {
                         format: new OpenLayers.Format.GeoJSON()
         })
 }));
+
+	map.addLayer (new OpenLayers.Layer.Vector("Ostfrankreich-Vogesen Hachette 1892", {
+    	                sphericalMercator: true,
+			isBaseLayer: false,
+			layerGroup: 'France',
+			visibility: true,
+                        strategies: [new OpenLayers.Strategy.Fixed()],
+                        protocol: new OpenLayers.Protocol.HTTP({
+                        url: "../shape/OstFR-Vogesen-1892.json",
+                        format: new OpenLayers.Format.GeoJSON()
+        })
+}));
+
 //	map.addLayer (new OpenLayers.Layer.Vector("Vorarlberg-Urmappe", {
 //                         // projection: "EPSG:4326",
 //    	                sphericalMercator: true,
