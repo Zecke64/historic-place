@@ -572,6 +572,12 @@ function iconParamsFromData (data, noHeritage, zoom) {
                         
             case 'city':
 						return ['archaeological_city',25];
+                     
+            case 'hut_circle':
+						return ['dun',25];
+                        
+            case 'dun':
+						return ['dun',25];
 	}
 
 		return ['archaeologie',20];
