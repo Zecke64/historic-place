@@ -558,14 +558,21 @@ function iconParamsFromData (data, noHeritage, zoom) {
                     case 'stone_ship':
 						return ['stone_ship',25];
 	}
+	
+			case 'fortification':
+                
+                switch (data.fortification_type) {
+                    
+                    case 'dun':
+						return ['dun',28];
+    }
+                        return ['fort',28];
+                        
 			case 'minilith':
 						return ['alignment',25];
 						
 			case 'tumulus':
 						return ['tumulus',25];
-
-			case 'fortification':
-						return ['fort',28];
                         
             case 'petroglyph':
 						return ['petroglyph',25];
