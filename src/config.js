@@ -528,6 +528,64 @@ function iconParamsFromData (data, noHeritage, zoom) {
 //==============================================================================
 
 	case 'Archaeological_site':
+		
+		switch (data.archaeological_site) {
+			
+			case 'megalith':
+				
+				switch (data.megalith_type) {
+					
+					case 'menhir':
+						return ['menhir',25];
+					case 'passage_grave':
+						return ['passage_grave',25];
+					case 'stone_circle':
+						return ['stone_circle',25];
+					case 'alignment':
+						return ['alignment',25];
+					case 'chamber':
+						return ['chamber',25];
+					case 'grosssteingrab':
+						return ['megalith',25];
+					case 'dolmen':
+						return ['megalith',25];
+					case 'nuraghe':
+						return ['nuraghe',25];
+					case 'tholos':
+						return ['tholos',25];
+					case 'cist':
+						return ['cist',25];
+					case 'stone_ship':
+						return ['stone_ship',25];
+				}
+				
+					case 'fortification':
+						
+						switch (data.fortification_type) {
+							
+							case 'dun':
+								return ['dun',28];
+						}
+						return ['fort',28];
+						
+							case 'minilith':
+								return ['alignment',25];
+								
+							case 'tumulus':
+								return ['tumulus',25];
+								
+							case 'petroglyph':
+								return ['petroglyph',25];
+								
+							case 'city':
+								return ['archaeological_city',25];
+								
+							case 'hut_circle':
+								return ['dun',25];
+								
+							case 'dun':
+								return ['dun',25];
+		}
 
 		switch (data.site_type) {
 
