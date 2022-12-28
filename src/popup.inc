@@ -1114,11 +1114,11 @@
 			}
 
 			//------------------------------------------------------
-			//	stadtentwicklung.berlin
+			//	denkmaldatenbank.berlin
 			//------------------------------------------------------
 			if (inBerlin && data['ref:lda']) {
-				result.push ('<div class="heritage">stadtentwicklung.berlin:&nbsp;<a target="_blank" href="' +
-					this.html('https://www.berlin.de/landesdenkmalamt/denkmale/liste-karte-datenbank/denkmaldatenbank/daobj.php?obj_dok_nr='+(data['ref:lda']||'')) + '">' + this.html(this.shrinkUrl(data['ref:lda'])) +
+				result.push ('<div class="heritage">denkmaldatenbank.berlin:&nbsp;<a target="_blank" href="' +
+					this.html('https://denkmaldatenbank.berlin.de/daobj.php?obj_dok_nr='+(data['ref:lda']||'')) + '">' + this.html(this.shrinkUrl(data['ref:lda'])) +
 						'</a></div>');
 			}
 			
