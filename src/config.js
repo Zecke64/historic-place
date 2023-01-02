@@ -2091,15 +2091,15 @@ function infoFromData (data) {
 		types.push ("$$Großsteingrab - Dolmen%%");
 		break;
 	}
-		if (data.site_type=='tumulus') {
+		if (data.site_type=='tumulus' || data.archaeological_site=='tumulus' ) {
 		types.push ("$$Hügelgrab (Tumulus)%%");
 		break;
 	}
-		if (data.site_type=='minilith') {
+		if (data.site_type=='minilith' || data.archaeological_site=='minilith') {
 		types.push ("Minilith");
 		break;
 	}
-		if (data.site_type=='fortification') {
+		if (data.site_type=='fortification' || data.archaeological_site=='fortification') {
 		types.push ("$$Wallanlage%%");
 		break;
 	}
