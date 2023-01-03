@@ -39,7 +39,7 @@ aircraft		Aircraft
 alignment		megalith_type=alignment
 anhalt-meilenstein	Anhaltischer Meilenstein
 aqueduct		historic=aqueduct
-archaeological_city     site_type=city
+archaeological_city     site_type=city|archaeological_site=city
 archaeological_site	historic=archaeological_site
 battlefield		historic=battlefield
 baum			natural=tree
@@ -69,7 +69,7 @@ fachwerk		building:architecture=umgebinde|building:architecture=timber_frame
 farm			historic=farm
 findling		natural=stone
 fort			historic=fort|castle_type=fortress|castle_type=kremlin
-fortification		site_type=fortification
+fortification		site_type=fortification|archaeological_site=fortification
 fountain		man_made=water_well|amenity=fountain
 gallows			historic=gallows
 geological		geological=palaeontological_site
@@ -112,7 +112,7 @@ pinge			natural=sinkhole
 place_of_worship	amenity=place_of_worship
 plakette                historic=plaque|memorial:type=plaque|memorial=plaque|memorial=blue_plaque
 plate			memorial:type=plate
-petroglyph      site_type=petroglyph
+petroglyph      site_type=petroglyph|archaeological_site=petroglyph
 preuß-meilenstein	Preußischer Meilenstein
 prison			abandoned:amenity=prison
 portal			man_made=portal
@@ -141,7 +141,7 @@ tholos			megalith_type=tholos
 tomb			historic=tomb
 tower			historic=tower|man_made=tower
 townhall		amenity=townhall
-tumulus			site_type=tumulus
+tumulus			site_type=tumulus|archaeological_site=tumulus
 umgebindehaus		building:architecture=umgebinde
 village			abandoned=village|abandoned:place=village
 wachturm		tower:type=watchtower
