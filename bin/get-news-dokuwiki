@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+# wir besorgen die oberste Zeile der Wiki-News-Seite für den Tooltip
+# Version für Dokuwiki
+#
+
+src="https://wiki.historic.place/doku.php?id=de:news&do=export_xhtml"
+dst=/opt/www/gk.historic.place/htdocs/latestnews.html
+
+
+news="$( wget -q "$src" -O - | grep 'class="level1"' |head -1 | sed -e 's/.*<strong>\(.*\)<\/strong>.*/\1/' )"
+
+s="<p><i>Latest news:</i>
+</b>
+<dl><dd>$news</dd></dl>
+<p>
+<small>(Click newspaper icon to see all news!)</small>
+<p>"
+
+olds="$(cat $dst)"
+[ "$s" = "$olds" ] || echo -e "$s" > $dst
