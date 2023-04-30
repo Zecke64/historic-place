@@ -28,7 +28,7 @@
                         if (zoomChanged) {
 
 				var zoom = this.map.zoom;
-				this.url = zoom <=10 ? this.historicplaceTiles : this.mapnikTiles;
+				this.url = zoom <=11 ? this.historicplaceTiles : this.mapnikTiles;
 
 				// this.url = zoom <= 6 ? this.eigene : this.fremde;
 			}
@@ -36,7 +36,7 @@
 			return OpenLayers.Layer.OSM.prototype.moveTo.apply (this, arguments);
 		},
 
-		attribution: '&copy;<a href="https://www.openstreetmap.org/copyright"target="_blank">OpenStreetMap</a> contributors, Zoom 6-7 <a href="https://www.naturalearthdata.com/about/terms-of-use"target="_blank">Made with Natural Earth</a>, Zoom 8-9 <a href="https://openrouteservice.org/terms-of-service/#/attribution"target="_blank">© openrouteservice.org</a> and <a href="https://www.openstreetmap.fr/mentions-legales/"target="_blank">Yohan Boniface & Humanitarian OpenStreetMap Team,OSM France</a>, Zoom 10 <a href="https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use"target="_blank">Wikimedia Maps</a>'
+		attribution: '&copy;<a href="https://www.openstreetmap.org/copyright"target="_blank">OpenStreetMap</a> contributors, Zoom 6-7 <a href="https://www.naturalearthdata.com/about/terms-of-use"target="_blank">Made with Natural Earth</a>, Zoom 8-9 <a href="https://openrouteservice.org/terms-of-service/#/attribution"target="_blank">© openrouteservice.org</a> and <a href="https://www.openstreetmap.fr/mentions-legales/"target="_blank">Yohan Boniface & Humanitarian OpenStreetMap Team,OSM France</a>, Zoom 10 <a href="https://foundation.wikimedia.org/wiki/Maps_Terms_of_Use"target="_blank">Wikimedia Maps</a>, Zoom 11 <a href="https://sgx.geodatenzentrum.de/web_public/gdz/datenquellen/Datenquellen_TopPlusOpen_15.12.2022.pdf"target="_blank">Bundesamt für Kartographie und Geodäsie (2022)</a>'
 
 	}));
 	}
