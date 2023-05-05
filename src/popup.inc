@@ -396,7 +396,7 @@
 			}
 			var imageSourceURL = this.parseURL(data.image) 
 				|| this.parseURL(data.wikimedia_commons) 
-				|| wikipediaURL 
+			//	|| wikipediaURL 
 				|| wdimage
 				|| mapillaryimage;
 			var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
