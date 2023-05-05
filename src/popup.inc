@@ -386,17 +386,16 @@
 			//	Image
 			//------------------------------------------------------
 
-			if ( data.image == null && wikipediaURL == null && wikidata) {
+			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
 						+ '?format=json&p=P18';
 			}
 			
-			if ( data.image == null && wikipediaURL == null && wikidata == null && data.mapillary) {
+			if ( data.image == null  && wikidata == null && data.mapillary) {
 				mapillaryimage = this.html('https://images.mapillary.com/'+ data.mapillary + '/thumb-1024.jpg');
 			}
 			var imageSourceURL = this.parseURL(data.image) 
 				|| this.parseURL(data.wikimedia_commons) 
-			//	|| wikipediaURL 
 				|| wdimage
 				|| mapillaryimage;
 			var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
