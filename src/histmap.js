@@ -315,6 +315,11 @@ window.onload = function () {
 			target: 'osb'
 		},
 		{
+			label: 'Open Place Reviews',
+			baseURL: 'https://openplacereviews.org/map?q={zoom}/{lat}/{lon}',
+			target: 'opr'
+		},
+		{
 			label: 'BRouter',
 			baseURL: 'https://brouter.de/brouter-web/#zoom={zoom}&lat={lat}&lon={lon}&layer=OpenStreetMap',
 			target: 'router'
