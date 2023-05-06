@@ -1130,6 +1130,23 @@
                 }
         );
         
+    //----------------------------------------------------------------------
+    //	Sächsische Meilenblätter 1781/1810
+    //----------------------------------------------------------------------
+    
+    addHistmapTiles(
+            "Sächsische Meilenblätter 1781/1810", "region/SMB", "sachsen",
+            {
+                    positionInLayerChanger: 8,
+                    description: 'Meilenblätter von Sachsen,Berliner Exemplar aufgenommen vom Sächs. Ing.-Korps 1780 - 1806 unter Ltg. von Friedrich Ludwig Aster',
+                    permaId: 'Vs',
+                    minZoom: 10,
+                    numZoomLevels: 17,
+                    opacity: 0.8,
+                    attribution:'Meilenblätter von Sachsen, Sächs. Ing.-Korps unter Ltg. von Friedrich Ludwig Aster, <a href="https://www.deutschefotothek.de/cms/kartenforum-sachsen-meilenblaetter-berlin.xml" target="_blank">SLUB / Deutsche Fotothek</a>, <a href="https://commons.wikimedia.org/wiki/Category:Meilenbl%C3%A4tter" target="_blank">Wikimedia Commons</a>, <a href="https://creativecommons.org/publicdomain/zero/1.0/deed.en" target="_blank">(CC0 1.0) Public Domain Dedication</a>'
+            }
+    );
+    
      //----------------------------------------------------------------------
 	 //	 Sitzenrodaer-Forst 1780
 	//----------------------------------------------------------------------
