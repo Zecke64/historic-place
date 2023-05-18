@@ -367,10 +367,8 @@
 			//------------------------------------------------------
             
 			var wikidata = (data.wikidata+'').match(/^(Q\d+)$/);
-			var wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-			+ '?format=json&p=P18&fallback= nowdimage';
+			var wdimage;
 			var mapillaryimage;
-			var nowdimage;
 			//------------------------------------------------------
 			//	wikimedia_commons
 			//------------------------------------------------------
@@ -387,12 +385,10 @@
 			//------------------------------------------------------
 			//	Image
 			//------------------------------------------------------
-			if (nowdimage) {
-				result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
-				
-			}
+			
 			if ( data.image == null  && wikidata) {
-				wdimage;
+				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
+						+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg ';
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
