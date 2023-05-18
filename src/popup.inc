@@ -389,7 +389,7 @@
 
 			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-						+ '?format=json&p=P18&fallback= nowdimage;
+						+ '?format=json&p=P18&fallback= nowdimage';
 			}
 			if (nowdimage) {
 			 result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
