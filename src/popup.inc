@@ -384,11 +384,12 @@
 
 			//------------------------------------------------------
 			//	Image
+			//https://gk.historic.place/i/beteilige-en.jpg&width=139
 			//------------------------------------------------------
 
 			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-						+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-en.jpg&width=139';
+						+ '?format=json&p=P18&fallback=result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>')';
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
