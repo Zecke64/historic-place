@@ -368,7 +368,7 @@
             
 			var wikidata = (data.wikidata+'').match(/^(Q\d+)$/);
 			var wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-			+ '?format=json&p=P18&fallback= nowdimage;
+			+ '?format=json&p=P18&fallback= nowdimage';
 			var mapillaryimage;
 			var nowdimage;
 			//------------------------------------------------------
