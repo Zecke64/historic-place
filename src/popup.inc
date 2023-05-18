@@ -384,12 +384,11 @@
 
 			//------------------------------------------------------
 			//	Image
-			//
 			//------------------------------------------------------
 
 			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-						+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg&width=239';
+						+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg';
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
