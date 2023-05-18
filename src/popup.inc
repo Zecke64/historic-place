@@ -369,6 +369,7 @@
 			var wikidata = (data.wikidata+'').match(/^(Q\d+)$/);
 			var wdimage;
 			var mapillaryimage;
+			var nowdimage = this.html ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');  
 			//------------------------------------------------------
 			//	wikimedia_commons
 			//------------------------------------------------------
@@ -389,7 +390,7 @@
 
 			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-						+ '?format=json&p=P18&fallback=thumbURL';
+						+ '?format=json&p=P18&fallback= nowdimage';
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
