@@ -369,7 +369,9 @@
 			var wikidata = (data.wikidata+'').match(/^(Q\d+)$/);
 			var wdimage;
 			var mapillaryimage;
-			var nowdimage = this.html ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');  
+			var thumbURL;
+			var nowdimage = thumbURL;
+			
 			//------------------------------------------------------
 			//	wikimedia_commons
 			//------------------------------------------------------
@@ -385,7 +387,6 @@
 
 			//------------------------------------------------------
 			//	Image
-			//https://gk.historic.place/i/beteilige-'+ sprache +'.jpg&w=200
 			//------------------------------------------------------
 
 			if ( data.image == null  && wikidata) {
