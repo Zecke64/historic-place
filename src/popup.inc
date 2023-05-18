@@ -392,7 +392,7 @@
 				
 			}
 			if ( data.image == null  && wikidata) {
-				wdimage';
+				wdimage;
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
