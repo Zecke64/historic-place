@@ -1658,7 +1658,7 @@ break;
 														clusterLimit: 50,
 														
 														osmlinks: false,
-														minZoom: 17,
+														minZoom: 16,
 														blockSize: 0
 }));
 
