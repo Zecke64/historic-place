@@ -200,6 +200,7 @@ map.addLayer (mlayer = new OpenLayers.Layer.PopupMarker("CenterwayObjekte", {
 														'~members': 'hidden',
 														'~ep': 'hidden',
 														'~in': 'hidden',
+														'~n': 'hidden',
 														'heritage:website': 'hidden',
 														id: 'hidden',
 														lat: 'hidden',
@@ -761,7 +762,7 @@ result.push ('<div class="lonlat">' + this.html("$$Koordinaten%%: " + coors) + '
 
 result.push ('</td></tr><tr><td colspan="1" rowspan="1" class="field4" style="vertical-align: middle; text-align: center">');
 
-result.push (this.getSizeFromData(data)||'');
+//result.push (this.getSizeFromData(data)||'');
 
 //------------------------------------------------------
 //	Table: 6. Row (both columns)
