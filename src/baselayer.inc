@@ -158,7 +158,7 @@
 	} else {
 
 		map.addLayer (new OpenLayers.Layer.XYZ("$$OSM deutscher Stil%%", [
-			"https://tile.openstreetmap.de/${z}/${x}/${y}.png",
+			"https://tile.openstreetmap.de/${z}/${x}/${y}.png"],
 			{description: 'openstreetmap.de', 
 			 sphericalMercator: true,  
 			 permaId: 'Kd',
