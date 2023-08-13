@@ -107,6 +107,12 @@ case 'uk':
         start_y1 = 44.4;
         start_y2 = 52.4;
         break;
+case 'it':
+        start_x1 = 5.8;
+        start_x2 = 19.3;
+        start_y1 = 36.0;
+        start_y2 = 47.6;
+        break;
 default:
 	start_x1 = -23;
 	start_x2 = 46;
@@ -325,7 +331,7 @@ window.onload = function () {
 			target: 'router'
 		},
 		{
-			label: '$$Topografische Karte von Maxbe%%',
+			label: "$$Topografische Karte von Maxbe%%",
 			baseURL: 'https://geo.dianacht.de/topo/?zoom={zoom}&lat={lat}&lon={lon}',
 			bounds: new OpenLayers.Bounds(10.00, 47.00, 13.25, 48.65),
 			target: 'topo'
@@ -394,28 +400,28 @@ window.onload = function () {
 		{
 			positionInLayerChanger: 1,
 			layerGroup: 'oldmap',
-			label: '$$Übersichtskarte über verfügbare historische Karten%%',
+			label: "$$Übersichtskarte über verfügbare historische Karten%%",
 			baseURL: '../../../Layer_Boundaries/',
 		//	bounds: new OpenLayers.Bounds(10.00, 47.00, 13.25, 48.65),
 			target: 'overview'
 		}, 
 		{
 			layerGroup: 'osm',
-			label: '$$Bearbeiten mit JOSM%%',
+			label: "$$Bearbeiten mit JOSM%%",
 			baseURL: 'http://127.0.0.1:8111/load_and_zoom?left={left}&bottom={bottom}&right={right}&top={top}',
 			minZoom: 12,
 			target: 'josm'
 		}, 
 		{
 			layerGroup: 'osm',
-			label: '$$Bearbeiten mit iD%%',
+			label: "$$Bearbeiten mit iD%%",
 			baseURL: 'https://www.openstreetmap.org/edit?editor=id&zoom={zoom}&lat={lat}&lon={lon}',
 			minZoom: 14,
 			target: 'edit'
 		}, 
 		{
 			layerGroup: 'osm',
-			label: '$$Bearbeiten mit Potlatch%%',
+			label: "$$Bearbeiten mit Potlatch%%",
 			baseURL: 'https://www.openstreetmap.org/edit?editor=potlatch2&zoom={zoom}&lat={lat}&lon={lon}',
 			minZoom: 14,
 			target: 'edit'
@@ -568,10 +574,10 @@ window.onload = function () {
 }));
 	map.addControl (new OpenLayers.Control.LocalTracks( {     
 		displayInLayerSwitcher: true,
-		textButtonTitle: '$$Lese GPX-Datei(en) aus dem lokalen Dateisystem%%',
+		textButtonTitle: "$$Lese GPX-Datei(en) aus dem lokalen Dateisystem%%",
 		textFileSizeWarning: '$$Die Datei ${name} ist ${size} Bytes groß%%.\n' +
-		'$$Das Laden kann etwas dauern. Fortsetzen?%%',  
-		textButtonLabel: '$$GPX einlesen%%'}));
+		"$$Das Laden kann etwas dauern. Fortsetzen?%%",  
+		textButtonLabel: "$$GPX einlesen%%"}));
 	map.addControl (new OpenLayers.Control.LoadStatus(
 		{html: '<img src="../../../i/ajax-loader.gif" /><br />$$Laden%%...<br/>${layers}'}));
 
@@ -597,7 +603,7 @@ window.onload = function () {
 	// map.addControl (new OpenLayers.Control.Navigation());
 	// map.addControl (new OpenLayers.Control.PanZoomBar());
 	map.addControl (new OpenLayers.Control.ScaleLine());
-	map.addControl (new OpenLayers.Control.ZoomWithDisplay({title: '$$Karten-Zoom%%'}));
+	map.addControl (new OpenLayers.Control.ZoomWithDisplay({title: "$$Karten-Zoom%%"}));
 	map.addControl (new OpenLayers.Control.ZoomStatus({
 		defaultHtml: '<b>Zoom=${actual}, $$bei Zoom=${next} werden weitere Daten eingeblendet%%</b>' }));
 
@@ -620,7 +626,7 @@ window.onload = function () {
 		minDistance: 50,
 		resultMinZoom: 16,
                 autoClose: false,
-		textKeepOpen: '$$Stehen lassen%%',
+		textKeepOpen: "$$Stehen lassen%%",
 
 		translate: function (clasz, type) {
 
@@ -792,7 +798,7 @@ window.onload = function () {
 
 		displayInLayerSwitcher: !!navigator.geolocation,
 		permaId: 'Sl',
-		title: '$$auf aktuellen Standort zoomen%%',
+		title: "$$auf aktuellen Standort zoomen%%",
 		description: 'Geolocation',
 		autoActivate: false,
 
@@ -845,7 +851,7 @@ window.onload = function () {
 	//	Uebersichtskarte
 	//----------------------------------------------------------------------
 
-	 var overviewMap = new OpenLayers.Control.OverviewMap({title: '$$Navigationsfenster%%', permaId: 'Sf',displayInLayerSwitcher: true});
+	 var overviewMap = new OpenLayers.Control.OverviewMap({title: "$$Navigationsfenster%%", permaId: 'Sf',displayInLayerSwitcher: true});
          map.addControl (overviewMap);
 	  overviewMap.div.style.display='none';
 */
@@ -896,7 +902,7 @@ window.onload = function () {
 
 		displayInLayerSwitcher: true,
 		permaId: 'Sk',
-		title: '$$Kompass%%',
+		title: "$$Kompass%%",
 
 		draw: function() {
 
@@ -944,7 +950,7 @@ window.onload = function () {
 
 	map.addControl (new OpenLayers.Control ({
 
-		title: '$$Namen%%',
+		title: "$$Namen%%",
 
 		displayInLayerSwitcher: true,
 		permaId: 'Sn',
@@ -1771,7 +1777,7 @@ HPLACE_INCLUDE histmap-wms.inc
 	//	Labellayer-Regionen
 	//----------------------------------------------------------------------
 
-	var textLayer = new OpenLayers.Layer.Labels('$$Regionen%%', {
+	var textLayer = new OpenLayers.Layer.Labels("$$Regionen%%", {
 		permaId: 'Hb',
 		layerGroup: 'info',
 		visibility: true,

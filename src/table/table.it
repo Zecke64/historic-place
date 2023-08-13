@@ -1,0 +1,361 @@
+Ab Zoom 10 sichtbar###Visibile a livello di ingrandimento 10
+Ab Zoom 11 sichtbar###Visibile a livello di ingrandimento 11
+Ab Zoom 12 sichtbar###Visibile a livello di ingrandimento 12
+Ab Zoom 13 sichtbar###Visibile a livello di ingrandimento 13
+Ab Zoom 14 sichtbar###Visibile a livello di ingrandimento 14
+Ab Zoom 15 sichtbar###Visibile a livello di ingrandimento 15
+Ab Zoom 16 sichtbar###Visibile a livello di ingrandimento 16
+Ab Zoom 17 sichtbar###Visibile a livello di ingrandimento 17
+Ab Zoom 18 sichtbar###Visibile a livello di ingrandimento 18
+Ab Zoom 5 sichtbar###Visibile a livello di ingrandimento 5
+Alle ${count} Einträge###Tutte le ${count} voci
+Alle Einträge###Tutte le voci
+Andere Objekte mit historischem Bezug###Altri oggetti con valore storico
+Anzahl###Somma
+Archäologische Stätte - allgemein###Sito archeologico (generale)
+Archäologische Stätte###Sito archeologico
+Archäologische Stätte (Befestigung)###Sito archeologico (fortificazione)
+Archäologische Stätte (Ganggrab)###Sito archeologico (tomba a corridoio)
+Archäologische Stätte (Grabkammer)###Sito archeologico (camera di sepoltura)
+Archäologische Stätte (Großsteingrab)###Sito archeologico (Dolmen)
+Archäologische Stätte (Hügelgrab)###Sito archeologico (tumulo)
+Archäologische Stätte (Megalith)###Sito archeologico (megalito)
+Archäologische Stätte (Menhir)###Sito archeologico (menhir)
+Archäologische Stätte (Steinkreis)###Sito archeologico (cerchio di pietre)
+Archäologische Stätte (Steinreihe)###Sito archeologico (pietre in fila)
+auf aktuellen Standort zoomen###Ingrandisci alla posizione corrente
+aufgegeben###abbandonato
+Ausrichtung des Objektes im Popup###Orientamento dell'oggetto nel popup
+Aussichtsturm###Torre di osservazione
+Bahnhof###Stazione ferroviaria
+Bahnhofsgelände###Area di una stazione ferroviaria
+Bahnlinie###Ferrovia
+Baumbildstock###Sacello su albero
+Bearbeiten mit###Modifica con
+Bearbeiten mit iD###Modifica con iD
+Bearbeiten mit JOSM###Modifica con JOSM
+Bearbeiten mit Potlatch###Modifica con Potlatch
+Befestigungsanlage###Fortificazione
+bei Zoom=${next} werden weitere Daten eingeblendet###Zoom=${next} mostrerà più dati
+Bergwerk###Miniera
+Bergwerk/Schachtanlage/Schacht###Miniera/Sistema minerario/Tunnel verticale
+Bergwerksstollen###Galleria (miniera)
+Bergwerksstollen (aufgegeben)###Galleria (miniera) - chiusa
+Beschreibung###Descrizione
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Porzioni di codice e preparazione dei dati realizzati da:
+Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###Voragine (depressione causata dall'attività, ad es. mineraria, dell'uomo)
+Bombenkrater###Cratere di una bomba
+Historische Brücke###Ponte storico
+Historische Brücke (Ruine)###Ponte storico (rovine)
+Brunnen###Fontana
+Bunker###Bunker
+Bunker (Ruine)###Bunker (rovine)
+Burg oder Schloss###Castello
+Burg###Palazzo/Castello/Forte (senza specificazione)
+Burg (Ruine)###Rovine di palazzo/castello/forte (senza specificazione)
+Credits###Ringraziamenti
+Danksagung###Ringraziamenti
+Dargestellte Einträge###Voci visualizzate
+denkmalgeschützt###protetto
+Denkmal###Memoriale
+Denkmalschutz###Protezione del monumento
+Details###Dettagli
+Die ersten ${count} von ${all} Einträgen###Le prime ${count} di ${all} voci
+Dreschplatz###Aia
+Du willst ein Bild? Beteilige Dich!###Vuoi una foto? Partecipa!
+Erinnerungsstätte###Monumento
+Farm###Fattoria
+Festung###Fortezza
+Festung/Kreml###Cremlino
+Festung/Kreml (Ruine)###Cremlino (rovine)
+Findling###Masso erratico
+Fläche###Area
+Flächen###aree
+Fragmente###Frammenti
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###La prima versione di questa mappa fu realizzata da:
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###La wiki di questa mappa fu realizzata da:
+Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###È disponibile un preset di JOSM per gli oggetti storici
+Für Übersetzungen :###Traduzioni
+Galgen###Forca
+Ganggrab (Langbett)###Tomba a corridoio
+Gebäude###Edificio
+Gedenkplakette###Targa commemorativa
+Gedenktafel###Piastra commemorativa
+Gefängnis###Prigione
+geschlossen###chiuso
+geschützt durch###protetto da
+Geschütztes Gebäude###Edificio protetto
+Geschütztes Gebiet###Area protetta
+Gipfelkreuz###Croce di vetta
+Glockenturm###Campanile
+Glockenturm (Ruine)###Campanile (rovine)
+Grab###Tomba
+Grenzmarkierung###Segnale di confine
+Grenzstein###Pietra di confine
+Großsteingrab - Dolmen###Dolmen
+Haltepunkt###Fermata ferroviaria
+Handschwengelpumpe###Vecchia pompa ad acqua manuale
+Handwasserpumpe###Vecchia pompa ad acqua manuale
+Herrenhaus###Maniero
+Historische Eisenbahnstrecke###Ferrovia storica
+Historische Farm###Fattoria storica
+Historische Industriebauten###Edificio industriale (storico)
+Historische Objekte###Oggetti storici
+Historische Quelle###Sorgente storica
+Naturdenkmal###Monumento naturale
+Historischer Brunnen / Zierbrunnen###Fontana storica
+Historischer Dreschplatz/Tenne###Aia storica
+Historischer Eisenbahn-Haltepunkt###Stazione ferroviaria storica
+Historischer Galgen###Forche storiche
+Historischer Name###Nome storico
+Historischer Stein###Pietra storica
+Historischer Turm###Torre storica
+Historischer Turm (Ruine)###Torre storica (rovine)
+Historischer Vermessungspunkt###Punto geodetico storico
+Historisches Gebäude###Edificio storico
+Historisches Grab###Tomba storica
+Historisches Luftfahrzeug###Velivolo storico
+Historisches Objekt###Oggetto storico
+Historisches Schiff###Nave storica
+Historisches Stadttor###Porta cittadina storica
+Historische Stadt-Mauer/Historische Mauer###Mura storiche
+Hügelgrab (Tumulus)###Tumulo
+Hütte###Capanna
+Icon###Icona
+Industriegebäude###Edificio industriale
+Informationstafel###Tabellone informativo
+Infos für Mapper###Informazioni per il mappatore
+Infos für OSM-Mapper###Informazioni per il mappatore OSM
+Info-Tafel mit historischem Bezug###Tabellone informativo storico
+Inschrift###Inscrizione
+Japanische Burg###Castello giapponese (Shiro)
+JOSM_Vorlage###Preset JOSM
+Kanone###Cannone
+Kapelle###Cappella
+Kein Treffer###Nessun risultato
+Keine Vorschau verfügbar!###Nessuna anteprima disponibile
+Kirche###Chiesa
+Kloster###Monastero
+Kloster (Ruine)###Monastero (rovine)
+Kompass###Bussola
+Kompass ein/aus###Bussola on/off
+Kontakt###Contatti
+Konzentrationslager###Campo di concentramento
+Koordinaten###Coordinate
+Kreml###Cremlino
+Kriegsgefangenenlager###Campo per prigionieri di guerra
+Laden###Caricamento
+Legende###Legenda
+Legende und Infos###Legenda e informazioni
+Leuchtturm###Faro
+Linie###Linea
+Linien###Linee
+Linien und Flächen###Linee e aree
+Link zum Bild###Collegamento a immagine
+Luftfahrzeug###Velivolo
+Marterl###Edicola votiva
+Mehr Objekte anzeigen###Mostra più oggetti
+Meilenstein###Pietra miliare
+Monument###Monumento
+Moschee###Moschea
+Namen###Nomi
+Normale Zahl von Objekten anzeigen###Mostra oggetti predefiniti
+NS-Konzentrationslager###Campo di concentramento nazista
+Obelisk###Obelisco
+Objekte mit Zusatzinfos###Oggetto con ulteriori informazioni
+Objekte mit Zusatz-Link###Oggetto con collegamento web
+Objekt###Oggetto
+oder###oppure
+OpenStreetMap und Mitwirkende###OpenStreetMap e i contributori
+Paläontologische Stätte###Sito paleontologico
+Palast/Burg/Schloß/Festung (ohne genaue Spezifizierung)###Palazzo/Castello/Forte (generico)
+Palast/Burg/Schloß/Festung Ruine (ohne genaue Spezifizierung)###Rovine di palazzo/castello/forte (generiche)
+Palast###Palazzo
+Palast (Ruine)###Palazzo (rovine)
+Pā (Māori) Befestigungsanlagen###Fortificazioni Pā (Māori)
+Pinge###Depressione
+Pranger###Gogna
+Punkt###Punto
+Quelle###Sorgente
+Rathaus###Municipio
+Religiöse Stätte (mit Link)###Luogo di culto (con collegamento web)
+Religiöse Stätte###Luogo di culto
+Religiöse Stätte (religionsspezifisch)###Luogo di culto (per religione)
+Rittergut/Herrenhaus###Maniero
+Rittergut/Herrenhaus (Ruine)###Maniero (rovine)
+Ruine###Rovine
+Runenstein###Pietra runica
+Schacht###Tunnel minerario
+Schiff###Nave
+Schiffswrack###Relitto marino
+Schlachtfeld###Campo di battaglia
+Schloss###Castello (casa di campagna inglese)
+Schloss (Ruine)###Castello (rovine di casa di campagna inglese)
+Schrein###Edicola votiva
+See###Lago
+Shiro (Japanische Burg)###Shiro (castello giapponese)
+Shiro (Ruine)###Shiro (rovine)
+Sprachauswahl###Selezione della lingua
+Stadtmauer###Mura cittadine
+Stadttor###Porta cittadina
+Stand der Daten###Dati risalenti al
+Steinbruch###Cava
+Steingrab - Menhir###Lapide - Menhir
+Steinkreis###Cerchio di pietre
+Steinreihe###Pietre in fila
+Stillgelegtes Bergwerk/stillgelegter Schacht###Miniera / Tunnel (chiuso)
+Stollen (allgemein)###Galleria (miniera)
+Stolleneingang###Galleria (miniera)
+Stolpersteine###Pietre d'inciampo (piastrelle del pavimento commemorative)
+Stolperstein###Pietra d'inciampo (piastrella del pavimento commemorativa)
+Sühnekreuz###Croce della conciliazione
+Sühnestein###Croce della conciliazione
+Synagoge###Sinagoga
+Technikdenkmal###Monumento tecnico
+Technisches Denkmal###Patrimonio industriale
+Tempel###Tempio
+Turm###Torre
+Übersicht###Panoramica
+UNESCO Welterbe###Patrimonio mondiale UNESCO
+Vermessungspunkt###Punto geodetico
+von###di
+Wallanlage###Bastione
+Wanderwege###Sentieri escursionistici
+Waschplatz###Lavatoio
+Wassermühle (Ruine)###Mulino ad acqua (rovine)
+Wassermühle###Mulino ad acqua
+Wasserpumpe###Pompa ad acqua
+Wasserturm###Torre piezometrica
+Webseite###sito web
+Wegkapelle###Cappella
+Weg-Kapelle###Cappella
+Wegkreuz###Croce storica
+Bildstock###Edicola votiva
+Weitere Karten###altre mappe
+Weniger Objekte anzeigen###Mostra meno oggetti
+Wiki zur Karte###Wiki per la mappa
+Windmühle (Ruine)###Mulino a vento (rovine)
+Windmühle###Mulino a vento
+Wrack###Relitto marittimo
+Wüstung###Villaggio abbandonato
+Zur Anzeige der Karte ist JavaScript erforderlich.###Questa mappa necessita di Javascript.
+ausgedehnte Objekte###oggetti estesi
+Die Routen-Layer###Livelli degli itinerari
+Einzelobjekte###Punti di interesse
+Eisenbahnen###Ferrovie
+experimentell###sperimentale
+Freizeit###Svago e benessere
+Grundkarte###Mappa di base
+Hilfsebenen###Livelli di supporto
+Inline-Skating###Pattinaggio in linea
+lizenziert unter###su licenza di
+Mountainbike###Mountain bike
+Radwege###Itinerari ciclabili
+Schummerung###Rilievi
+Straßen###Strade
+Verwaltungsgrenzen###Confini amministrativi
+Wetter###Meteo
+Zeichenwerkzeuge###Strumenti di disegno
+Zeichnen###Disegno
+Steuerelemente###Strumenti
+Zeigt diese Gruppe###Mostra questo gruppo
+Versteckt diese Gruppe###Nascondi questo gruppo
+Zeigt diese Ebene###Mostra questo livello
+Versteckt diese Ebene###Nascondi questo livello
+Wählt diese Ebene als Basisebene###Seleziona un livello di base
+Zeigt dieses Steuerelement###Mostra questo strumento
+Versteckt dieses Steuerelement###Nascondi questo strumento
+Verringert die Deckkraft der Ebene###Diminuisci l'opacità di questo livello
+Erhöht die Deckkraft der Ebene###Aumenta l'opacità di questo livello
+Verringert die Deckkraft des Steuerelements###Diminuisci l'opacità di questo strumento
+Erhöht die Deckkraft des Steuerelements###Aumenta l'opacità di questo strumento
+Navigationsfenster###Pannello delle indicazioni
+Reit- und Wanderkarte###Mappa escursionistica
+Statue###Statua
+Aquädukt###Acquedotto
+Ehemaliger Windmühlenstandort###Luogo di un ex mulino a vento
+Ehemaliger Wassermühlenstandort###Luogo di un ex mulino ad acqua
+Ehemaliger Schacht###ex tunnel verticale
+Ehemaliger Stollen###ex galleria mineraria
+Wappen###Stemma
+Bergehalde###Discarica delle ferrovie
+Schlackenhalde###Accumulo di scorie
+Müllhalde###Discarica dei rifiuti
+Bohrung###Foro di trivellazione
+Museumsbahnlinie###Ferrovia del patrimonio
+stillgelegt###dismesso
+nahezu komplett entfernt###raso al suolo
+Stehen lassen###Lascia aperto
+Historisches Gefängnis###Prigione storica
+Suche###Cerca
+Kartenebenen###Livelli della mappa
+Fenster schließen###Chiudi finestra
+Köhlerei###Carbonaia
+Töpferei###Lavorazione della ceramica
+Ziegelei###Fabbrica di mattoni
+Kalkbrandofen###Fornace del calcare
+Pechhütte###Fornace del catrame
+Glashütte###Fornace del vetro
+Brennofen###Fornace
+Kohlenmeiler###Fornace del carbone
+Schornstein###Ciminiera
+Portal###Portale
+Tunnelportal###Porta di un tunnel
+Fachwerkhaus###Casa a graticcio
+Felsenkeller###Cantina di pietra
+Maultierpfad###Mulattiera
+Umgebindehaus###Dimora tipica dell'Alta Lusazia
+Wohnturm###Casa torre
+Wehrturm###Torre fortificata
+Wachturm###Torre di guardia
+Skisprungschanze###Collina per il salto con gli sci
+Optischer Telegraf###Telegrafo ottico (semaforo)
+Historisches Militärgelände###Area militare storica
+Historische Straße###Strada storica
+Arbeitslager###Campo dei lavori forzati
+Ehemaliges Bergwerk###Ex miniera
+Erbaut###Realizzato
+Historische Karten###Mappe storiche
+Verweise auf Fremdkarten###Riferimenti a mappe straniere
+Objekte Bearbeiten###Modifica oggetti
+Downloads###Scaricamenti
+Karten-Zoom###Zoom della mappa
+Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###Imposta l'ingrandimento tra ${zoom} e ${minZoom}
+Zoomt auf Ausdehnung###Ingrandisci all'estensione
+Entfernt das Layer###Rimuove il livello
+Lokale Dateien###File locali
+GPX einlesen###Carica GPX
+Einstellungen in Cookie speichern###Salva le impostazioni in un cookie
+Cookie gespeichert###Cookie salvato
+Permalink###Collegamento permanente
+Übersichtskarte über verfügbare historische Karten###Mappa di sintesi delle mappe storiche
+Historische Karten im Ausschnitt###Mappe storiche nelle vicinanze
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Clicca su anteprima per ingrandire e vedere l'autore, la licenza e le informazioni dell'immagine
+Historisches Schienenfahrzeug###Veicolo ferroviario storico
+Historisches Ausstellungsstück###Mostra storica
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###Leggi (uno o più) file GPX dal sistema locale
+Reiten###Equitazione
+Die Datei ${name} ist ${size} Bytes groß###Il file ${name} occupa ${size} byte
+Das Laden kann etwas dauern. Fortsetzen?###Il caricamento potrebbe durare un po'. Continuare?
+Ende###Fine
+Hilfe###Assistenza
+Messwerkzeug###Strumento di misurazione
+Kriegsgräberstätte###Tomba di guerra
+Umgebung mit###Vicinanze di
+Pflanzjahr###Anno di impianto
+Mehr Infos von###Informazioni aggiuntive da
+vor Christus###avanti Cristo
+vor###prima
+nach###dopo
+Anfang###inizio
+um###all'incirca intorno
+Mitte###all'incirca durante la metà del
+gegen Ende###fine
+Kunstwerk###Opera artistica
+Transformatorenturm###Torre di trasformazione
+OSM deutscher Stil###Stile OSM tedesca
+Reit- und Wanderkarte###Mappa escursionistica
+Topgrafische Karte von Maxbe###Mappa topografica di Maxbe
+Regionen###Regioni naturali, catene montuose
+Historische Grenzen (experimentell)###Confini storici (sperimentale)
+Jahrhundert###secolo

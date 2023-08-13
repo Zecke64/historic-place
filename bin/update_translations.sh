@@ -6,6 +6,7 @@
 #
 
 #set -x
+set -e
 
 home="$( cd "$(dirname "$0")" ; cd .. ; pwd -P )"
 
@@ -19,6 +20,7 @@ trans="$hist/l"
 
 
 for lang in $hp_languages; do
+	[ -d "$trans/$lang" ] || mkdir  "$trans/$lang"
 	cd "$trans/$lang"
 	rm -f favicon.ico
 	ln -s ../../favicon.ico favicon.ico

@@ -1,2 +1,5 @@
 /install.conf
 /tmp/*
+/htdocs/historische_objekte/l/*/*.js
+/htdocs/historische_objekte/l/*/*.html
+

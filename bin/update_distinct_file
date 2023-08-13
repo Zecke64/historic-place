@@ -57,7 +57,7 @@ match() {
 
 cd "$hp_root/src"
 
-
+[ -d "$hp_root/tmp" ] || mkdir "$hp_root/tmp"
 
 master=$(basename $masterf)
 
