@@ -1215,4 +1215,21 @@
                 }
         );
 
+        //----------------------------------------------------------------------
+        //       Püttlingen Tractus 1784
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Püttlingen Tractus 1784", "city/Puettlingen/Tractus_1784", "Puettl-Tractus-1784",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Püttlingen Tractus 1784',
+                        permaId: 'Vv',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'Stadtarchiv Püttlingen / CC-BY-SA 3.0 DE'
+                }
+        );
+
 

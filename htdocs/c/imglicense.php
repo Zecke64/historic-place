@@ -244,7 +244,7 @@ function get_lic_str_flickr ($id, $authid) {
 
 	# erstmal die XML-Seite via API laden
 
-	$apikey = file_get_contents ('HPLACE_CONFIG/flickr_api.key', true);
+	$apikey = file_get_contents ('/var/opt/www/hp/config/flickr_api.key', true);
 	$apikey = rtrim ($apikey, "\n");
 
 	$sourceURL = "https://api.flickr.com/services/rest/?api_key="
@@ -318,7 +318,7 @@ function get_lic_str_geograph ($id, $nation) {
 
 	global $USER_AGENT, $imageurl;
 
-	$apikey = file_get_contents ('HPLACE_CONFIG/geograph_api.key', true);
+	$apikey = file_get_contents ('/var/opt/www/hp/config/geograph_api.key', true);
 	$apikey = rtrim ($apikey, "\n");
 
 	if ( $nation == 'UK' ) {

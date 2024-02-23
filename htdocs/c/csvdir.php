@@ -1,7 +1,7 @@
 <?php
 #$CSVDIR = preg_replace("#[^/]+$#", '', $_SERVER['SCRIPT_FILENAME']).'csv';
 #$CSVDIR = "/opt/www/data.historic.place/cache/csv";
-$CSVDIR = "HPLACE_DATABASE";
+$CSVDIR = "/opt/www/data.historic.place/cache/csv";
 
 $BINDIR = "/usr/bin";
 
