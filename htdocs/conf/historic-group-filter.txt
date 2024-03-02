@@ -166,6 +166,7 @@
 	--use-subgroups image,userinfo
 	--include	historic=memorial&memorial:type=stolperstein
 	--include	historic=memorial&memorial=stolperstein
+	--include	historic=memorial&memorial=stolperschwelle
 
 --group	Threshing_floor
 	--include	historic=threshing_floor

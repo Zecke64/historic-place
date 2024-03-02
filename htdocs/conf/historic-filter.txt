@@ -281,6 +281,7 @@
 		--select historic=memorial&memorial:type=stolperstein
 		--select historic=memorial&memorial:type=Stolperstein
 		--select historic=memorial&memorial=stolperstein
+		--select historic=memorial&memorial=stolperschwelle
 	--group Spring
 	        --use-subgroups image,userinfo
 		--select natural=spring&historic=
