@@ -7,7 +7,7 @@
 	//----------------------------------------------------------------------
 	if ( sprache == 'de' || sprache =='fr' || sprache =='nl' || sprache =='cs' || sprache =='ro' || sprache =='da' || sprache =='pl' || sprache =='hu') {
 	map.addLayer (new OpenLayers.Layer.OSM('$$Grundkarte%%', null, {
-		numZoomLevels: 20,
+		numZoomLevels: 21,
 		tileOptions: {
 
 			crossOriginKeyword: null
@@ -43,7 +43,7 @@
 	else
 	{
 		map.addLayer (new OpenLayers.Layer.OSM('$$Grundkarte%%', null, {
-		numZoomLevels: 20,
+		numZoomLevels: 21,
 		tileOptions: {
 
 			crossOriginKeyword: null
