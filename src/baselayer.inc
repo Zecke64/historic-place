@@ -7,7 +7,7 @@
 	//----------------------------------------------------------------------
 	if ( sprache == 'de' || sprache =='fr' || sprache =='nl' || sprache =='cs' || sprache =='ro' || sprache =='da' || sprache =='pl' || sprache =='hu') {
 	map.addLayer (new OpenLayers.Layer.OSM('$$Grundkarte%%', null, {
-		numZoomLevels: 21,
+		numZoomLevels: 20,
 		tileOptions: {
 
 			crossOriginKeyword: null
@@ -43,7 +43,7 @@
 	else
 	{
 		map.addLayer (new OpenLayers.Layer.OSM('$$Grundkarte%%', null, {
-		numZoomLevels: 21,
+		numZoomLevels: 20,
 		tileOptions: {
 
 			crossOriginKeyword: null
@@ -208,9 +208,9 @@
 	}));
 		
 	map.addLayer(new OpenLayers.Layer.OSM("No Background","../../../i/1x1w.gif",
-		{ maxZoomLevel: 17,
+		{ maxZoomLevel: 22,
 		  permaId: 'Kv',  
-		  numZoomLevels: 18 
+		  numZoomLevels: 22 
 	}));
 		
 	//----------------------------------------------------------------------------
