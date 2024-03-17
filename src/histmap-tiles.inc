@@ -844,7 +844,7 @@
                         description: 'Stadtplan des Brandversicherungsinspektor Carl Robert Friedrich Kanitz (1811-1893), Stadtarchiv Leipzig, (dl-de/by-2-0)',
                         permaId: 'Oz',
                         minZoom: 15,
-                        numZoomLevels: 21,
+                        numZoomLevels: 22,
                         opacity: 0.8,
 			attribution:' Carl Robert Friedrich Kanitz, <a href="https://opendata.leipzig.de/" target="_blank">Open Data Stadtarchiv Leipzig</a>, <a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">(dl-de/by-2-0)</a>'
                 }
