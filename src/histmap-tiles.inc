@@ -1228,7 +1228,24 @@
                         minZoom: 14,
                         numZoomLevels: 20,
                         opacity: 0.8,
-                        attribution:'Stadtarchiv Püttlingen / CC-BY-SA 3.0 DE'
+                        attribution:'Stadtarchiv Püttlingen'
+                }
+        );
+
+        //----------------------------------------------------------------------
+        //       Püttlingen - Nassau-Saarbrückische Überarbeitung der Tractus-Karte 1822
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Püttlingen Nassau-SB 1822", "city/Puettlingen/Nassau_1822", "Puettl-Nassau-1822",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Püttlingen Nassau SB 1822',
+                        permaId: 'Vw',
+                        minZoom: 12,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'Saarländisches Landesarchiv'
                 }
         );
 
