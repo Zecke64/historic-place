@@ -1249,4 +1249,21 @@
                 }
         );
 
+        //----------------------------------------------------------------------
+        //       Püttlingen - Tractus Karte 1759 von Rittenhofen, Coelln, Engelfangen
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Rittenhofen/Coelln/Engelfangen 1759", "city/Puettlingen/RittCoEng_1759", "Rittenhofen-Coelln-Engelfangen_1759",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Rittenhofen/Coelln/Engelfangen 1759',
+                        permaId: 'Vx',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'Saarländisches Landesarchiv'
+                }
+        );
+
 
