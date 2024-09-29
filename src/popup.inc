@@ -390,7 +390,7 @@ var subject_wikidataURL = (data['subject:wikidata']+'').match(/^(Q\d+)$/);
 
 if ( data.image == null  && wikidata) {
 	wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-	+ '?p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg';
+	+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg';
 }
 
 if ( data.image == null  && wikidata == null && data.mapillary) {
@@ -2049,7 +2049,7 @@ break;
 			
 			if ( data.image == null  && wikidata) {
 				wdimage = this.html('https://tools.wmflabs.org/hub/'+wikidata[1]) 
-						+ '?p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg';
+						+ '?format=json&p=P18&fallback=https://gk.historic.place/i/beteilige-'+ sprache +'.jpg';
 			}
 			
 			if ( data.image == null  && wikidata == null && data.mapillary) {
