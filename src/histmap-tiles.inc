@@ -912,7 +912,7 @@
                 "Hokkaido 1892", "region/Hokkaido", "Hokkaido",
                 {
                         positionInLayerChanger: 8,
-                        description: 'Full map of Hokkaido, City map of Sapporo, City map of Hakodate, Taikichi Tanaka (Tokyo, author and editor), Magokichi Matsumura (Tokyo, printer), Sanshodo (Tokyo, editor), International Research Center for Japanese Culture, Public Domain Mark',
+                        description: 'Full map of Hokkaido, City map of Sapporo, City map of Hakodate, Taikichi Tanaka (Tokyo, author and editor), Magokichi Matsumura (Tokyo, printer), Sanshodo (Tokyo, editor), International Research Center for Japanese Culture',
                         permaId: 'Vv',
                         minZoom: 7,
                         numZoomLevels: 13,
