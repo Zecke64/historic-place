@@ -902,6 +902,24 @@
 			attribution:'Fesca, Max: Vegetationsgebiete der Japanischen Inseln, <a href="https://dx.doi.org/10.3931/e-rara-39312" target="_blank">ETH-Bibliothek Zürich, Rar K 236</a>, <a href="https://creativecommons.org/publicdomain/mark/1.0//deed.de" target="_blank">Public Domain Mark</a>'
                 }
         );
+        
+        
+        //----------------------------------------------------------------------
+        //      Hokkaido 1892
+        //----------------------------------------------------------------------
+        
+        addHistmapTiles(
+                "Hokkaido 1892", "region/Hokkaido", "Hokkaido",
+                {
+                        positionInLayerChanger: 8,
+                        description: 'Full map of Hokkaido, City map of Sapporo, City map of Hakodate, Taikichi Tanaka (Tokyo, author and editor), Magokichi Matsumura (Tokyo, printer), Sanshodo (Tokyo, editor), International Research Center for Japanese Culture, Public Domain Mark',
+                        permaId: 'Vv',
+                        minZoom: 7,
+                        numZoomLevels: 12,
+                        opacity: 0.8,
+                        attribution:'Full map of Hokkaido, <a href="https://lapis.nichibun.ac.jp/chizu/map_detail.php?id=002409852" target="_blank">(from the collection of the International Research Center for Japanese Studies)</a>'
+                }
+        );
 
 
         //----------------------------------------------------------------------------
