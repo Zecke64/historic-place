@@ -915,7 +915,7 @@
                         description: 'Full map of Hokkaido, City map of Sapporo, City map of Hakodate, Taikichi Tanaka (Tokyo, author and editor), Magokichi Matsumura (Tokyo, printer), Sanshodo (Tokyo, editor), International Research Center for Japanese Culture, Public Domain Mark',
                         permaId: 'Vv',
                         minZoom: 7,
-                        numZoomLevels: 12,
+                        numZoomLevels: 13,
                         opacity: 0.8,
                         attribution:'Full map of Hokkaido, <a href="https://lapis.nichibun.ac.jp/chizu/map_detail.php?id=002409852" target="_blank">(from the collection of the International Research Center for Japanese Studies)</a>'
                 }
