@@ -16,7 +16,7 @@
 	--keys geological
 	--keys heritage,heritage:website
 	--keys historic,historic:boundary,historic:landuse,historic:railway,historic:place
-	--keys man_made=campanile,man_made=cellar_entrance,man_made=cross,man_made=water_well,man_made=watermill,man_made=windmill
+	--keys man_made=campanile,man_made=cellar_entrance,man_made=cross,man_made=water_well,man_made=watermill,man_made=windmill,man_made=torii
 	--keys marker
 	--keys natural=stone
 	--keys preservation

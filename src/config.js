@@ -145,7 +145,7 @@ function nameMagic( data ){
 
 	const jtext = data['name:ja'] || data.name || '';
 
-	if( jtext.match(/[\u4ecf\u4f5b]/) ){
+	if( jtext.match(/(\u4ecf|\u4f5b|\u91c8\u8fe6)/) ){
 		return ['buddha', 30];
 	}
 
