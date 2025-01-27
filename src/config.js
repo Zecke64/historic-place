@@ -390,6 +390,9 @@ function iconParamsFromData (data, noHeritage, zoom) {
 
 		switch (data['man_made'] ) {
 
+		case 'torii':
+				return ['torii', 25];
+
 		case 'obelisk':
 
 			switch (data['historic:civilization'] ) {
@@ -742,6 +745,8 @@ function iconParamsFromData (data, noHeritage, zoom) {
 
 		if (data.historic=='shelter')
 			return ['historic_shelter',20];
+		if (data.man_made=='torii')
+			return ['torii',25];
 		if (data.building=='transformer_tower')
 			return ['power',25];
 
@@ -1098,6 +1103,9 @@ function iconParamsFromData (data, noHeritage, zoom) {
 
 		if (data['man_made'] == 'obelisk')
 			return 'obelisk-antik'  ;
+
+		if (data['man_made'] == 'torii')
+			return 'torii'  ;
 
 		if (data['monument'] == 'bust')
 			return nameMagic(data) || ['bust', 20];
