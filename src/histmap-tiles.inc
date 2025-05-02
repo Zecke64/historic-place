@@ -1284,4 +1284,21 @@
                 }
         );
 
+        //----------------------------------------------------------------------
+        //       Herchenbach - Tractus Karte 1807-1809
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Herchenbach 1807", "city/Puettlingen/Herchenbach_1807", "Herchenbach_1807",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Herchenbach Tractus 1807',
+                        permaId: 'Vy',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'Stadtarchiv Püttlingen, Bestand D1.1-8167 bis D1.1-8170'
+                }
+        );
+
 
