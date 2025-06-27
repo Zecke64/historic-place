@@ -749,7 +749,8 @@ function iconParamsFromData (data, noHeritage, zoom) {
 			return ['torii',25];
 		if (data.building=='transformer_tower')
 			return ['power',25];
-
+		if (data.building=='triumphal_arch')
+			return ['triumpf',25];
 		if (data['image'] || data['wikidata'] || data['wikipedia'] ||
 			data['website']|| data['heritage:website'] ||
 			data['url'] || data['wikimedia_commons'] ){
