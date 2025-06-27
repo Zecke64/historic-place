@@ -750,7 +750,7 @@ function iconParamsFromData (data, noHeritage, zoom) {
 		if (data.building=='transformer_tower')
 			return ['power',25];
 		if (data.building=='triumphal_arch')
-			return ['triumpf',25];
+			return ['triumpf',30];
 		if (data['image'] || data['wikidata'] || data['wikipedia'] ||
 			data['website']|| data['heritage:website'] ||
 			data['url'] || data['wikimedia_commons'] ){
@@ -1103,10 +1103,13 @@ function iconParamsFromData (data, noHeritage, zoom) {
 	case 'Monument':
 
 		if (data['man_made'] == 'obelisk')
-			return 'obelisk-antik'  ;
+			return 'obelisk-antik';
 
 		if (data['man_made'] == 'torii')
-			return 'torii'  ;
+			return 'torii';
+		
+		if (data['building'] == 'triumphal_arch')
+			return 'triumpf';
 
 		if (data['monument'] == 'bust')
 			return nameMagic(data) || ['bust', 20];
