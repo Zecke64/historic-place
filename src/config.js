@@ -1968,6 +1968,17 @@ function iconParamsFromData (data, noHeritage, zoom) {
 
 		if (data.highway=='street_lamp')
 			return ['street_lamp'];
+		
+		
+		//--------------------------------------------------------------
+		//
+		//	building=triumphal_arch
+		//
+		//--------------------------------------------------------------
+		
+		if (data.building=='triumphal_arch')
+			return ['triumpf'];
+		
 
 		//--------------------------------------------------------------
 		//
@@ -2552,6 +2563,12 @@ function infoFromData (data) {
 		//--------------------------------------------------------------
 
 	case 'Monument':
+		
+		if (data['building']=='triumphal_arch') {
+			types.push ("$$Triumpfbogen%%");
+			break;
+		}
+		
 		types.push ("$$Erinnerungsstätte%%");
 		break;
 
