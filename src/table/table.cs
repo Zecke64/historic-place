@@ -361,3 +361,4 @@ Topografische Karte von Maxbe###Topografická mapa od Maxbe-ho
 Regionen###Regiony
 Historische Grenzen (experimentell)###Historické hranice (experimentální)
 Jahrhundert###století
+Triumpfbogen###Vítězný oblouk

@@ -359,3 +359,4 @@ Topgrafische Karte von Maxbe###Topgraphic map of Maxbe
 Regionen###Natural regions, mountain ranges,
 Historische Grenzen (experimentell)###Historyczne granice (eksperymentalne)
 Jahrhundert###wiek
+Triumpfbogen###Łuk triumfalny

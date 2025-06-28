@@ -1,22 +1,22 @@
-Ab Zoom 10 sichtbar###Видимый на уровне масштабирования 10
-Ab Zoom 11 sichtbar###Видимый на уровне масштабирования 11
-Ab Zoom 12 sichtbar###Видимый на уровне масштабирования 12
-Ab Zoom 13 sichtbar###Видимый на уровне масштабирования 13
-Ab Zoom 14 sichtbar###Видимый на уровне масштабирования 14
-Ab Zoom 15 sichtbar###Видимый на уровне масштабирования 15
-Ab Zoom 16 sichtbar###Видимый на уровне масштабирования 16
-Ab Zoom 17 sichtbar###Видимый на уровне масштабирования 17
-Ab Zoom 18 sichtbar###Видимый на уровне масштабирования 18
-Ab Zoom 5 sichtbar###Видимый на уровне масштабирования 5
-Alle ${count} Einträge###Все ${count} записей
+Ab Zoom 10 sichtbar###Видно при увеличении 10
+Ab Zoom 11 sichtbar###Видно при увеличении 11
+Ab Zoom 12 sichtbar###Видно при увеличении 12
+Ab Zoom 13 sichtbar###Видно при увеличении 13
+Ab Zoom 14 sichtbar###Видно при увеличении 14
+Ab Zoom 15 sichtbar###Видно при увеличении 15
+Ab Zoom 16 sichtbar###Видно при увеличении 16
+Ab Zoom 17 sichtbar###Видно при увеличении 17
+Ab Zoom 18 sichtbar###Видно при увеличении 18
+Ab Zoom 5 sichtbar###Видно при увеличении 5
+Alle ${count} Einträge###Всего ${count} записей
 Alle Einträge###Все записи
 Andere Objekte mit historischem Bezug###Другие объекты с исторической ценностью
 Anzahl###Количество
-Archäologische Stätte - allgemein###Археологический памятник - общий
+Archäologische Stätte - allgemein###Археологический памятник — общий
 Archäologische Stätte###Археологический памятник
 Archäologische Stätte (Befestigung)###Археологический памятник (Укрепление)
-Archäologische Stätte (Ganggrab)###Археологический памятник (Passage grave)
-Archäologische Stätte (Grabkammer)###Археологический памятник (Chamber)
+Archäologische Stätte (Ganggrab)###Археологический памятник (Коридорная гробница)
+Archäologische Stätte (Grabkammer)###Археологический памятник (Камера)
 Archäologische Stätte (Großsteingrab)###Археологический памятник (Мегалитические гробницы)
 Archäologische Stätte (Hügelgrab)###Археологический памятник (Курган)
 Archäologische Stätte (Megalith)###Археологический памятник (Мегалит)
@@ -25,7 +25,7 @@ Archäologische Stätte (Steinkreis)###Археологический памят
 Archäologische Stätte (Steinreihe)###Археологический памятник (Каменный ряд)
 auf aktuellen Standort zoomen###Приблизить к текущему положению
 aufgegeben###заброшенный
-Ausrichtung des Objektes im Popup###Object orientation in the popup
+Ausrichtung des Objektes im Popup###Ориентация объекта во всплывающем окне
 Aussichtsturm###Смотровая башня
 Bahnhof###Железнодорожная станция
 Bahnhofsgelände###Район железнодорожной станции
@@ -42,17 +42,17 @@ Bergwerk/Schachtanlage/Schacht###Шахта/Сооружение шахты/Ша
 Bergwerksstollen###Штольня
 Bergwerksstollen (aufgegeben)###Штольня - закрытая
 Beschreibung###Описание
-Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Особая благодарность за использованый код и подготовку данных:
+Besonderer Dank für verschiedenste Code snippets und die Bereitstellung der Daten geht an:###Особая благодарность за использованный код и подготовку данных:
 Pinge (Binge) - durch Bergbautätigkeiten entstandene Vertiefung###Воронка (образованная в результате человеческой деятельности, например добычи ископаемых)
 Bombenkrater###Кратер от взрыва бомбы
-Historische Brücke###Исторический Мост
-Historische Brücke (Ruine)###Исторический Мост (руины)
+Historische Brücke###Исторический мост
+Historische Brücke (Ruine)###Исторический мост (руины)
 Brunnen###Фонтан
 Bunker###Бункер
 Bunker (Ruine)###Бункер (руины)
 Burg oder Schloss###Замок
 Burg###Дворец/Замок/Форт (без дальнейшего уточнения)
-Burg (Ruine)###Дворец/Замок/Форт - руины (без дальнейшего уточнения)
+Burg (Ruine)###Дворец/Замок/Форт — руины (без дальнейшего уточнения)
 Credits###Благодарность
 Danksagung###Благодарность
 Dargestellte Einträge###Отображаемые записи
@@ -61,23 +61,23 @@ Denkmal###Мемориал
 Denkmalschutz###сохранение
 Details###Подробности
 Die ersten ${count} von ${all} Einträgen###Первые ${count} из ${all} записей
-Dreschplatz###Гумно
+Dreschplatz###Молотильная площадка
 Du willst ein Bild? Beteilige Dich!###Хотите фото? Примите участие!
 Erinnerungsstätte###Памятник
-Farm###Farm
+Farm###Ферма
 Festung###Крепость
 Festung/Kreml###Крепость/Кремль
-Festung/Kreml (Ruine)###Крепость/Кремль (Руины)
+Festung/Kreml (Ruine)###Крепость/Кремль (руины)
 Findling###Эрратические валуны
 Fläche###Область
 Flächen###Области
 Fragmente###Фрагменты
-Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###The first version of this map was made by:
-Für die Wiki-Arbeit rund um die Geschichtskarten an:###The wiki for this map was made by:
+Für die Ersten Historischen Karten auf denen die Geschichtskarten aufbauen an:###Первая версия этой карты была сделана:
+Für die Wiki-Arbeit rund um die Geschichtskarten an:###Вики-страница для этой карты была создана:
 Für Josm existiert eine Vorlage zum Mappen Historischer Objekte###Есть шаблон JOSM для исторических объектов
 Für Übersetzungen :###Переводы:
 Galgen###Виселица
-Ganggrab (Langbett)###Passage grave
+Ganggrab (Langbett)###Коридорная гробница
 Gebäude###Здание
 Gedenkplakette###Мемориальный знак
 Gedenktafel###Мемориальная доска
@@ -86,13 +86,13 @@ geschlossen###закрыто
 geschützt durch###защищено
 Geschütztes Gebäude###Охраняемое здание
 Geschütztes Gebiet###Охраняемая область
-Gipfelkreuz###Summit cross
+Gipfelkreuz###Вершинный крест
 Glockenturm###Колокольня
 Glockenturm (Ruine)###Колокольня (руины)
 Grab###Могила
 Grenzmarkierung###Пограничный знак
 Grenzstein###Пограничный камень
-Großsteingrab - Dolmen###Мегалитические могилы - Дольмен
+Großsteingrab - Dolmen###Мегалитические могилы — Дольмен
 Haltepunkt###Железнодорожная остановка
 Handschwengelpumpe###Водяной насос (журавль)
 Handwasserpumpe###Ручной водяной насос
@@ -104,14 +104,14 @@ Historische Objekte###Исторические объекты
 Historische Quelle###Исторический источник
 Naturdenkmal###Природный памятник
 Historischer Brunnen / Zierbrunnen###Исторический фонтан
-Historischer Dreschplatz/Tenne###Гумно (историческое)
+Historischer Dreschplatz/Tenne###Молотильная площадка/Гумно (историческое)
 Historischer Eisenbahn-Haltepunkt###Железнодорожная станция (историческая)
 Historischer Galgen###Висленица (историческая)
-Historischer Name###Историческое имя
+Historischer Name###Историческое название
 Historischer Stein###Исторический камень
 Historischer Turm###Историческая башня
 Historischer Turm (Ruine)###Историческая башня (руины)
-Historischer Vermessungspunkt###Historic survey point
+Historischer Vermessungspunkt###Исторический обзорный пункт
 Historisches Gebäude###Историческое здание
 Historisches Grab###Историческая могила
 Historisches Luftfahrzeug###Исторический самолет
@@ -121,7 +121,7 @@ Historisches Stadttor###Исторические городские ворота
 Historische Stadt-Mauer/Historische Mauer###Историческая городская стена/Историческая стена
 Hügelgrab (Tumulus)###Могильный холмик (курган)
 Hütte###Хижина
-Icon###Значок
+Icon###Икона
 Industriegebäude###Индустриальное здание
 Informationstafel###Информационная доска
 Infos für Mapper###Информация для картографа
@@ -153,9 +153,9 @@ Linien###Линии
 Linien und Flächen###Линии и области
 Link zum Bild###Ссылка на изображение
 Luftfahrzeug###Самолет
-Marterl###Ключевые слова
+Marterl###Столбик с распятием
 Mehr Objekte anzeigen###Показать больше объектов
-Meilenstein###Веха
+Meilenstein###Придорожный столб
 Monument###Памятник
 Moschee###Мечеть
 Namen###Названия
@@ -174,7 +174,7 @@ Palast###Дворец
 Palast (Ruine)###Дворец (руины)
 Pā (Māori) Befestigungsanlagen###Фортификационое сооружение Па (Маори)
 Pinge###Воронка
-Pranger###Pillory
+Pranger###Позорный столб
 Punkt###Точка
 Quelle###Источник
 Rathaus###Ратуша
@@ -190,14 +190,14 @@ Schiff###Корабль
 Schiffswrack###Кораблекрушение
 Schlachtfeld###Поле боя
 Schloss###Замок (величественный)
-Schloss (Ruine)###Замок (величественный - руины)
+Schloss (Ruine)###Замок (величественный — руины)
 Schrein###Храм
 See###Озеро
 Shiro (Japanische Burg)###Широ (Японский замок)
 Shiro (Ruine)###Широ (руины)
 Sprachauswahl###Выбор языка
-Stadtmauer###City wall
-Stadttor###Городская стена
+Stadtmauer###Городская стена
+Stadttor###Городские ворота
 Stand der Daten###Данные из
 Steinbruch###Карьер
 Steingrab - Menhir###Каменная могила - Менгир
@@ -216,12 +216,12 @@ Technisches Denkmal###Промышленное наследие
 Tempel###Храм
 Turm###Башня
 Übersicht###Обзор
-UNESCO Welterbe###Всемирного наследия ЮНЕСКО
+UNESCO Welterbe###Всемирное наследие ЮНЕСКО
 Vermessungspunkt###Пункт опроса
 von###от
 Wallanlage###Вал
 Wanderwege###Туристические тропы
-Waschplatz###Washing place
+Waschplatz###Место для стирки
 Wassermühle (Ruine)###Водяная мельница (руины)
 Wassermühle###Водяная мельница
 Wasserpumpe###Водяной насос
@@ -257,7 +257,7 @@ Verwaltungsgrenzen###Административные границы
 Wetter###Погода
 Zeichenwerkzeuge###Иструменты рисования
 Zeichnen###Рисование
-Steuerelemente###Иструменты
+Steuerelemente###Инструменты
 Zeigt diese Gruppe###Показать группу
 Versteckt diese Gruppe###Скрыть группу
 Zeigt diese Ebene###Показать слой
@@ -294,19 +294,19 @@ Köhlerei###Место изготовления древесного угля
 Töpferei###Керамика
 Ziegelei###Кирпичный завод
 Kalkbrandofen###Печь для известняка
-Pechhütte###Tar kiln
+Pechhütte###Печь для обжига смолы
 Glashütte###Печь для стекла
 Brennofen###Печь
 Kohlenmeiler###Печь для обжига древесного угля
 Schornstein###Дымоход
 Portal###Портал
-Tunnelportal###Tunnel portal
+Tunnelportal###Портал туннеля
 Fachwerkhaus###Каркасный дом
 Felsenkeller###Погреб
-Maultierpfad###Packhorse Trail
-Umgebindehaus###Upper Lusatian house
-Wohnturm###Tower house
-Wehrturm###Fortified Tower
+Maultierpfad###Тропа вьючной лошади
+Umgebindehaus###Верхнелужицкий дом
+Wohnturm###Дом-башня
+Wehrturm###Оборонительная башня
 Wachturm###Сторожевая башня
 Skisprungschanze###Трамплин
 Optischer Telegraf###Оптический телеграф
@@ -321,41 +321,42 @@ Objekte Bearbeiten###Редактировать объекты
 Downloads###Загрузки
 Karten-Zoom###Приближение карты
 Bitte zuerst von ${zoom} auf ${minZoom} hineinzoomen###Пожалуйста, сначала приблизьте с ${zoom} до ${minZoom}
-Zoomt auf Ausdehnung###Zoom to extent
+Zoomt auf Ausdehnung###Увеличить до расширения
 Entfernt das Layer###Удаляет слой
 Lokale Dateien###Локальные файлы
-GPX einlesen###Загрузить трэки
+GPX einlesen###Загрузить треки
 Einstellungen in Cookie speichern###Сохранить настройки в куки
 Cookie gespeichert###Куки сохранены
 Permalink###Постоянная ссылка
-Übersichtskarte über verfügbare historische Karten###Overview map of historical maps
-Historische Karten im Ausschnitt###Historical maps in range
-Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Click on preview to enlarge and see author, licence and image information
-Historisches Schienenfahrzeug###Historic rail vehicle
+Übersichtskarte über verfügbare historische Karten###Обзорная карта исторических карт
+Historische Karten im Ausschnitt###Исторические карты в ассортименте
+Bitte klicken für größeres Bild, Autor, Lizenz und Bildinformationen###Нажмите на предварительный просмотр, чтобы увеличить и увидеть информацию об авторе, лицензии и изображении
+Historisches Schienenfahrzeug###Историческое рельсовое транспортное средство
 Historisches Ausstellungsstück###Экспонат
-Lese GPX-Datei(en) aus dem lokalen Dateisystem###Read GPX file (s) from the local file system
+Lese GPX-Datei(en) aus dem lokalen Dateisystem###Считывает файлы GPX из локальной файловой системы
 Reiten###Езда
-Die Datei ${name} ist ${size} Bytes groß###The file ${name} is ${size} bytes big
-Das Laden kann etwas dauern. Fortsetzen?###Loading may take some time. Continue?
+Die Datei ${name} ist ${size} Bytes groß###Размер файла ${name} составляет ${size} байт
+Das Laden kann etwas dauern. Fortsetzen?###Загрузка может занять некоторое время. Продолжать?
 Ende###Дата окончания
 Hilfe###Помощь
 Messwerkzeug###Измерение
 Kriegsgräberstätte###Братская могила
-Umgebung mit###Surroundings of
-Pflanzjahr###year of planting
+Umgebung mit###Окрестности
+Pflanzjahr###год посадки
 Mehr Infos von###Дополнительная информация от
-vor Christus###before Christ
-vor###before
-nach###after
-Anfang###early
-um###some time around
-Mitte###some time during the middle of
-gegen Ende###late
+vor Christus###до н.э.
+vor###до
+nach###после
+Anfang###ранее
+um###в районе
+Mitte###некоторое время между
+gegen Ende###позднее
 Kunstwerk###Произведение искусства
-Transformatorenturm###Transformer tower
-OSM deutscher Stil###OSM German style
-Reit- und Wanderkarte###Riding and hiking map
-Topgrafische Karte von Maxbe###Topgraphic map of Maxbe
-Regionen###Natural regions, mountain ranges,
-Historische Grenzen (experimentell)###Historical boundaries (experimental)
-Jahrhundert###столетие
+Transformatorenturm###Трансформаторная башня
+OSM deutscher Stil###OSM Немецкий стиль
+Reit- und Wanderkarte###Карта для верховой езды и пеших походов
+Topgrafische Karte von Maxbe###Топографическая карта от Maxbe
+Regionen###Природные регионы, горные хребты,
+Historische Grenzen (experimentell)###Исторические границы (экспериментальные)
+Jahrhundert###век
+Triumpfbogen###Триумфальная арка
