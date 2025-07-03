@@ -117,6 +117,7 @@
 
 --group	City_gate
 	--include	historic=city_gate
+	--include	building=triumphal_arch
 
 --group	Tomb
 	--include	historic=tomb

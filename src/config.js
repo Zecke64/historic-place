@@ -2347,6 +2347,11 @@ function infoFromData (data) {
 		//--------------------------------------------------------------
 
 	case 'City_gate':
+		
+		if (data.building=='triumphal_arch') {
+			types.push ("$$Triumpfbogen%%");
+			break;
+		}
 
 		types.push ("$$Stadttor%%");
 		break;

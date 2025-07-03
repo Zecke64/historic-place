@@ -8,7 +8,7 @@
 	--keys barrier=city_wall
 	--keys board_type
 	--keys boundary=marker
-	--keys building=castle_wall,building=monastery
+	--keys building=castle_wall,building=monastery,building=triumphal_arch
 	--keys building:architecture,bunker_type
 	--keys denotation=natural_monument
 	--keys description=technical_monument
@@ -325,6 +325,7 @@
 		--select historic=tomb
 	--group City_gate
 		--select-as-site historic=city_gate
+		--select-as-site building=triumphal_arch
 	--group Tower
 		--select-as-site historic=tower
 		--select-as-site disused:historic=tower
