@@ -1321,6 +1321,9 @@ function iconParamsFromData (data, noHeritage, zoom) {
 	//----------------------------------------------------------------------
 
 	case 'City_gate':
+		
+		if (data['building'] == 'triumphal_arch')
+			return ['triumpf',30];
 
 		return ['stadttor',28,28, 'U'];
 
