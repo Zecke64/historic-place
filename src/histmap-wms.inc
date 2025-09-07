@@ -265,7 +265,7 @@
         
         addHistmapWMS(
                 "Saarland", 
-                "https://geoportal.saarland.de/mapbender/php/wms.php?layer_id=38960", "WMS_SL_ALKIS",
+                "https://geoportal.saarland.de/mapbender/php/wms.php?layer_id=38960&REQUEST=GetCapabilities&VERSION=1.1.1&SERVICE=WMS", "WMS_SL_ALKIS",
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'Vw',
