@@ -274,9 +274,8 @@
                         numZoomLevels: 18,
                         opacity: 0.8,
                         projection: new OpenLayers.Projection('EPSG:3857'),
-                      attribution:'<a href="https://geoportal.saarland.de/" target="_blank">Datenlizenz Deutschland Namensnennung 2.0
-                      Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
-                }
+                      attribution:'<a href="https://geoportal.saarland.de/" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
+        }
         );
         
         //----------------------------------------------------------------------
