@@ -258,7 +258,26 @@
 		        attribution:'<a href="https://geodaten.freiburg.de/geonetwork/srv/ger/catalog.search#/metadata/16f7271f-beae-4120-9d8c-5fdcecd4d092"target="_blank">Datengrundlage: Stadt Freiburg, www.freiburg.de</a>, <a href="https://www.govdata.de/dl-de/by-2-0"target="_blank">(DL-DE-BY-2.0)</a>'
 		}
         );
-	
+        
+        //----------------------------------------------------------------------
+        //      Saarland
+        //----------------------------------------------------------------------
+        
+        addHistmapWMS(
+                "Saarland", 
+                "https://geoportal.saarland.de/mapbender/php/wms.php?layer_id=38960", "WMS_SL_ALKIS",
+                "Saar",{
+                        positionInLayerChanger: 7,
+                        permaId: 'Vw',
+                        description: 'Sachsen vor 1945, Staatsbetrieb Geobasisinformation und Vermessung Sachsen - GeoSN',
+                        minZoom: 13,
+                        numZoomLevels: 18,
+                        opacity: 0.8,
+                        projection: new OpenLayers.Projection('EPSG:3857'),
+                      attribution:'<a href="https://www.landesvermessung.sachsen.de" target="_blank">Staatsbetrieb Geobasisinformation und Vermessung Sachsen 2016</a>'
+                }
+        );
+        
         //----------------------------------------------------------------------
         //      Sachsen vor 1945
         //----------------------------------------------------------------------
