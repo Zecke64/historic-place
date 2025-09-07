@@ -4,7 +4,7 @@
 //	WMS Layer
 //
 
-	//----------------------------------------------------------------------
+        //----------------------------------------------------------------------
         //      Bundesamt für Kartographie und Geodäsie
         //----------------------------------------------------------------------
 	if ( sprache == 'de' || sprache == 'nl')
@@ -269,12 +269,13 @@
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'Vw',
-                        description: 'Sachsen vor 1945, Staatsbetrieb Geobasisinformation und Vermessung Sachsen - GeoSN',
+                        description: 'ALKIS Saarland SW (Raster)',
                         minZoom: 13,
                         numZoomLevels: 18,
                         opacity: 0.8,
                         projection: new OpenLayers.Projection('EPSG:3857'),
-                      attribution:'<a href="https://www.landesvermessung.sachsen.de" target="_blank">Staatsbetrieb Geobasisinformation und Vermessung Sachsen 2016</a>'
+                      attribution:'<a href="https://geoportal.saarland.de/" target="_blank">Datenlizenz Deutschland Namensnennung 2.0
+                      Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
                 }
         );
         
