@@ -278,6 +278,24 @@
         );
         
         //----------------------------------------------------------------------
+        //      Saarland Preußische Generalstabskarte 1816-1847
+        //----------------------------------------------------------------------
+        
+        addHistmapWMS(
+                "Saarland Preußische Generalstabskarte 1816-1847", 
+                "https://geoportal.saarland.de/mapbender/php/wms.php?inspire=1&layer_id=41887", "2",
+                "Saar",{
+                        positionInLayerChanger: 7,
+                        permaId: 'Wd',
+                        description: 'Preußische Generalstabskarte 1:86400 Ausgabe 1816-1847',
+                      minZoom: 15,
+                      numZoomLevels: 18,
+                      opacity: 0.8,
+                      attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
+                }
+        );
+        
+        //----------------------------------------------------------------------
         //      Sachsen vor 1945
         //----------------------------------------------------------------------
 
