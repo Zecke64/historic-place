@@ -265,7 +265,7 @@
         
         addHistmapWMS(
                 "Saarland", 
-                "https://geoportal.saarland.de/mapbender/php/wms.php?layer_id=35423&VERSION=1.1.1", "Karte_SL",
+                "https://geoportal.saarland.de/freewms/karte_sl?", "Karte_SL",
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'Wd',
