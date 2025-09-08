@@ -283,12 +283,10 @@
         
         addHistmapWMS(
                 "Saarland Preußische Generalstabskarte 1816-1847", 
-                "
-                GetMap-URL
-                https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "2",
+                "https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "2",
                 "Saar",{
                         positionInLayerChanger: 7,
-                        permaId: 'Wd',
+                        permaId: 'We',
                         description: 'Preußische Generalstabskarte 1:86400 Ausgabe 1816-1847',
                       minZoom: 15,
                       numZoomLevels: 18,
