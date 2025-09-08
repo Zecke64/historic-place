@@ -289,9 +289,27 @@
                         permaId: 'We',
                         description: 'Preußische Generalstabskarte 1:86400 Ausgabe 1816-1847',
                       minZoom: 15,
-                      numZoomLevels: 18,
+                      numZoomLevels: 16,
                       opacity: 0.8,
                       attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
+                }
+        );
+        
+        //----------------------------------------------------------------------
+        //      Kartenaufnahme Tranchot und von Müffling Ausgabe 1801-1820 
+        //----------------------------------------------------------------------
+        
+        addHistmapWMS(
+                "Saarland Tranchot und von Müffling 1801-1820 ", 
+                "https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "0",
+                "Saar",{
+                        positionInLayerChanger: 7,
+                        permaId: 'Wf',
+                        description: 'Kartenaufnahme Tranchot und von Müffling Ausgabe 1801-1820',
+                        minZoom: 14,
+                        numZoomLevels: 16,
+                        opacity: 0.8,
+                        attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
                 }
         );
         
