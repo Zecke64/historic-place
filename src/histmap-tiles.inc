@@ -1191,7 +1191,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'MTB35xx Saarbrücken/St. Johann 1882-87',
-                        permaId: 'Vs',
+                        permaId: 'Vx',
                         minZoom: 12,
                         numZoomLevels: 17,
                         opacity: 0.8,
@@ -1208,7 +1208,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'Carte GeoFR 161 Pfalz 1770',
-                        permaId: 'Vt',
+                        permaId: 'Vy',
                         minZoom: 11,
                         numZoomLevels: 16,
                         opacity: 0.8,
@@ -1225,7 +1225,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'Ostfrankreich-Vogesen Hachette 1892',
-                        permaId: 'Vu',
+                        permaId: 'Vz',
                         minZoom: 12,
                         numZoomLevels: 16,
                         opacity: 0.8,
@@ -1242,7 +1242,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'Püttlingen Tractus 1784',
-                        permaId: 'Vv',
+                        permaId: 'Wa',
                         minZoom: 14,
                         numZoomLevels: 20,
                         opacity: 0.8,
@@ -1276,7 +1276,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'Rittenhofen/Coelln/Engelfangen 1759',
-                        permaId: 'Vx',
+                        permaId: 'Wb',
                         minZoom: 14,
                         numZoomLevels: 20,
                         opacity: 0.8,
@@ -1293,7 +1293,7 @@
                 {
                         positionInLayerChanger: 7,
                         description: 'Herchenbach Tractus 1807',
-                        permaId: 'Vy',
+                        permaId: 'Wc',
                         minZoom: 14,
                         numZoomLevels: 20,
                         opacity: 0.8,

@@ -265,15 +265,14 @@
         
         addHistmapWMS(
                 "Saarland", 
-                "https://geoportal.saarland.de/geobasisdaten/mapserv?map=/mapfiles/geobasisdaten/Internet/alkis.map&", "ALKIS Saarland SW (Raster)",
+                "https://geoportal.saarland.de/mapbender/php/wms.php?layer_id=35423&VERSION=1.1.1", "Karte_SL",
                 "Saar",{
                         positionInLayerChanger: 7,
-                        permaId: 'Vw',
+                        permaId: 'Wd',
                         description: 'ALKIS Saarland SW (Raster)',
                         minZoom: 13,
                         numZoomLevels: 18,
                         opacity: 0.8,
-                        projection: new OpenLayers.Projection('EPSG:3857'),
                       attribution:'<a href="https://geoportal.saarland.de/" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
         }
         );
