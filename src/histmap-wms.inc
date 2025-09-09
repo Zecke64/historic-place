@@ -269,7 +269,7 @@
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'Wd',
-                        description: 'Saarland Ur-Messtischblätter Ausgabe 1843-1878',
+                        description: 'Saarland Ur-Messtischblätter Ausgabe 1843-1878 © GeoBasis DE/LVGL-SL (2025)',
                         minZoom: 14,
                         numZoomLevels: 17,
                         opacity: 0.8,
@@ -287,7 +287,7 @@
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'We',
-                        description: 'Preußische Generalstabskarte 1:86400 Ausgabe 1816-1847',
+                        description: 'Preußische Generalstabskarte 1:86400 Ausgabe 1816-1847 © GeoBasis DE/LVGL-SL (2025)',
                       minZoom: 15,
                       numZoomLevels: 17,
                       opacity: 0.8,
@@ -305,11 +305,48 @@
                 "Saar",{
                         positionInLayerChanger: 7,
                         permaId: 'Wf',
-                        description: 'Kartenaufnahme Tranchot und von Müffling Ausgabe 1801-1820',
+                        description: 'Kartenaufnahme Tranchot und von Müffling Ausgabe 1801-1820 © GeoBasis DE/LVGL-SL (2025)',
                         minZoom: 14,
                         numZoomLevels: 17,
                         opacity: 0.8,
                         attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
+                }
+        );
+        
+        //----------------------------------------------------------------------
+        //      Bayrische Originalpositionsblätter 1:25000 Ausgabe 1836-1841
+        //----------------------------------------------------------------------
+        
+        addHistmapWMS(
+                "Saarland Bayrische Originalpositionsblätter 1836-1841", 
+                "https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "1",
+                "Saar",{
+                        positionInLayerChanger: 7,
+                        permaId: 'Wg',
+                        description: 'Bayrische Originalpositionsblätter 1:25000 Ausgabe 1836-1841 © GeoBasis DE/LVGL-SL (2025)',
+                        minZoom: 14,
+                        numZoomLevels: 17,
+                        opacity: 0.8,
+                        attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
+                }
+        );
+        
+        //----------------------------------------------------------------------
+        //      Top. Karte 1:25000 Ausgaben 1935-1940
+        //----------------------------------------------------------------------
+        
+        addHistmapWMS(
+                "Saarland Top. Karte 1:25000 Ausgaben 1935-1940
+                ", 
+                "https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "5",
+                "Saar",{
+                        positionInLayerChanger: 7,
+                        permaId: 'Wh',
+                        description: 'Top. Karte 1:25000 Ausgaben 1935-1940 © GeoBasis DE/LVGL-SL (2025)',
+                      minZoom: 14,
+                      numZoomLevels: 18,
+                      opacity: 0.8,
+                      attribution:'<a href="https://www.govdata.de/dl-de/by-2-0" target="_blank">Datenlizenz Deutschland Namensnennung 2.0 Quellenvermerk: © GeoBasis DE/LVGL-SL (2025)</a>'
                 }
         );
         
