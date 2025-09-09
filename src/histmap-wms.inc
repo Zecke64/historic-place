@@ -336,8 +336,7 @@
         //----------------------------------------------------------------------
         
         addHistmapWMS(
-                "Saarland Top. Karte 1:25000 Ausgaben 1935-1940
-                ", 
+                "Saarland Top. Karte 1:25000 Ausgaben 1935-1940", 
                 "https://geoportal.saarland.de/owsproxy/00000000000000000000000000000000/ab93f249fdcf35edf2b1d581f136b9d2?", "5",
                 "Saar",{
                         positionInLayerChanger: 7,
