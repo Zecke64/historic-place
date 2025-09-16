@@ -1340,7 +1340,7 @@
         //----------------------------------------------------------------------
 
         addHistmapTiles(
-                "Tractus Fürstenhausen", "city/Voelklingen/Fürstenhausen", "Fürstenhausen",
+                "Tractus Fürstenhausen", "city/Voelklingen/Fuerstenhausen", "Fuerstenhausen",
                 {
                         positionInLayerChanger: 7,
                         description: 'Fürstenhausen Tractus',
