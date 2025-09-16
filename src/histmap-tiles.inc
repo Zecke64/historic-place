@@ -1301,4 +1301,55 @@
                 }
         );
 
+        //----------------------------------------------------------------------
+        //       Wehrden - Tractus Karte 1755
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Wehrden 1755", "city/Voelklingen/Wehrden_1755", "Wehrden_1755",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Wehrden Tractus 1755',
+                        permaId: 'Wi',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'(wird in Kürze ergänzt)'
+                }
+        );
+
+        //----------------------------------------------------------------------
+        //       Geislautern - Tractus Karte 
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Geislautern", "city/Voelklingen/Geislautern", "Geislautern",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Geislautern Tractus',
+                        permaId: 'Wj',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'(wird in Kürze ergänzt)'
+                }
+        );
+
+        //----------------------------------------------------------------------
+        //       Fürstenhausen - Tractus Karte
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Fürstenhausen", "city/Voelklingen/Fürstenhausen", "Fürstenhausen",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Fürstenhausen Tractus',
+                        permaId: 'Wk',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 0.8,
+                        attribution:'(wird in Kürze ergänzt)'
+                }
+        );
+
 

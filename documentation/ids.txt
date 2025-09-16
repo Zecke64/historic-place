@@ -117,6 +117,30 @@ Reisekarte Deutschland 1859                       Vk
 Ostbelgien Grenze                                 Vl
 Ostbelgien Grenze 1936                            Vm
 Westrussland 1905                                 Vn
+Schmettau 1787 Brandenburg                        Vo
+Sachsen 1857                                      Vp
+Krasna                                            Vq
+Sitzenrodaer-Forst 1780                           Vr
+Sächsische Meilenblätter                          Vs
+Emmental 1940                                     Vt
+Karamurat 1940                                    Vu
+Hokkaido 1892                                     Vv
+Püttlingen - 1822                                 Vw
+MTB3548 und 3549 Saarbruecken/St. Johann 1887/82  Vx
+Carte GeoFR 161 Pfalz von 1770                    Vy
+Ostfrankreich-Vogesen Hachette 1892               Vz
+Püttlingen Tractus 1784                           Wa
+Püttlingen - Tractus Karte 1759                   Wb
+Herchenbach - Tractus Karte 1807-1809             Wc
+Saarland Ur-Messtischblätter Ausgabe 1843-1878    Wd
+Saarland Preußische Generalstabskarte 1816-1847   We
+Saarland Tranchot und von Müffling 1801-1820      Wf
+Saarland Bayrische Originalpositionsblätter 1836-1841  Wg
+Saarland Top. Karte 1:25000 1935-1940             Wh
+Wehrden Tractus 1755				  Wi
+Geislautern Tractus				  Wj
+Fürstenhausen					  Wk
+Völklingen 1823					  Wl
 
 Marker                   Sa
 TK25                     Sb
