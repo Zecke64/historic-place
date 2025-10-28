@@ -1313,8 +1313,8 @@
                         permaId: 'Wi',
                         minZoom: 14,
                         numZoomLevels: 20,
-                        opacity: 0.8,
-                        attribution:'(wird in Kürze ergänzt)'
+                        opacity: 1,
+                        attribution:'Stadtarchiv Völklingen D1/691'
                 }
         );
 
@@ -1323,15 +1323,15 @@
         //----------------------------------------------------------------------
 
         addHistmapTiles(
-                "Tractus Geislautern", "city/Voelklingen/Geislautern", "Geislautern",
+                "Tractus Geislautern 1822-1825", "city/Voelklingen/Geislautern", "Geislautern",
                 {
                         positionInLayerChanger: 7,
-                        description: 'Geislautern Tractus',
+                        description: 'Geislautern Tractus 1822-1825',
                         permaId: 'Wj',
                         minZoom: 14,
                         numZoomLevels: 20,
-                        opacity: 0.8,
-                        attribution:'(wird in Kürze ergänzt)'
+                        opacity: 1,
+                        attribution:'Landesarchiv Saarland K Kat 434: Geislautern, gemeinfrei'
                 }
         );
 
@@ -1343,12 +1343,29 @@
                 "Tractus Fürstenhausen", "city/Voelklingen/Fuerstenhausen", "Fuerstenhausen",
                 {
                         positionInLayerChanger: 7,
-                        description: 'Fürstenhausen Tractus',
+                        description: 'Fürstenhausen Tractus 1822-1825',
                         permaId: 'Wk',
                         minZoom: 14,
                         numZoomLevels: 20,
-                        opacity: 0.8,
-                        attribution:'(wird in Kürze ergänzt)'
+                        opacity: 1,
+                        attribution:'Landesarchiv Saarland K Kat 370: Geislautern, gemeinfrei'
+                }
+        );
+
+        //----------------------------------------------------------------------
+        //       Völklingen 1823
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Tractus Völklingen 1823", "city/Voelklingen/Voelklingen_1823", "Voelklingen_1823",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Völklingen Tractus 1823',
+                        permaId: 'Wl',
+                        minZoom: 14,
+                        numZoomLevels: 20,
+                        opacity: 1,
+                        attribution:'Stadtarchiv Völklingen D1/597'
                 }
         );
 
