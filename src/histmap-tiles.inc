@@ -1340,7 +1340,7 @@
         //----------------------------------------------------------------------
 
         addHistmapTiles(
-                "Tractus Fürstenhausen", "city/Voelklingen/Fuerstenhausen", "Fuerstenhausen",
+                "Tractus Fürstenhausen 1822-1825", "city/Voelklingen/Fuerstenhausen", "Fuerstenhausen",
                 {
                         positionInLayerChanger: 7,
                         description: 'Fürstenhausen Tractus 1822-1825',
