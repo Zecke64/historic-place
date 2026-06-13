@@ -12,8 +12,8 @@
 #
 #===============================================================================
 
-$THUMB_WIDTH	= 150;
-$THUMB_HEIGHT	= 100;
+$THUMB_WIDTH	= 120;
+$THUMB_HEIGHT	= 120;
 $THUMB_MINRATIO	= 0.4;
 $THUMB_MAXRATIO	= 2.0;
 
