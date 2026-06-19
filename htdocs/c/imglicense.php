@@ -8,7 +8,7 @@
 #===============================================================================
 
 
-$USER_AGENT = 'imglicense.php @ http://www.historic.place';
+$USER_AGENT = 'imglicense.php/1.0 (https://www.historic.place; <lutzto@t-online.de>) generic-library/1.0';
 
 if (!preg_match("#^(https?://\S+)$#", $_GET['image'], $match)) {
 

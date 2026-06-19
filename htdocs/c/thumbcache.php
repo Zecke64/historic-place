@@ -45,7 +45,7 @@ $ERROR_IMAGE	= "./i/no-image-$LC.png";
 $ERROR_MIME	= 'image/png';
 $CACHE_DIR	= '/var/opt/www/hp/dyn/thumbcache';
 
-$USER_AGENT = 'thumbcache.php ; prereads, thumbnails and caches images to display in map popup info boxes. In case of trouble contact ite owner or <lutzto@t-online.de>.';
+$USER_AGENT = 'thumbcache.php/1.0 (https://www.historic.place; <lutzto@t-online.de>) generic-library/1.0';
 
 #-------------------------------------------------------------------------------
 #	Global values
@@ -90,7 +90,8 @@ function file_get_contents_curl($url) {
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_URL, $url);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
-    curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');       
+    #curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.1.2) Gecko/20090729 Firefox/3.5.2 GTB5');       
+    curl_setopt($ch, CURLOPT_USERAGENT, $USER_AGENT);
 
     $data = curl_exec($ch);
     curl_close($ch);
