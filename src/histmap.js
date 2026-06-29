@@ -1268,6 +1268,10 @@ HPLACE_INCLUDE opendata.inc
 	//	wmsName: 	Name der Karte auf dem WMS-Server
 	//	subdir: 	hier liegen die shapes für den Overview
 	//	layerSettings:	hashtable mit speziellen settings für diesen layer
+        //
+        //      AddHistMapTiles ("Name im LC", "Pfad zu den Tiles", "Pfad zum Shapefile",
+        //      minZoom         sollte exakt stimmen
+        //      numZoomLevels   max Zoom + 1
 	//	
         //----------------------------------------------------------------------
 

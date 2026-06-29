@@ -1369,4 +1369,20 @@
                 }
         );
 
+        //----------------------------------------------------------------------
+        //       Saar: Preußische Uraufnahme 1850
+        //----------------------------------------------------------------------
+
+        addHistmapTiles(
+                "Preussische Uraufnahme 1850", "region/Saar-PreussUr-1850", "Saar-PreussUr-1850",
+                {
+                        positionInLayerChanger: 7,
+                        description: 'Preußische Uraufnahme 1850',
+                        permaId: 'Wm',
+                        minZoom: 12,
+                        numZoomLevels: 18,
+                        opacity: 1,
+                        attribution:'Staatsbibliothek Berlin / LVGL Saarland'
+                }
+        );
 

@@ -141,6 +141,7 @@ Wehrden Tractus 1755				  Wi
 Geislautern Tractus				  Wj
 Fürstenhausen					  Wk
 Völklingen 1823					  Wl
+Preußische Uraufnahme 1850			  Wm
 
 Marker                   Sa
 TK25                     Sb
