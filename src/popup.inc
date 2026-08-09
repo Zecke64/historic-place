@@ -181,7 +181,7 @@ map.addLayer (mlayer = new OpenLayers.Layer.PopupMarker("CenterwayObjekte", {
 														//
 														//--------------------------------------------------------------
 														
-														thumbBaseURL: '../../../c/thumbcache.php?image=',
+														//thumbBaseURL: '../../../c/thumbcache.php?image=',
 														licenseBaseURL: '../../../c/imglicense.php?image=',
 														
 														//--------------------------------------------------------------
@@ -400,8 +400,8 @@ var imageSourceURL = this.parseURL(data.image)
 || this.parseURL(data.wikimedia_commons) 
 || wdimage
 || mapillaryimage;
-var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
-&& (this.thumbBaseURL + encodeURIComponent(imageSourceURL));
+//var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
+//&& (this.thumbBaseURL + encodeURIComponent(imageSourceURL));
 var licenseURL = imageSourceURL 
 && (this.licenseBaseURL + encodeURIComponent(imageSourceURL));
 var kontaktURL = '../../../c/kontakt-formular.php';
@@ -411,20 +411,20 @@ var kontaktURL2 = '../../../c/kontakt-formular2.php';
 //	XXX temporär zur Diskussion mit NSDOK in Köln
 //------------------------------------------------------
 
-if (data.id=='n655332809') {
-	imageSourceURL = 'https://www.museenkoeln.de/ns-dok/default.asp?s=763&tid=323&id=1591&abb=abb_1591_13321';
-thumbURL = 'https://www.museenkoeln.de/ns-dok/db_stolpersteine/Abbildungen/lo/abb_1591_13321.jpg';
-}
+//if (data.id=='n655332809') {
+//	imageSourceURL = 'https://www.museenkoeln.de/ns-dok/default.asp?s=763&tid=323&id=1591&abb=abb_1591_13321';
+//thumbURL = 'https://www.museenkoeln.de/ns-dok/db_stolpersteine/Abbildungen/lo/abb_1591_13321.jpg';
+
 
 
 //------------------------------------------------------
 //	image onload
 //------------------------------------------------------
 
-var imgOnload =
-"root=this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;" +
-"main = root.parentElement.parentElement.parentElement; " +
-"if (main) main.control.updateSize();";
+//var imgOnload =
+//"root=this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;" +
+//"main = root.parentElement.parentElement.parentElement; " +
+//"if (main) main.control.updateSize();";
 
 //------------------------------------------------------
 //	click on tab
@@ -721,14 +721,131 @@ result.push ('</td><td rowspan="3" class="thumb" style="vertical-align: middle; 
 //	Image
 //------------------------------------------------------
 
-if (thumbURL) {
+//if (thumbURL) {
 	
-	result.push ('<a target="_blank" href="' + this.html(imageSourceURL) + '"><img src="' +
-	this.html(thumbURL) + '" onload="' + imgOnload + '" alt="loading..."></a>');
+//	result.push ('<a target="_blank" href="' + this.html(imageSourceURL) + '"><img src="' +
+//	this.html(thumbURL) + '" onload="' + imgOnload + '" alt="loading..."></a>');
 	
-} else {
-	result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
+//} else {
+//	result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
+//}
+
+function toWikimediaThumbURL(input, width = 80) {
+	if (!input) return null;
+	let str = String(input).trim();
+	
+	// Wichtig: auch URL-kodierte "File:"-Schreibweise abfangen
+	// z.B. .../wiki/File%3AIlberstedt_...jpg  -> .../wiki/File:Ilberstedt_...jpg
+	str = str.replace(/File%3A/gi, 'File:');
+	
+	// (Optional, aber oft hilfreich) ganze URL dekodieren, wenn sie scheinbar schon kodiert ist
+	// str = decodeURIComponent(str); // nur wenn du sicher bist, dass es nicht "zu viel" kaputtmacht
+	
+	const isCommonsWiki = /^https?:\/\/[^/]+\/wiki\/File:/i.test(str) || /^File:/i.test(str);
+	
+	if (isCommonsWiki) {
+		let fileName;
+		
+		if (/^File:/i.test(str)) {
+			fileName = str.replace(/^File:/i, '');
+		} else {
+			const u = new URL(str);
+			const m = u.pathname.match(/\/wiki\/([^/?#]+)/i);
+			if (!m) return null;
+			fileName = m[1].replace(/^File:/i, '');
+			fileName = decodeURIComponent(fileName);
+		}
+		
+		return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=${encodeURIComponent(String(width))}`;
+	}
+	
+	// 2) upload.wikimedia.org/.../NAME.jpg  (hier bauen wir eine echte Thumb-URL)
+	//    Beispiele:
+	//    https://upload.wikimedia.org/wikipedia/commons/5/5b/NAME.jpg
+	const isUpload = /^https?:\/\/upload\.wikimedia\.org\//i.test(str);
+	if (isUpload) {
+		const u = new URL(str);
+		const parts = u.pathname.split('/').filter(Boolean); // [wikipedia, commons, 5, 5b, ...file]
+		// Erwartet mindestens: wikipedia / commons / a / b / filename
+		if (parts.length < 5) return null;
+		
+		const container = parts.slice(0, 2).join('/'); // wikipedia/commons
+		const hash1 = parts[2];
+		const hash2 = parts[3];
+		const file = parts.slice(4).join('/'); // kann verschachtelt sein, nehmen wir vollständig
+		
+		// file ist im Pfad bereits URL-encoded, aber encodeURIComponent ist ok, wenn wir es vorher dekodieren:
+		const fileDecoded = decodeURIComponent(file);
+		
+		return `${u.origin}/${container}/thumb/${hash1}/${hash2}/${encodeURIComponent(
+			fileDecoded
+		)}/${encodeURIComponent(String(width))}px-${encodeURIComponent(fileDecoded)}`;
+	}
+	
+	return null;
 }
+
+const fallbackImg = "../i/beteilige.png";
+const fallbackWebImg = "../i/no-image-de.png";
+const fallbackHref = "https://wiki.historic.place/doku.php?id=de:popup";
+
+let imgSrc = fallbackImg;
+let href = fallbackHref;
+
+const inputImage = data && data.image ? String(data.image).trim() : "";
+
+// Vorrang: Wikimedia-Thumb (upload.wikimedia.org oder commons Special:FilePath passt deine vorhandene Funktion)
+const thumbURL = toWikimediaThumbURL(inputImage, 80);
+if (thumbURL) {
+	imgSrc = thumbURL;
+	href = imageSourceURL; // wie bisher
+} else {
+	// Zusätzlich behandeln: de.wikipedia.org/wiki/Datei:NAME.jpg (Datei: = File:)
+	const deWikiFileMatch = inputImage.match(/\/wiki\/Datei:([^/?#]+)/i);
+	if (deWikiFileMatch) {
+		const fileName = decodeURIComponent(deWikiFileMatch[1]).replace(/^File:/i, "").trim();
+		
+		if (fileName) {
+			imgSrc =
+			`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}` +
+			`?width=${encodeURIComponent("80")}`;
+			
+			href = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(
+				fileName.replace(/_/g, " ")
+			)}`;
+		}
+	} else {
+		// Beliebige Webadresse als data.image
+		if (/^https?:\/\//i.test(inputImage)) {
+			imgSrc = fallbackWebImg;
+			href = inputImage;
+		} else {
+			// fallback auf data.wikimedia_commons: File:*
+			const wc = data && data.wikimedia_commons;
+			if (wc) {
+				let fileName = String(wc).trim();
+				if (/^File:/i.test(fileName)) fileName = fileName.replace(/^File:/i, "");
+				
+				if (fileName) {
+					imgSrc =
+					`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}` +
+					`?width=${encodeURIComponent("80")}`;
+					
+					href = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(
+						fileName.replace(/_/g, " ")
+					)}`;
+				}
+			}
+		}
+	}
+}
+
+result.push(
+	'<a target="_blank" href="' + this.html(href) + '">' +
+'<img src="' + this.html(imgSrc) + '" border="0" alt="preview"' +
+' onerror="this.onerror=null;this.src=\'' + fallbackImg + '\';" />' +
+'</a>'
+);
 
 if (licenseURL) {
 	
@@ -1841,7 +1958,7 @@ break;
 		//
 		//--------------------------------------------------------------
 
-		thumbBaseURL: '../../../c/thumbcache.php?image=',
+		//thumbBaseURL: '../../../c/thumbcache.php?image=',
 		licenseBaseURL: '../../../c/imglicense.php?image=',
 
 		//--------------------------------------------------------------
@@ -2059,8 +2176,8 @@ break;
 				|| this.parseURL(data.wikimedia_commons) 
 				|| wdimage
 				|| mapillaryimage;
-			var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
-				&& (this.thumbBaseURL + encodeURIComponent(imageSourceURL));
+			//var thumbURL = mapillaryimage && (this.thumbBaseURL + encodeURIComponent(imageSourceURL))|| imageSourceURL 
+			//	&& (this.thumbBaseURL + encodeURIComponent(imageSourceURL));
 			var licenseURL = imageSourceURL 
 				&& (this.licenseBaseURL + encodeURIComponent(imageSourceURL));
 			var kontaktURL = '../../../c/kontakt-formular.php';
@@ -2070,20 +2187,20 @@ break;
 			//	XXX temporär zur Diskussion mit NSDOK in Köln
 			//------------------------------------------------------
 
-			if (data.id=='n655332809') {
-				imageSourceURL = 'https://www.museenkoeln.de/ns-dok/default.asp?s=763&tid=323&id=1591&abb=abb_1591_13321';
-				thumbURL = 'https://www.museenkoeln.de/ns-dok/db_stolpersteine/Abbildungen/lo/abb_1591_13321.jpg';
-			}
+			//if (data.id=='n655332809') {
+			//	imageSourceURL = 'https://www.museenkoeln.de/ns-dok/default.asp?s=763&tid=323&id=1591&abb=abb_1591_13321';
+			//	thumbURL = 'https://www.museenkoeln.de/ns-dok/db_stolpersteine/Abbildungen/lo/abb_1591_13321.jpg';
+			//}
 
 
 			//------------------------------------------------------
 			//	image onload
 			//------------------------------------------------------
 
-			var imgOnload =
-	"root=this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;" +
-	"main = root.parentElement.parentElement.parentElement; " +
-	"if (main) main.control.updateSize();";
+			//var imgOnload =
+	//"root=this.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;" +
+	//"main = root.parentElement.parentElement.parentElement; " +
+	//"if (main) main.control.updateSize();";
 
 			//------------------------------------------------------
 			//	click on tab
@@ -2380,15 +2497,132 @@ break;
 			//	Image
 			//------------------------------------------------------
 
-			if (thumbURL) {
+			//if (thumbURL) {
 
-				result.push ('<a target="_blank" href="' + this.html(imageSourceURL) + '"><img src="' +
-					this.html(thumbURL) + '" onload="' + imgOnload + '" alt="loading..."></a>');
+			//	result.push ('<a target="_blank" href="' + this.html(imageSourceURL) + '"><img src="' +
+			//		this.html(thumbURL) + '" onload="' + imgOnload + '" alt="loading..."></a>');
 
-			} else {
-				result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
+			//} else {
+			//	result.push ('<a target="_blank"  href="https://wiki.openstreetmap.org/wiki/Historical_Objects/Popup#Bildvorschau"><img src="../../../i/beteilige.png" border="0" ></a>');
+			//}
+			
+			function toWikimediaThumbURL(input, width = 80) {
+				if (!input) return null;
+				let str = String(input).trim();
+				
+				// Wichtig: auch URL-kodierte "File:"-Schreibweise abfangen
+				// z.B. .../wiki/File%3AIlberstedt_...jpg  -> .../wiki/File:Ilberstedt_...jpg
+				str = str.replace(/File%3A/gi, 'File:');
+				
+				// (Optional, aber oft hilfreich) ganze URL dekodieren, wenn sie scheinbar schon kodiert ist
+				// str = decodeURIComponent(str); // nur wenn du sicher bist, dass es nicht "zu viel" kaputtmacht
+				
+				const isCommonsWiki = /^https?:\/\/[^/]+\/wiki\/File:/i.test(str) || /^File:/i.test(str);
+				
+				if (isCommonsWiki) {
+					let fileName;
+					
+					if (/^File:/i.test(str)) {
+						fileName = str.replace(/^File:/i, '');
+					} else {
+						const u = new URL(str);
+						const m = u.pathname.match(/\/wiki\/([^/?#]+)/i);
+						if (!m) return null;
+						fileName = m[1].replace(/^File:/i, '');
+						fileName = decodeURIComponent(fileName);
+					}
+					
+					return `https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}?width=${encodeURIComponent(String(width))}`;
+				}
+				
+				// 2) upload.wikimedia.org/.../NAME.jpg  (hier bauen wir eine echte Thumb-URL)
+				//    Beispiele:
+				//    https://upload.wikimedia.org/wikipedia/commons/5/5b/NAME.jpg
+				const isUpload = /^https?:\/\/upload\.wikimedia\.org\//i.test(str);
+				if (isUpload) {
+					const u = new URL(str);
+					const parts = u.pathname.split('/').filter(Boolean); // [wikipedia, commons, 5, 5b, ...file]
+					// Erwartet mindestens: wikipedia / commons / a / b / filename
+					if (parts.length < 5) return null;
+					
+					const container = parts.slice(0, 2).join('/'); // wikipedia/commons
+					const hash1 = parts[2];
+					const hash2 = parts[3];
+					const file = parts.slice(4).join('/'); // kann verschachtelt sein, nehmen wir vollständig
+					
+					// file ist im Pfad bereits URL-encoded, aber encodeURIComponent ist ok, wenn wir es vorher dekodieren:
+					const fileDecoded = decodeURIComponent(file);
+					
+					return `${u.origin}/${container}/thumb/${hash1}/${hash2}/${encodeURIComponent(
+						fileDecoded
+					)}/${encodeURIComponent(String(width))}px-${encodeURIComponent(fileDecoded)}`;
+				}
+				
+				return null;
 			}
-
+			
+			const fallbackImg = "../i/beteilige.png";
+			const fallbackWebImg = "../i/no-image-de.png";
+			const fallbackHref = "https://wiki.historic.place/doku.php?id=de:popup";
+			
+			let imgSrc = fallbackImg;
+			let href = fallbackHref;
+			
+			const inputImage = data && data.image ? String(data.image).trim() : "";
+			
+			// Vorrang: Wikimedia-Thumb (upload.wikimedia.org oder commons Special:FilePath passt deine vorhandene Funktion)
+			const thumbURL = toWikimediaThumbURL(inputImage, 80);
+			if (thumbURL) {
+				imgSrc = thumbURL;
+				href = imageSourceURL; // wie bisher
+			} else {
+				// Zusätzlich behandeln: de.wikipedia.org/wiki/Datei:NAME.jpg (Datei: = File:)
+				const deWikiFileMatch = inputImage.match(/\/wiki\/Datei:([^/?#]+)/i);
+				if (deWikiFileMatch) {
+					const fileName = decodeURIComponent(deWikiFileMatch[1]).replace(/^File:/i, "").trim();
+					
+					if (fileName) {
+						imgSrc =
+						`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}` +
+						`?width=${encodeURIComponent("80")}`;
+						
+						href = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(
+							fileName.replace(/_/g, " ")
+						)}`;
+					}
+				} else {
+					// Beliebige Webadresse als data.image
+					if (/^https?:\/\//i.test(inputImage)) {
+						imgSrc = fallbackWebImg;
+						href = inputImage;
+					} else {
+						// fallback auf data.wikimedia_commons: File:*
+						const wc = data && data.wikimedia_commons;
+						if (wc) {
+							let fileName = String(wc).trim();
+							if (/^File:/i.test(fileName)) fileName = fileName.replace(/^File:/i, "");
+							
+							if (fileName) {
+								imgSrc =
+								`https://commons.wikimedia.org/wiki/Special:FilePath/${encodeURIComponent(fileName)}` +
+								`?width=${encodeURIComponent("80")}`;
+								
+								href = `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(
+									fileName.replace(/_/g, " ")
+								)}`;
+							}
+						}
+					}
+				}
+			}
+			
+			result.push(
+				'<a target="_blank" href="' + this.html(href) + '">' +
+				'<img src="' + this.html(imgSrc) + '" border="0" alt="preview"' +
+				' onerror="this.onerror=null;this.src=\'' + fallbackImg + '\';" />' +
+				'</a>'
+			);
+			
                         if (licenseURL) {
 
                                 var captid;
